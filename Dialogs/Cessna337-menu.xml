@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+<default>
+	<menu n="10">
+		<label>Cessna 337G</label>
+		<enabled type="bool">true</enabled>
+		<item n="1">
+			<label>Aircraft Lights</label>
+			<binding>            
+				<command>dialog-show</command>
+				<dialog-name>lights-dialog</dialog-name>
+			</binding>
+		</item>
+		<item n="2">
+			<label>Engines Management</label>
+			<binding>            
+				<command>dialog-show</command>
+				<dialog-name>systems-dialog</dialog-name>
+			</binding>
+		</item>
+		<item n="3">
+			<label>Select Livery</label>
+			<binding>
+				<command>nasal</command>
+				<script>aircraft.livery.dialog.toggle()</script>
+			</binding>
+		</item>
+		<item n="4">
+			<label>Yokes On/Off</label>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/yokes-visible</property>
+			</binding>
+		</item>
+	</menu>
+</default>
+
+</PropertyList>

@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>CHT-Oil.ac</path>
+ 
+ <animation>
+  <type>material</type>
+  <!-- <object-name>Base</object-name> -->
+  <object-name>Meter</object-name>
+  <object-name>NeedleCHT_FRONT</object-name>
+  <object-name>NeedleCHT_REAR</object-name>
+  <object-name>NeedleOilTempFRONT</object-name>
+  <object-name>NeedleOilTempREAR</object-name>
+     <emission>
+         <red>0.7</red>           
+         <green>0.7</green>       
+         <blue>0.7</blue>         
+         <factor-prop>controls/lighting/panel-norm</factor-prop>  <!-- <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
+     </emission>
+ </animation> 
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleCHT_FRONT</object-name>
+  <property>engines/engine[0]/cht-degf</property>
+  <interpolation>
+   <entry>
+    <ind>200</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>400</ind>
+    <dep>75</dep>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep>86.5</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m>-0.067146</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleCHT_REAR</object-name>
+  <property>engines/engine[1]/cht-degf</property>
+  <interpolation>
+   <entry>
+    <ind>200</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>400</ind>
+    <dep>75</dep>
+   </entry>
+   <entry>
+    <ind>500</ind>
+    <dep>86.5</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m>-0.022146</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleOilTempFRONT</object-name>
+  <property>engines/engine[0]/oil-temperature-degf</property>
+  <interpolation>
+   <entry>
+    <ind>75</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>180</ind>
+    <dep>59</dep>
+   </entry>
+   <entry>
+    <ind>260</ind>
+    <dep>89</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m> 0.022854</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleOilTempREAR</object-name>
+  <property>engines/engine[1]/oil-temperature-degf</property>
+  <interpolation>
+   <entry>
+    <ind>75</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>180</ind>
+    <dep>59</dep>
+   </entry>
+   <entry>
+    <ind>260</ind>
+    <dep>89</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m> 0.067854</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Cylinder Head and Oil Temp</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.15</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.01</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+</PropertyList>

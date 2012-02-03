@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+	<model>
+		<livery>
+			<name type="string">N53472</name>
+			<texture>Textures/livery_N53472.png</texture>
+		</livery>
+		<videocam type="bool">false</videocam>
+		<device type="bool">false</device>
+		<frontcone type="bool">true</frontcone>
+		<rearcone type="bool">true</rearcone>
+		<wingfins type="bool">true</wingfins>
+	</model>
+</sim>
+</PropertyList>
