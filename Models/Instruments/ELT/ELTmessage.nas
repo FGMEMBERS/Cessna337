@@ -19,7 +19,7 @@ var eltmsg = func {
 	
 	setlistener("sim/crashed", func(n) {
 		if (getprop("ELT/armed")) {
-			var help_string = "ELT AutoMessage: " ~ aircraft ~ " " ~ callsign ~ " testing ELT at " ~lat~" LAT "~lon~" LON, requesting SAR service";
+			var help_string = "ELT AutoMessage: " ~ aircraft ~ " " ~ callsign ~ " crashed at " ~lat~" LAT "~lon~" LON, requesting SAR service";
 			setprop("/sim/multiplay/chat", help_string);
 		}
 	});

@@ -32,7 +32,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 
 
 <model>
-	<path>Aircraft/Cessna337/Models/Instruments/Clock/clock.xml</path>
+	<path>Aircraft/Cessna337/Models/Instruments/Clock/Clock.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
 		<y-m>-0.523</y-m>
