@@ -20,15 +20,31 @@
   <animation>
     <type>rotate</type>
     <object-name>Needle_FRONT</object-name>
-    <property>engines/engine[0]/egt-degf</property>
+    <property>engines/engine[0]/egt-degf</property>  <!-- grados en Fahrenheit -->
     <interpolation>
       <entry>
-        <ind>900</ind>
+        <ind>1200</ind>    
         <dep>0</dep>
       </entry>
       <entry>
-        <ind>200</ind>
-        <dep>90</dep>
+        <ind>1300</ind>    
+        <dep>18.5</dep>
+      </entry>
+      <entry>
+        <ind>1400</ind>    
+        <dep>36.5</dep>
+      </entry>
+      <entry>
+        <ind>1500</ind>    
+        <dep>55</dep>
+      </entry>
+      <entry>
+        <ind>1600</ind>    
+        <dep>73</dep>
+      </entry>
+      <entry>
+        <ind>1700</ind>     
+        <dep>91</dep>
       </entry>
     </interpolation>
     <axis>
@@ -46,15 +62,31 @@
   <animation>
     <type>rotate</type>
     <object-name>Needle_REAR</object-name>
-    <property>engines/engine[1]/egt-degf</property>
+    <property>engines/engine[1]/egt-degf</property>  <!-- grados en Fahrenheit -->
     <interpolation>
       <entry>
-        <ind>900</ind>
+        <ind>1200</ind>    
         <dep>0</dep>
       </entry>
       <entry>
-        <ind>200</ind>
-        <dep>-90</dep>
+        <ind>1300</ind>    
+        <dep>-18.5</dep>
+      </entry>
+      <entry>
+        <ind>1400</ind>    
+        <dep>-36.5</dep>
+      </entry>
+      <entry>
+        <ind>1500</ind>    
+        <dep>-55</dep>
+      </entry>
+      <entry>
+        <ind>1600</ind>    
+        <dep>-73</dep>
+      </entry>
+      <entry>
+        <ind>1700</ind>     
+        <dep>-91</dep>
       </entry>
     </interpolation>
     <axis>

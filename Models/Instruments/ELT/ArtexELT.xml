@@ -27,10 +27,6 @@ Be sure to link the Nasal in your -set file, typing:
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>nasal</command>
-			<script>ELT.eltmsg();</script>
-		</binding>
-		<binding>
 			<command>property-toggle</command>
 			<property>/ELT/armed</property>
 			<value type="bool">true</value>

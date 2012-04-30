@@ -11,16 +11,30 @@
 
 print('Emergency Locator Transmitter (ELT) loaded');
 
-var eltmsg = func {
-    var lat = getprop("/position/latitude-string");
-    var lon = getprop("/position/longitude-string");
-    var aircraft = getprop("sim/description");
-    var callsign = getprop("sim/multiplay/callsign");
-	
-	setlistener("sim/crashed", func(n) {
-		if (getprop("ELT/armed")) {
-			var help_string = "ELT AutoMessage: " ~ aircraft ~ " " ~ callsign ~ " crashed at " ~lat~" LAT "~lon~" LON, requesting SAR service";
-			setprop("/sim/multiplay/chat", help_string);
-		}
-	});
-}
+#Aircraft ID definition
+var aircraft = getprop("sim/description");
+var callsign = getprop("sim/multiplay/callsign");
+var aircraft_id = aircraft ~ ", " ~ callsign;
+
+var ground = getprop("position/altitude-agl-ft");
+
+#Print an emergency auto-message when aircraft crashes
+setlistener("sim/crashed", func(msg) {
+	if ((getprop("sim/crashed")) and (ground < 1)) {
+		var lat = getprop("/position/latitude-string");
+		var lon = getprop("/position/longitude-string");
+		var help_string = "ELT AutoMessage: " ~ aircraft_id ~ ", CRASHED AT " ~lat~" LAT "~lon~" LON, REQUESTING SAR SERVICE";
+		setprop("/sim/multiplay/chat", help_string);
+		settimer(msg, 1);
+	}
+});
+
+#Print an emergency message when pilot turns on the "armed" button
+setlistener("ELT/armed", func(alrm) {
+	if (getprop("ELT/armed")) {
+		var lat = getprop("/position/latitude-string");
+		var lon = getprop("/position/longitude-string");
+		var help_string = "ELT Message: " ~ aircraft_id ~ ", DECLARING EMERGENCY AT " ~lat~" LAT, "~lon~" LON";
+		setprop("/sim/multiplay/chat", help_string);
+	}
+});

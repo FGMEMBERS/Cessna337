@@ -35,7 +35,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Clock/Clock.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m>-0.523</y-m>
+		<y-m>-0.522</y-m>
 		<z-m> 0.1455</z-m>
 	</offsets>
 </model>
@@ -44,7 +44,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Synchroscope/Synchroscope.xml</path>
 	<offsets>
 		<x-m>-0.973</x-m>
-		<y-m>-0.502</y-m>
+		<y-m>-0.501</y-m>
 		<z-m> 0.1915</z-m>
 	</offsets>
 </model>
@@ -53,7 +53,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/TC/5550-8340N5L.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m>-0.5235</y-m>
+		<y-m>-0.5225</y-m>
 		<z-m> 0.081</z-m>
 	</offsets>
 </model>
@@ -62,7 +62,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/ASI/EA-5174.xml</path>
 	<offsets>
 		<x-m>-0.977</x-m>
-		<y-m>-0.439</y-m>
+		<y-m>-0.438</y-m>
 		<z-m> 0.182</z-m>
 	</offsets>
 </model>
@@ -71,8 +71,8 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/ADF/KI-227.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m>-0.439</y-m>
-		<z-m> 0.0935</z-m>
+		<y-m>-0.438</y-m>
+		<z-m> 0.094</z-m>
 	</offsets>
 </model>
 
@@ -80,16 +80,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/AI/EA-5000F6.xml</path>
 	<offsets>
 		<x-m>-0.977</x-m>
-		<y-m>-0.338</y-m>
+		<y-m>-0.337</y-m>
 		<z-m> 0.189</z-m>
 	</offsets>
 </model>
 
 <model>
-	<path>Aircraft/Cessna337/Models/Instruments/HI/RCA15BK-1.xml</path>
+	<path>Aircraft/Cessna337/Models/Instruments/HI/RCA15AK.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m>-0.338</y-m>
+		<y-m>-0.337</y-m>
 		<z-m> 0.094</z-m>
 	</offsets>
 </model>
@@ -98,7 +98,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Altimeter/EA-401A.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m>-0.237</y-m>
+		<y-m>-0.236</y-m>
 		<z-m> 0.182</z-m>
 	</offsets>
 </model>
@@ -107,7 +107,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/VSI/VSI.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m>-0.237</y-m>
+		<y-m>-0.236</y-m>
 		<z-m> 0.0935</z-m>
 	</offsets>
 </model>
@@ -116,7 +116,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/VOR/KI-206-nav1.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m>-0.136</y-m>
+		<y-m>-0.135</y-m>
 		<z-m> 0.214</z-m>
 	</offsets>
 </model>
@@ -125,7 +125,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/VOR/KI-206-nav2.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m>-0.136</y-m>
+		<y-m>-0.135</y-m>
 		<z-m> 0.126</z-m>
 	</offsets>
 </model>
@@ -134,7 +134,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/RadarAltimeter/BendixKing_KI250.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m>-0.136</y-m>
+		<y-m>-0.135</y-m>
 		<z-m> 0.03809</z-m>
 	</offsets>
 </model>
@@ -145,7 +145,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/MP/MP.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m> 0.136</y-m>
+		<y-m> 0.137</y-m>
 		<z-m> 0.214</z-m>
 	</offsets>
 </model>
@@ -154,7 +154,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/RPM/RPM.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m> 0.136</y-m>
+		<y-m> 0.137</y-m>
 		<z-m> 0.126</z-m>
 	</offsets>
 </model>
@@ -163,7 +163,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/FuelFlow/FuelFlow.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m> 0.136</y-m>
+		<y-m> 0.137</y-m>
 		<z-m> 0.038</z-m>
 	</offsets>
 </model>
@@ -172,7 +172,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/EGT/AlcorDualEGT.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m> 0.2305</y-m>
+		<y-m> 0.2315</y-m>
 		<z-m> 0.038</z-m>
 	</offsets>
 </model>
@@ -181,7 +181,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Hobbs/HobbsMeter.xml</path>
 	<offsets>
 		<x-m>-0.972</x-m>
-		<y-m> 0.287</y-m>
+		<y-m> 0.288</y-m>
 		<z-m> 0.2315</z-m>
 	</offsets>
 </model>
@@ -190,7 +190,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Fuel-CHT-Oil/Fuel-Oil.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m> 0.287</y-m>
+		<y-m> 0.288</y-m>
 		<z-m> 0.191</z-m>
 	</offsets>
 </model>
@@ -199,7 +199,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Fuel-CHT-Oil/CHT-Oil.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m> 0.287</y-m>
+		<y-m> 0.288</y-m>
 		<z-m> 0.135</z-m>
 	</offsets>
 </model>
@@ -208,7 +208,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Vacuum/Vacuum.xml</path>
 	<offsets>
 		<x-m>-0.976</x-m>
-		<y-m> 0.445</y-m>
+		<y-m> 0.446</y-m>
 		<z-m> 0.177</z-m>
 	</offsets>
 </model>
@@ -217,7 +217,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Altimeter/EA-401A.xml</path>
 	<offsets>
 		<x-m>-0.977</x-m>
-		<y-m> 0.445</y-m>
+		<y-m> 0.446</y-m>
 		<z-m> 0.0955</z-m>
 	</offsets>
 </model>
@@ -226,7 +226,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Amp/Amp.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m> 0.515</y-m>
+		<y-m> 0.516</y-m>
 		<z-m> 0.1645</z-m>
 	</offsets>
 </model>
@@ -235,7 +235,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<path>Aircraft/Cessna337/Models/Instruments/Volt/Volt.xml</path>
 	<offsets>
 		<x-m>-0.975</x-m>
-		<y-m> 0.515</y-m>
+		<y-m> 0.516</y-m>
 		<z-m> 0.1215</z-m>
 	</offsets>
 </model>
@@ -294,7 +294,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<offsets>
 		<x-m>-0.973</x-m>
 		<y-m> 0.001</y-m>
-		<z-m>-0.006</z-m>
+		<z-m>-0.004</z-m>
 	</offsets>
 </model>
 
@@ -308,7 +308,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 </model>
 
 <model>
-	<path>Aircraft/Cessna337/Models/Instruments/Navomatic/Navomatic400B.xml</path>
+	<path>Aircraft/Cessna337/Models/Instruments/Navomatic/Navomatic400A.xml</path>
 	<offsets>
 		<x-m>-0.848</x-m>
 		<y-m> 0.001</y-m>

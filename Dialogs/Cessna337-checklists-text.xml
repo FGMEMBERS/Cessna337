@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PropertyList>
+<name></name>
+
+<checklists>
+	<checklist n="0">
+		<title>BEFORE STARTING ENGINES</title>
+		<line><text>Preflight Inspection</text>				<result>COMPLETE</result></line>
+		<line><text>Cabin Door</text>						<result>CLOSE BOTTOM; LOWER OR CLOSE UPPER</result></line>
+		<line><text>Cabin Window</text>						<result>AS DESIRED for ventilation</result></line>
+		<line><text>Brakes</text>							<result>TEST and SET</result></line>
+		<line><text>Seats, Belts, Shoulder Harnesses</text>	<result>ADJUST and SECURE</result></line>
+		<line><text>Landing Gear Switch</text>				<result>CHECK EXTEND position</result></line>
+		<line><text>Avionics Power Switch</text>			<result>OFF</result></line>
+		<line><text>Electrical Equipment</text>				<result>OFF</result></line>
+		<line><text>Battery and Alternators</text>			<result>ON</result></line>
+		<line><text>Cowl Flaps</text>						<result>OPEN</result></line>
+		<line><text>Fuel Selectors: Front Engine</text>		<result>LEFT TANK</result></line>
+		<line><text>Fuel Selectors: Rear Engine</text>		<result>RIGHT TANK</result></line>
+		<line><text>Fuel Quantity</text>					<result>CHECK</result></line>
+	</checklist>
+<!-- CAUTION
+The avionics power switch must be OFF during engine
+start to prevent possible damage to avionics. -->
+	
+	<checklist n="1">
+		<title>STARTING ENGINES</title>
+		<line><text>Mixtures</text>							<result>RICH</result></line>
+		<line><text>Propellers</text>						<result>HIGH RPM</result></line>
+		<line><text>Throttles</text>						<result>CLOSED</result></line>
+		<line><text>Auxiliary Fuel Pump</text>				<result>HI</result></line>
+		<line><text>Throttle</text>							<result>ADVANCE to 60 lbs./hr. fuel flow, then RETARD to IDLE</result></line>
+		<line><text>Auxiliary Fuel Pump</text>				<result>OFF</result></line>
+		<line><text>Propeller Area</text>					<result>CLEAR</result></line>
+		<line><text>Ignition Switch</text>					<result>START</result></line>
+		<line><text>Throttle</text>							<result>ADVANCE slowly</result></line>
+		<line><text>Ignition Switch</text>					<result>RELEASE when engine starts</result></line>
+		<line><text>Throttle</text>							<result>800-1000 RPM</result></line>
+		<line><text>Oil Pressure</text>						<result>CHECK</result></line>
+		<line><text>Other Engine</text>						<result>REPEAT ABOVE</result></line>
+		<line><text>Avionics Power Switch</text>			<result>ON</result></line>
+		<line><text>Radios</text>							<result>ON and SET</result></line>
+	</checklist>
+<!-- NOTE
+The engine should start in two or three revolutions. If it does not
+continue running, start again at step 3 above. If the engine does not
+start, leave the auxiliary fuel pump switch off, set the mixture to idle
+cut-off, open the throttle, and crank until the engine fires or for
+approximately 15 seconds. If still unsuccessful, start again using the
+normal starting procedure after allowing the starter motor to cool. -->
+
+	<checklist n="2">
+		<title>BEFORE TAKEOFF</title>
+		<line><text>Parking Brake</text>					<result>SET</result></line>
+		<line><text>Flight Controls</text>					<result>FREE and CORRECT</result></line>
+		<line><text>Flight Instruments</text>				<result>SET and CHECKED</result></line>
+		<line><text>Fuel Mixtures, Selectors, Quantities</text><result>RECHECK</result></line>
+		<line><text>Elevator and Rudder Trim</text>			<result>SET</result></line>
+		<line><text>Engine Runup: Throttles</text>			<result>1800 RPM</result></line>
+		<line><text>Magnetos</text>							<result>CHECK (RPM drop should not exceed 150 RPM on either magneto)</result></line>
+		<line><text>Propellers</text>						<result>CHECK feathering to 1200 RPM; then return to high RPM</result></line>
+		<line><text>Alternators</text>						<result>CHECK</result></line>
+		<line><text>Engine Instruments</text>				<result>CHECK</result></line>
+		<line><text>Suction Gauge</text>					<result>CHECK</result></line>
+		<line><text>Cabin Door and Windows</text>			<result>CLOSED and LATCHED</result></line>
+		<line><text>Autopilot</text>						<result>OFF</result></line>
+		<line><text>Synchrophaser</text>					<result>OFF</result></line>
+		<line><text>Beacon, Strobe, Navigation Lights</text><result>Flashing -- ON as required</result></line>
+		<line><text>Parking Brake</text>					<result>RELEASE</result></line>
+	</checklist>
+	
+	<checklist n="3">
+		<title>NORMAL TAKEOFF</title>
+		<line><text>Wing Flaps</text>						<result>UP to 1/3 DOWN</result></line>
+		<line><text>Power:</text>							<result>37 INCHES Hg and 2800 RPM</result></line>
+		<line><text>Mixtures</text>							<result>ADJUST to 140 lbs.lhr fuel flow</result></line>
+		<line><text>Power Instruments</text>				<result>CHECK for adequate power from both engines</result></line>
+		<line><text>Elevator Control</text>					<result>LIFT NOSE WHEEL at 70-75 KIAS</result></line>
+		<line><text>Brakes</text>							<result>APPLY momentarily when airborne</result></line>
+		<line><text>Landing Gear</text>						<result>RETRACT in climb-out</result></line>
+		<line><text>Climb Speed</text>						<result>95-105 KIAS until a safe altitude is reached</result></line>
+		<line><text>Wing Flaps</text>						<result>RETRACT (if extended) after obstacles are cleared.</result></line>
+	</checklist>
+<!-- NOTE
+Lead with rear engine to verify rear engine operation. Apply
+throttles smoothly to minimize any tendency to overboost. -->
+
+	<checklist n="4">
+		<title>SHORT FIELD TAKEOFF</title>
+		<line><text>Wing Flaps</text>						<result>1/3 DOWN</result></line>
+		<line><text>Brakes</text>							<result>APPLY and HOLD</result></line>
+		<line><text>Power:</text>							<result>37 INCHES Hg and 2800 RPM</result></line>
+		<line><text>Mixtures</text>							<result>ADJUST to 140 lbs/hr fuel flow</result></line>
+		<line><text>Brakes</text>							<result>RELEASE</result></line>
+		<line><text>Elevator Control</text>					<result>MAINTAIN SLIGHTLY TAIL LOW</result></line>
+		<line><text>Climb Speed</text>						<result>70 KIAS ( at maximum weight) until all obstacles are cleared</result></line>
+		<line><text>Brakes</text>							<result>APPLY momentarily when airborne</result></line>
+		<line><text>Landing Gear and Wing Flaps</text>		<result>RETRACT after obstacles are cleared</result></line>
+	</checklist>
+<!-- NOTE
+Start takeoff roll when maximum manifold pressure is noted on
+both engines and fuel flow has stabilized. -->
+
+	<checklist n="5">
+		<title>MAXIMUM PERFORMANCE CLIMB</title>
+		<line><text>Airspeed</text>							<result>95 KIAS</result></line>
+		<line><text>Power</text>							<result>25 INCHES and 2800 RPM</result></line>
+		<line><text>Mixtures</text>							<result>ADJUST to 140 lbs/hr fuel flow</result></line>
+		<line><text>Cowl Flaps</text>						<result>OPEN</result></line>
+	</checklist>
+<!-- NOTE
+Under extreme hot day conditions, it may be necessary to utilize the auxiliary fuel pumps to attain 140 lbs/hr fuel flow.-->
+
+	<checklist n="6">
+		<title>CRUISE</title>
+		<line><text>Power</text>							<result>12-16 INCHES Hg and 2200-2450 RPM</result></line>
+		<line><text>Cowl Flaps</text>						<result>CLOSED</result></line>
+		<line><text>Elevator and Rudder Trim</text>			<result>ADJUST</result></line>
+		<line><text>Mixtures</text>							<result>LEAN for cruise fuel flow using EGT gauge</result></line>
+		<line><text>Fuel Selectors, Front Engine </text>	<result>LEFT TANK</result></line>
+		<line><text>Fuel Selectors, Rear Engine</text>		<result>RIGHT TANK</result></line>
+		<line><text>Synchrophaser</text>					<result>AS DESIRED</result></line>
+	</checklist>
+<!-- NOTE
+Under some extreme hot day conditions at high altitudes, it may be necessary to use an engine speed as high as 2600 RPM to maintain manifold pressure stability. In this event, limit manifold pressure so as to not exceed 75% power, as determined using the Cessna Power Computer. -->
+<!-- NOTE
+In hot weather at high altitudes, be alert for fuel vapor indications. If fuel flow fluctuations are observed, place auxiliary fuel pump switch(es) in the HI or LO position and reset the mixture control(s) as required. -->
+<!-- NOTE
+If operating both engines from a single tank, cease crossfeeding when fuel is within 50 lbs of empty in tank in use, or 50 lbs of full in tank not in use. -->
+
+	<checklist n="7">
+		<title>DESCENT</title>
+		<line><text>Power</text>							<result>AS REQUIRED</result></line>
+		<line><text>Auxiliary Fuel Pump Switches</text>		<result>ADJUST. Use rich mixture at idle power</result></line>
+		<line><text>Mixtures</text>							<result>1/3 DOWN</result></line>
+		<line><text>Fuel Selectors, Front Engine</text>		<result>LEFT TANK</result></line>
+		<line><text>Fuel Selectors, Rear Engine</text>		<result>RIGHT TANK</result></line>
+	</checklist>
+<!-- NOTE 
+A minimum of 20 INCHES Hg and 2450 RPM is required for pressurization. If necessary, extend the landing gear to increase rate of descent. -->
+
+	<checklist n="8">
+		<title>BEFORE LANDING</title>
+		<line><text>Auxiliary Fuel Pump Switches</text>		<result>CHECK OFF</result></line>
+		<line><text>Landing Gear</text>						<result>DOWN below 140 KIAS</result></line>
+		<line><text>Wing Flaps</text>						<result>UP to 1/3 below 165 KIAS</result></line>
+		<line><text>Mixtures</text>							<result>RICH</result></line>
+		<line><text>Propellers</text>						<result>HIGH RPM</result></line>
+		<line><text>Autopilot</text>						<result>OFF</result></line>
+		<line><text>Synchrophaser</text>					<result>OFF</result></line>
+	</checklist>
+<!--
+NOTE
+Check gear positions visually and green light ON -->
+
+	<checklist n="9">
+		<title>NORMAL LANDING</title>
+		<line><text>Airspeed</text>							<result>80-90 KIAS (flaps UP)</result></line>
+		<line><text>Wing Flaps</text>						<result>UP to 113 below 165 KIAS</result></line>
+		<line><text>          </text>						<result>113 to 2/3 below 135 KIAS</result></line>
+		<line><text>          </text>						<result>2/3 to FULL below 110 KIAS</result></line>
+		<line><text>Airspeed</text>							<result>75-85 KIAS (flaps DOWN)</result></line>
+		<line><text>Trim</text>								<result>ADJUST</result></line>
+		<line><text>Touchdown</text>						<result>MAIN WHEELS FIRST</result></line>
+		<line><text>Landing Roll</text>						<result>LOWER NOSE WHEEL GENTLY</result></line>
+		<line><text>Braking</text>							<result>MINIMUM REQUIRED</result></line>
+	</checklist>
+
+	<checklist n="10">
+		<title>SHORT FIELD LANDING</title>
+		<line><text>Airspeed</text>							<result>80-90 KIAS (flaps UP)</result></line>
+		<line><text>Wing Flaps</text>						<result>FULL DOWN</result></line>
+		<line><text>Airspeed</text>							<result>MAINTAIN 78 KIAS (at maximum landing weight)</result></line>
+		<line><text>Trim</text>								<result>ADJUST</result></line>
+		<line><text>Touchdown</text>						<result>MAIN WHEELS FIRST</result></line>
+		<line><text>Brakes</text>							<result>APPLY HEAVILY</result></line>
+		<line><text>Wing Flaps</text>						<result>RETRACT for maximum brake effectiveness</result></line>
+	</checklist>
+
+	<checklist n="11">
+		<title>BALKED LANDING</title>
+		<line><text>Power</text>							<result>25 INCHES and 2800 RPM</result></line>
+		<line><text>Wing Flaps</text>						<result>RETRACT to 1/3 DOWN</result></line>
+		<line><text>Airspeed</text>							<result>80 KIAS</result></line>
+		<line><text>Wing Flaps</text>						<result>RETRACT slowly</result></line>
+		<line><text>Cowl Flaps</text>						<result>OPEN</result></line>
+	</checklist>
+
+	<checklist n="12">
+		<title>AFTER LANDING</title>
+		<line><text>Wing Flaps</text>						<result>RETRACT</result></line>
+		<line><text>Cowl Flaps</text>						<result>OPEN</result></line>
+	</checklist>
+
+	<checklist n="13">
+		<title>SECURING AIRPLANE</title>
+		<line><text>Parking Brake</text>					<result>SET</result></line>
+		<line><text>Idle Speed, Front Engine</text>			<result>575-625 RPM</result></line>
+		<line><text>Idle Speed, Rear Engine</text>			<result>625-675 RPM</result></line>
+		<line><text>Avionics Power Switch</text>			<result>OFF</result></line>
+		<line><text>Electrical Equipment</text>				<result>OFF</result></line>
+		<line><text>Mixtures</text>							<result>IDLE CUT-OFF</result></line>
+		<line><text>Ignition Switches</text>				<result>OFF</result></line>
+		<line><text>Battery and Alternators</text>			<result>OFF</result></line>
+		<line><text>Control Lock</text>						<result>INSTALL</result></line>
+	</checklist>
+</checklists>
+
+</PropertyList>

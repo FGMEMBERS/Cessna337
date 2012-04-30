@@ -1505,6 +1505,223 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	</action>
 </animation>
     
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_09</object-name>
+	<property>controls/anti-ice/window-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_09</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/window-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- <animation>
+	<type>rotate</type>
+	<object-name>Switch_10</object-name>
+	<property>controls/anti-ice/engine[0]/carb-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_10</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[0]/carb-heat</property>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[0]/inlet-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_11</object-name>
+	<property>controls/anti-ice/engine[1]/carb-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_11</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[1]/carb-heat</property>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[1]/inlet-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_12</object-name>
+	<property>controls/anti-ice/wing-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_12</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/wing-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_13</object-name>
+	<property></property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_13</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property></property>
+		</binding>
+	</action>
+</animation> -->
+
+<!-- Luz Alarma Stall -->
+
+<animation>
+	<type>material</type>
+	<object-name>LuzAlrm_01</object-name>
+		<condition>
+			<or>
+				<and>
+					<or>
+						<property>controls/engines/engine/master-bat</property>
+						<property>controls/engines/engine[0]/master-alt</property>
+						<property>controls/engines/engine[1]/master-alt</property>
+					</or>
+					<less-than>
+						<property>velocities/airspeed-kt</property>
+						<value>65</value>
+					</less-than>
+					<not>
+						<property>gear/gear[0]/wow</property>
+						<property>gear/gear[1]/wow</property>
+						<property>gear/gear[2]/wow</property>
+					</not>
+				</and>
+				<and>
+					<or>
+						<less-than>
+							<property>gear/gear[0]/position-norm</property>
+							<value>0.95</value>
+						</less-than>
+						<less-than>
+							<property>gear/gear[1]/position-norm</property>
+							<value>0.95</value>
+						</less-than>
+						<less-than>
+							<property>gear/gear[2]/position-norm</property>
+							<value>0.95</value>
+						</less-than>
+					</or>
+					<or>
+						<less-than>
+							<property>controls/engines/engine[0]/throttle</property>
+							<value>0.2</value>
+						</less-than>
+						<less-than>
+							<property>controls/engines/engine[1]/throttle</property>
+							<value>0.2</value>
+						</less-than>
+					</or>
+					<or>
+						<less-than>
+							<property>/position/altitude-agl-ft</property>
+							<value>500</value>
+						</less-than>
+					</or>
+				</and>
+			</or>
+		</condition>
+    <emission>
+       <red>0.60</red>
+       <green>0.40</green>
+       <blue>0.0</blue>
+    </emission>
+</animation>
+
 <!-- AVIONICS POWER -->
 
 <animation>
@@ -1537,55 +1754,55 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 			<property>controls/switches/master-avionics</property>
 		</binding>
 		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/adf</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/audio-panel[0]</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/audio-panel[1]</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/autopilot</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/avionics-fan</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/dme</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/hsi</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/nav[0]</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/nav[1]</property>
-      <value>0</value>
-    </binding>
-    		<binding>
-      <command>property-assign</command>
-      <property>systems/electrical/outputs/transponder</property>
-      <value>0</value>
-    </binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/adf</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/audio-panel[0]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/audio-panel[1]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/autopilot</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/avionics-fan</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/dme</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/hsi</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/nav[0]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/nav[1]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/transponder</property>
+			<value>0</value>
+		</binding>
 	</action>
 </animation>
 
@@ -1614,7 +1831,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<interval-sec>0.008</interval-sec>
 		<binding>
 			<command>property-adjust</command>
-		  <property>controls/lighting/panel-norm</property>
+			<property>controls/lighting/panel-norm</property>
 			<step>-0.002</step>
 			<min>-1</min>
 			<max>1</max>
@@ -1665,7 +1882,118 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	</center>
 </animation>
 
+      <!-- Parasoles *sunshade* -->
+<animation>
+	<type>pick</type>
+	<object-name>ViseraIZQ_01</object-name>
+	<visible>true</visible>
+	<action>
+		<name>Select</name>
+		<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("Cessna337/sunshade/left") > 0) {
+					interpolate("Cessna337/sunshade/left", 0, 0.6);
+					} else {
+					interpolate("Cessna337/sunshade/left", 1, 0.6);
+				}
+				</script>
+			</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>ViseraIZQ_01</object-name>
+	<property>/Cessna337/sunshade/left</property>
+	<factor>-130</factor>
+	<axis>
+		<x1-m>-0.476395</x1-m>
+		<y1-m> 0.346198</y1-m>
+		<z1-m> 0.568136</z1-m>
+		<x2-m>-0.476395</x2-m>
+		<y2-m>-0.344396</y2-m>
+		<z2-m> 0.568136</z2-m>
+	</axis>
+</animation>      
+
+<animation>
+	<type>pick</type>
+	<object-name>ViseraDER_01</object-name>
+	<visible>true</visible>
+	<action>
+		<name>Select</name>
+		<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("Cessna337/sunshade/right") > 0) {
+					interpolate("Cessna337/sunshade/right", 0, 0.6);
+					} else {
+					interpolate("Cessna337/sunshade/right", 1, 0.6);
+				}
+				</script>
+			</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>ViseraDER_01</object-name>
+	<property>/Cessna337/sunshade/right</property>
+	<factor>-130</factor>
+	<axis>
+		<x1-m>-0.476395</x1-m>
+		<y1-m> 0.346198</y1-m>
+		<z1-m> 0.568136</z1-m>
+		<x2-m>-0.476395</x2-m>
+		<y2-m>-0.344396</y2-m>
+		<z2-m> 0.568136</z2-m>
+	</axis>
+</animation>    
+
+<!-- Guantera *Storage-Drawer* -->
+
+<animation>
+	<type>pick</type>
+	<object-name>TapaPanel_02</object-name>
+	<visible>true</visible>
+	<action>
+		<name>Select</name>
+		<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("Cessna337/storage-drawer") > 0) {
+					interpolate("Cessna337/storage-drawer", 0, 0.6);
+					} else {
+					interpolate("Cessna337/storage-drawer", 1, 0.6);
+				}
+				</script>
+			</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>TapaPanel_01a</object-name>
+	<object-name>TapaPanel_01b</object-name>
+	<object-name>TapaPanel_02</object-name>
+	<property>/Cessna337/storage-drawer</property>
+	<factor>-60</factor>
+	<axis>
+		<x1-m>-0.97601</x1-m>
+		<y1-m> 0.504692</y1-m>
+		<z1-m>-0.144485</z1-m>
+		<x2-m>-0.97601</x2-m>
+		<y2-m> 0.361938</y2-m>
+		<z2-m>-0.144485</z2-m>
+	</axis>
+</animation>   
+
     <!-- **Motores** -->
+
 <!-- Propulsor delantero -->
  <animation>
   <type>noshadow</type>
@@ -3122,16 +3450,14 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 
 	<!-- **SHADERS** -->
 
-<animation>
-	<type>shader</type>
-	<shader>chrome</shader>
-	<texture>Textures/glass_shader.png</texture>
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-glass</inherits-from>
 	<object-name>Cristales</object-name>
 	<object-name>CristalPuertaSUP</object-name>
-</animation>
+</effect>
 
 <effect>
-	<inherits-from>Aircraft/Cessna337/Models/Effects/reflect-opaque</inherits-from>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-reflect</inherits-from>
 		<object-name>Ceniceros</object-name>
 		<object-name>Manilla</object-name>
 		<object-name>PalancaAcelerador1_01</object-name>
@@ -3152,7 +3478,28 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 </effect>
 
 <effect>
-	<inherits-from>Aircraft/Cessna337/Models/Effects/reflect-bump-spec</inherits-from>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-opaque</inherits-from>
+		<object-name>Parasol</object-name>
+		<object-name>PuertaSUPinterior</object-name>
+		<object-name>PuertaINFinterior</object-name>
+		<object-name>Escalerilla</object-name>
+		<object-name>Piso</object-name>
+		<object-name>Interior</object-name>
+		<object-name>FondoInterior</object-name>
+		<object-name>FrontalInterior</object-name>
+		<object-name>PanelParkBrake</object-name>
+		<object-name>CircuitBreakersPanel</object-name>
+		<object-name>Overhead</object-name>
+		<object-name>ViseraIZQ_01</object-name>
+		<object-name>ViseraDER_01</object-name>
+		<object-name>SoporteViseras</object-name>
+		<object-name>TapaPanel_01</object-name>
+		<object-name>Apoyabrazos</object-name>
+		<object-name>Apoyabrazos_PuertaSUP</object-name>
+</effect>
+
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-bump</inherits-from>
 		<object-name>Alas</object-name>
 		<object-name>AleronDER</object-name>
 		<object-name>AleronIZQ</object-name>
@@ -3192,9 +3539,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<object-name>IntakeDorsal</object-name>
 		<object-name>PuertaINF</object-name>
 		<object-name>PuertaSUP</object-name>
-		<object-name>RuedaDEL</object-name>
-		<object-name>RuedaDER</object-name>
-		<object-name>RuedaIZQ</object-name>
 		<object-name>SoporteAlaDER</object-name>
 		<object-name>SoporteAlaIZQ</object-name>
 		<object-name>TimonDER</object-name>
@@ -3203,5 +3547,12 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<object-name>TrenIZQ_01</object-name>
 		<object-name>VideoCam_03</object-name>
 </effect>
-	
+
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-rubber</inherits-from>
+		<object-name>RuedaDEL</object-name>
+		<object-name>RuedaDER</object-name>
+		<object-name>RuedaIZQ</object-name>
+</effect>
+
 </PropertyList>

@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>Navomatic400A.ac</path>
+ 
+<animation>
+	<type>material</type>
+	<object-name>Knob_Trim</object-name>
+	<emission>
+		<red>0.7</red>
+		<green>0.7</green>
+		<blue>0.7</blue>
+	<factor-prop>controls/lighting/panel-norm</factor-prop> 
+	</emission>
+</animation> 
+
+	<!-- AP ON/OFF
+
+<animation>
+	<type>rotate</type>
+	<object-name>Btn_AP-ON</object-name>
+	<property>/sim/gui/dialogs/autopilot/heading-active</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.002346 </x1-m>
+		<y1-m> 0.0364655</y1-m>
+		<z1-m> 0.018325 </z1-m>
+		<x2-m>-0.002346 </x2-m>
+		<y2-m> 0.0364655</y2-m>
+		<z2-m>-0.018325 </z2-m>
+	</axis>
+</animation>
+<animation>
+	<type>pick</type>
+	<object-name>Btn_AP-ON</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>/sim/gui/dialogs/autopilot/heading-active</property> 
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>  
+			var node = props.globals.getNode("/autopilot/locks/heading", 1);
+				if ( node.getValue() == "dg-heading-hold" ) {
+					node.setValue( "" );
+					} else {
+					node.setValue( "dg-heading-hold" );
+				} 
+			</script>   
+		</binding>
+	</action>
+</animation> 
+
+	NAV ON/OFF
+
+<animation>
+	<type>rotate</type>
+	<object-name>Btn_NAV</object-name>
+	<property>/sim/gui/dialogs/autopilot/dg-heading-hold</property>
+	<condition>
+		<not>
+			<property>/sim/gui/dialogs/autopilot/wing-leveler</property>
+		</not>
+	</condition>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.002346 </x1-m>
+		<y1-m> 0.0364655</y1-m>
+		<z1-m> 0.018325 </z1-m>
+		<x2-m>-0.002346 </x2-m>
+		<y2-m> 0.0364655</y2-m>
+		<z2-m>-0.018325 </z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Btn_NAV</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/heading-active</property>
+			<value>1</value>
+		</binding>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/dg-heading-hold</property>
+			<value>1</value>
+		</binding>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/wing-leveler</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>  
+			var node = props.globals.getNode("/autopilot/locks/heading", 1);
+				if ( node.getValue() == "dg-heading-hold" ) {
+					node.setValue( "" );
+					} else {
+					node.setValue( "dg-heading-hold" );
+				} 
+			</script>   
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/heading-active</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/dg-heading-hold</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>  
+			var node = props.globals.getNode("/autopilot/locks/heading", 1);
+				if ( node.getValue() == "dg-heading-hold" ) {
+					node.setValue( "" );
+					} else {
+					node.setValue( "dg-heading-hold" );
+				} 
+			</script>   
+		</binding>
+
+	</action>
+</animation>
+
+	WINGS LEVEL
+
+<animation>
+	<type>translate</type>
+	<object-name>Knob_Trim</object-name>
+	<property>sim/gui/dialogs/autopilot/heading-active</property>
+	<condition>
+		<not>
+			<property>sim/gui/dialogs/autopilot/dg-heading-hold</property>
+		</not>
+	</condition>
+	<condition>
+		<equals>
+			<property>sim/gui/dialogs/autopilot/wing-leveler</property>
+			<value>1</value>
+		</equals>
+	</condition>
+	<factor>0.01</factor>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Knob_Trim</object-name>
+	<action>
+		<button>0</button> 
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/heading-active</property>
+			<value>1</value>
+		</binding>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/wing-leveler</property>
+			<value>1</value>
+		</binding>
+	</action>
+	<action>
+		<button>1</button> 
+		<repeatable>true</repeatable>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/heading-active</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-set</command>
+			<property>/sim/gui/dialogs/autopilot/wing-leveler</property>
+			<value>0</value>
+		</binding>
+	</action>
+</animation>
+
+	ALT ON/OFF
+
+<animation>
+	<type>rotate</type>
+	<object-name>Btn_ALT</object-name>
+	<property>/sim/gui/dialogs/autopilot/altitude-active</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.002346 </x1-m>
+		<y1-m> 0.0364655</y1-m>
+		<z1-m> 0.018325 </z1-m>
+		<x2-m>-0.002346 </x2-m>
+		<y2-m> 0.0364655</y2-m>
+		<z2-m>-0.018325 </z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Btn_ALT</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>/sim/gui/dialogs/autopilot/altitude-active</property>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			var node = props.globals.getNode("/autopilot/locks/altitude", 1);
+				if ( node.getValue() == "pitch-hold" ) {
+				node.setValue( "" );
+				} else {
+				node.setValue( "pitch-hold" );
+			}
+			</script>
+		</binding>
+	</action>
+</animation>
+
+	PITCH SETTING
+
+<animation>
+	<type>rotate</type>
+	<object-name>Knob_Pitch</object-name>
+	<property>controls/flight/elevator-trim</property>
+	<factor>-360</factor>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+	<center>
+		<x-m>-0.00884</x-m>
+		<y-m>-0.04116</y-m>
+		<z-m> 0.0    </z-m>
+	</center>
+</animation>  
+
+<animation>
+	<type>pick</type>
+	<object-name>Knob_Pitch</object-name>
+	<action>
+		<button>0</button> 
+		<repeatable>true</repeatable>
+		<binding>
+			<condition>
+				<equals>   
+					<property>/sim/gui/dialogs/autopilot/altitude-active</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<command>property-adjust</command>
+			<property>autopilot/settings/target-pitch-deg</property>
+			<step>1</step>
+			<min>-20</min>
+			<max>20</max> 
+		</binding>
+	</action>
+	<action>
+		<button>2</button>    
+		<repeatable>true</repeatable>
+		<binding>
+			<condition>
+				<equals>   
+					<property>/sim/gui/dialogs/autopilot/altitude-active</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<command>property-adjust</command>
+			<property>autopilot/settings/target-pitch-deg</property>
+			<step>-1</step>
+			<min>-20</min>
+			<max>20</max>
+		</binding>
+	</action>
+	<action>
+		<button>3</button> 
+		<repeatable>true</repeatable>
+		<binding>
+			<condition>
+				<equals>  
+					<property>/sim/gui/dialogs/autopilot/altitude-active</property>
+					<value>1</value>
+				</equals>
+			</condition>
+			<command>property-adjust</command>
+			<property>autopilot/settings/target-pitch-deg</property>
+			<step>-1</step>
+			<min>-20</min>
+			<max>20</max>
+		</binding>
+	</action>
+	<action>
+		<button>4</button>     
+		<repeatable>true</repeatable>
+		<binding>
+		<condition>
+			<equals>   
+				<property>/sim/gui/dialogs/autopilot/altitude-active</property>
+				<value>1</value>
+			</equals>
+		</condition>
+		<command>property-adjust</command>
+	 	<property>autopilot/settings/target-pitch-deg</property>
+		<step>1</step>
+		<min>-20</min>
+		<max>20</max>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Knob_Trim</object-name>
+	<property>/autopilot/CENTURYIIB/settings/roll-knob-deg</property>
+	<factor>-1.5</factor>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>0.007956</x-m>
+		<y-m>-0.00116</y-m>
+		<z-m> 0.0    </z-m>
+	</center>
+</animation>
+    
+<animation>
+	<type>pick</type>
+	<object-name>Knob_Trim</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>/autopilot/CENTURYIIB/settings/roll-knob-deg</property>
+			<step>0.0001</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+</animation> -->
+
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Autopilot</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.07</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.03</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m>-0.02</z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+</PropertyList>

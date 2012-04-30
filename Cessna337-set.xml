@@ -4,8 +4,8 @@
 
 <sim>
 	<author>Fernando Espinosa, Pavel Cueto</author>
-	<description>Cessna 337G Super Skymaster</description>
-	<aircraft-version>v20120203</aircraft-version>
+	<description>Cessna 337G Skymaster</description>
+	<aircraft-version>v20120429</aircraft-version>
 	<rating>
 		<FDM type="int">3</FDM>
 		<systems type="int">2</systems>
@@ -14,7 +14,7 @@
 	</rating>
 	<status>early-production</status>
 	<flight-model>jsb</flight-model>
-	<aero>Cessna_337</aero>
+	<aero>Cessna337-JSBSim</aero>
         
 	<model>
 		<path archive="y">Aircraft/Cessna337/Models/Cessna337.xml</path>
@@ -154,14 +154,15 @@
 		</livery>
 	</model> 
 
+	<crashed type="bool">0</crashed>
 	<yokes-visible type="bool">1</yokes-visible>
-
+	
 	<menubar include="Dialogs/Cessna337-menu.xml"/>
 	<help include="Dialogs/Cessna337-help.xml"/>
 
 	<systems>
 		<path>Aircraft/Cessna337/Systems/Cessna337-systems.xml</path>
-		<property-rule n="100">
+		<property-rule>
 			<name>Instrument-Filter</name>
 			<path>Aircraft/Cessna337/Systems/Cessna337-filters.xml</path>
 		</property-rule>
@@ -170,6 +171,11 @@
 	<instrumentation>
 		<path>Aircraft/Cessna337/Systems/Cessna337-instrumentation.xml</path>
 	</instrumentation>
+	
+  <!-- <alarms>
+    <stall-warning type="double">0</stall-warning>
+  </alarms> -->
+		
 </sim>
 
 <gear>
@@ -234,12 +240,21 @@
 		<landing-lights>false</landing-lights>				
 	</lighting>
 </controls>
+
+<Cessna337>
+	<sunshade>
+		<left>0.0</left>
+		<right>0.0</right>
+	</sunshade>
+	<storage-drawer>0.0</storage-drawer>
+</Cessna337>  
   
 <nasal>
 	<Cessna337>
 		<file>Aircraft/Cessna337/Nasal/light.nas</file>
 		<file>Aircraft/Cessna337/Nasal/liveries.nas</file>
 		<file>Aircraft/Cessna337/Nasal/dialogs.nas</file>
+		<file>Aircraft/Cessna337/Nasal/autostart.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/ADF/KR87.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/DME/KI266.nas</file>
 		<script><![CDATA[ki266.new(0);]]></script>
@@ -247,7 +262,7 @@
 	<tyresmoke>
 		<file>Aircraft/Cessna337/Nasal/tyresmoke.nas</file>
 	</tyresmoke>
-		<ELT>
+	<ELT>
 		<file>Aircraft/Cessna337/Models/Instruments/ELT/ELTmessage.nas</file>
 	</ELT>
 </nasal>

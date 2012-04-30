@@ -7,24 +7,24 @@
 		<label>Cessna 337G</label>
 		<enabled type="bool">true</enabled>
 		<item n="1">
-			<label>Aircraft Lights</label>
-			<binding>            
-				<command>dialog-show</command>
-				<dialog-name>lights-dialog</dialog-name>
+			<label>Autostart</label>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/autostart</property>
 			</binding>
 		</item>
 		<item n="2">
-			<label>Engines Management</label>
-			<binding>            
+			<label>Utility</label>
+			<binding>
 				<command>dialog-show</command>
-				<dialog-name>systems-dialog</dialog-name>
+				<dialog-name>utility-dialog</dialog-name>
 			</binding>
 		</item>
 		<item n="3">
-			<label>Select Livery</label>
+			<label>Checklists</label>
 			<binding>
-				<command>nasal</command>
-				<script>aircraft.livery.dialog.toggle()</script>
+				<command>dialog-show</command>
+				<dialog-name>checklists</dialog-name>
 			</binding>
 		</item>
 		<item n="4">
@@ -32,6 +32,54 @@
 			<binding>
 				<command>property-toggle</command>
 				<property>sim/yokes-visible</property>
+			</binding>
+		</item>
+		<item n="5">
+			<label>Select Livery</label>
+			<binding>
+				<command>nasal</command>
+				<script>aircraft.livery.dialog.toggle()</script>
+			</binding>
+		</item>
+	</menu>
+
+  <menu n="3">
+	  <label>Autopilot</label>
+		<name>autopilot</name>  
+		<item>
+			<label>Navomatic Settings (F11)</label>
+			<name>autopilot-settings</name>
+			<!-- <enabled type="bool">false</enabled> -->
+			<binding>
+				<command>dialog-show</command>
+			  <dialog-name>autopilot</dialog-name>  
+			</binding>
+		</item>
+		<item> 
+			<label>Route Manager</label>  
+			<name>route-manager</name>
+			<enabled type="bool">false</enabled>
+			<binding>
+				<command>dialog-show</command>
+				<dialog-name>route-manager</dialog-name>
+			</binding> 
+		</item>
+		<item>
+			<label>Previous Waypoint</label> 
+			<name>previous-waypoint</name>
+			<enabled type="bool">false</enabled>
+			<binding>
+				<command>nasal</command>
+				<script>setprop("/autopilot/route-manager/input", "@previous")</script>
+			</binding>
+		</item>
+		<item>
+			<label>Next Waypoint</label> 
+			<name>next-waypoint</name>
+			<enabled type="bool">false</enabled>
+			<binding>
+				<command>nasal</command>
+				<script>setprop("/autopilot/route-manager/input", "@next")</script>
 			</binding>
 		</item>
 	</menu>
