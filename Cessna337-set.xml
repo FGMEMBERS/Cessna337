@@ -162,7 +162,7 @@
 
 	<systems>
 		<path>Aircraft/Cessna337/Systems/Cessna337-systems.xml</path>
-		<property-rule>
+		<property-rule n="100">
 			<name>Instrument-Filter</name>
 			<path>Aircraft/Cessna337/Systems/Cessna337-filters.xml</path>
 		</property-rule>
