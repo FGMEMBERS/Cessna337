@@ -16,18 +16,19 @@ var aircraft = getprop("sim/description");
 var callsign = getprop("sim/multiplay/callsign");
 var aircraft_id = aircraft ~ ", " ~ callsign;
 
-var ground = getprop("position/altitude-agl-ft");
+var crashed = func() {
+    var ground = getprop("position/altitude-agl-ft");
+    if ((getprop("sim/crashed")) and (ground < 1)) {
+        var lat = getprop("/position/latitude-string");
+        var lon = getprop("/position/longitude-string");
+        var help_string = "ELT AutoMessage: " ~ aircraft_id ~ ", CRASHED AT " ~lat~" LAT "~lon~" LON, REQUESTING SAR SERVICE";
+        setprop("/sim/multiplay/chat", help_string);
+        settimer(crashed, 60);
+    }
+}
 
 #Print an emergency auto-message when aircraft crashes
-setlistener("sim/crashed", func(msg) {
-	if ((getprop("sim/crashed")) and (ground < 1)) {
-		var lat = getprop("/position/latitude-string");
-		var lon = getprop("/position/longitude-string");
-		var help_string = "ELT AutoMessage: " ~ aircraft_id ~ ", CRASHED AT " ~lat~" LAT "~lon~" LON, REQUESTING SAR SERVICE";
-		setprop("/sim/multiplay/chat", help_string);
-		settimer(msg, 1);
-	}
-});
+setlistener("sim/crashed", crashed);
 
 #Print an emergency message when pilot turns on the "armed" button
 setlistener("ELT/armed", func(alrm) {
