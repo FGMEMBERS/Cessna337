@@ -73,3 +73,6 @@ var Shutdown = func{
 	setprop("/systems/electrical/outputs/transponder",0);
 	setprop("/controls/gear/brake-parking",0);
 }
+
+setprop("/systems/electrical/outputs/nav[0]",0);
+setprop("/systems/electrical/outputs/nav[1]",0);
