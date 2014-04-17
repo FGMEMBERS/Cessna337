@@ -102,9 +102,9 @@ License: GPL
 	<object-name>Needle_LOC</object-name>
 	<property>instrumentation/nav[1]/heading-needle-deflection</property>
 	<interpolation>
-		<entry><ind>-10.0</ind><dep>-0.0113</dep></entry>
+		<entry><ind>-10.0</ind><dep>-0.0161</dep></entry>
 		<entry><ind>0.0</ind><dep>0.0</dep></entry>
-		<entry><ind>10.0</ind><dep>0.0113</dep></entry>
+		<entry><ind>10.0</ind><dep>0.0161</dep></entry>
 	</interpolation>
 	<axis>
 		<x>0.0</x>
@@ -118,11 +118,11 @@ License: GPL
 	<object-name>Needle_GS</object-name>
 	<property>instrumentation/nav[1]/gs-needle-deflection</property>
 	<interpolation>
-		<entry><ind>-9999.0</ind><dep>-0.0113</dep></entry>
-		<entry><ind>-10.0</ind><dep>-0.0113</dep></entry>
+		<entry><ind>-9999.0</ind><dep>-0.0170</dep></entry>
+		<entry><ind>-7.0</ind><dep>-0.0170</dep></entry>
 		<entry><ind>0.0</ind><dep>0.0</dep></entry>
-		<entry><ind>10.0</ind><dep>0.0113</dep></entry>
-		<entry><ind>9999.0</ind><dep>0.0113</dep></entry>
+		<entry><ind>7.0</ind><dep>0.0170</dep></entry>
+		<entry><ind>9999.0</ind><dep>0.0170</dep></entry>
 	</interpolation>
 	<axis>
 		<x>0.0</x>
