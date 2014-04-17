@@ -1722,6 +1722,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
     </emission>
 </animation>
 
+<animation>
+	<type>material</type>
+	<object-name>LuzAlrm_01</object-name>
+		<condition>
+    		<property>autopilot/locks/gs-captured</property>
+		</condition>
+    <emission>
+       <red>0.1</red>
+       <green>0.5</green>
+       <blue>0.0</blue>
+    </emission>
+</animation>
+
 <!-- AVIONICS POWER -->
 
 <animation>

@@ -21,7 +21,7 @@ print('February/Febrero 2012');
 var dlg = {
 	checklists: gui.Dialog.new("/sim/gui/dialogs/Cessna337/checklists/dialog","Aircraft/Cessna337/Dialogs/Cessna337-checklists.xml"),
 	utility: gui.Dialog.new("/sim/gui/dialogs/Cessna337/utility/dialog","Aircraft/Cessna337/Dialogs/Cessna337-utility.xml"),
-	autopilot: gui.Dialog.new("/sim/gui/dialogs/Cessna337/autopilot/dialog","Aircraft/Cessna337/Dialogs/Cessna337-autopilot.xml")
+	autopilot: gui.Dialog.new("/sim/gui/dialogs/Cessna337/autopilot/dialog","Aircraft/Cessna337/Dialogs/Navomatic400A-autopilot.xml")
 	};
 fgcommand("loadxml", props.Node.new({filename: "Aircraft/Cessna337/Dialogs/Cessna337-checklists-text.xml", targetnode: "/sim/gui/dialogs/Cessna337/checklists-list"}));
 	

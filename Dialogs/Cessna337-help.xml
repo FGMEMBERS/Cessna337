@@ -27,6 +27,8 @@ See "Equipment/Fuel and Payload" menu to adjust aircraft weights. Being able to 
 The Cessna 337 Skymaster has a constant-speed propeller; so, you can increase propeller pitch to get more airspeed, but with a loss of engine RPM and power.
 
 About knobs, use scroll mouse for gross adjustments, and left-central buttons for fine tunning. When setting radio frequencies, the mouse scroll will adjust integral numbers, and buttons will tune decimals.
+
+There is a (temporary) guide to the Navomatic 400A autopilot in Models/Instruments/Navomatic/NAVOMATIC-400A-README.
 </text>
 
 </PropertyList>
