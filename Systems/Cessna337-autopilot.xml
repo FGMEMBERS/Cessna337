@@ -225,7 +225,7 @@
         <output>autopilot/internal/nav1-course-error-deg</output>
         <config>
             <Kp>4.5</Kp>
-            <Ki>0.01</Ki>
+            <Ki>0.02</Ki>
         </config>
         <min>-45.0</min>
         <max>45.0</max>
@@ -366,8 +366,8 @@
         <input>instrumentation/altimeter/indicated-altitude-ft</input>
         <reference>autopilot/settings/target-altitude-ft</reference>
         <output>autopilot/settings/target-pitch-deg</output>
-        <min>-10.0</min>
-        <max>10.0</max>
+        <min>-3.0</min>
+        <max>3.0</max>
     </filter>
 
     <!-- Glideslope -->
@@ -424,8 +424,8 @@
             <Kp>-4.0</Kp>
             <Ki>-0.25</Ki>
         </config>
-        <min>-10.0</min>
-        <max>10.0</max>
+        <min>-4.0</min>
+        <max>4.0</max>
     </pi-simple-controller>
 
     <!-- Elevator Servo Controller -->

@@ -95,7 +95,7 @@ exactly the same as the 3D panel.
 General Notes
 -------------
 
-The Navomatic 400A describes how a VOR radial is intercepted and this
+The Navomatic 400A manual describes how a VOR radial is intercepted and this
 Flightgear simulation simulates that. When the course deflection is
 greater than 10 degrees (full scale on the CDI), the autopilot will turn
 to intercept at 45 degrees. When the deflection goes below 10 degrees, it 
@@ -125,4 +125,3 @@ engagement. Alternatively, you can take off with the push-pull dial pushed
 in, heading bug set to runway heading and NAV switch off. Note that if you do
 not move the pitch wheel before takeoff, the autopilot will level your pitch
 when you turn the autopilot on.
-
