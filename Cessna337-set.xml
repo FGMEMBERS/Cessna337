@@ -284,6 +284,7 @@
 		<file>Aircraft/Cessna337/Nasal/liveries.nas</file>
 		<file>Aircraft/Cessna337/Nasal/dialogs.nas</file>
 		<file>Aircraft/Cessna337/Nasal/autostart.nas</file>
+		<file>Aircraft/Cessna337/Models/Instruments/Transponder/KT76A.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/ADF/KR87.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/DME/KI266.nas</file>
 		<script><![CDATA[ki266.new(0);]]></script>
@@ -327,6 +328,17 @@
 		<audio-btn type="bool">false</audio-btn>
 		<volume type="double">0</volume>
 	</nav>
+    <transponder>
+        <powered type="bool">false</powered>
+        <inputs>
+            <knob-mode type="int">0</knob-mode>
+        </inputs>
+        <outputs>
+            <ident-light-on type="bool">false</ident-light-on>
+            <power-light-on type="bool">false</power-light-on>
+        </outputs>
+        <show-radar-in-range type="bool">false</show-radar-in-range>
+    </transponder>
 </instrumentation>
 
 	<!-- configuracion teclado -->
