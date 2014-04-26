@@ -292,6 +292,9 @@
     <Navomatic>
 		<file>Aircraft/Cessna337/Models/Instruments/Navomatic/navomatic.nas</file>
     </Navomatic>
+    <Hobbs>
+		<file>Aircraft/Cessna337/Models/Instruments/Hobbs/hobbs.nas</file>
+    </Hobbs>
 	<tyresmoke>
 		<file>Aircraft/Cessna337/Nasal/tyresmoke.nas</file>
 	</tyresmoke>
@@ -328,6 +331,14 @@
 		<audio-btn type="bool">false</audio-btn>
 		<volume type="double">0</volume>
 	</nav>
+    <hobbs-meter>
+        <seconds type="int"/>
+        <thousands type="int"/>
+        <hundreds type="int"/>
+        <tens type="int"/>
+        <hours type="int"/>
+        <tenths type="int"/>
+    </hobbs-meter>
     <transponder>
         <powered type="bool">false</powered>
         <inputs>
