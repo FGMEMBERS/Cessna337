@@ -314,20 +314,22 @@
 		<power-btn type="bool">0</power-btn>
 	</dme>
 	<comm n="0">
-		<volume type="double">0</volume>
+		<power-btn type="bool">true</power-btn>
+		<volume type="double">1.0</volume>
 		<test-btn type="bool">false</test-btn>
 	</comm>
 	<nav n="0">
-		<power-btn type="bool">0</power-btn>
+		<power-btn type="bool">false</power-btn>
 		<audio-btn type="bool">false</audio-btn>
 		<volume type="double">0</volume>
 	</nav>
 	<comm n="1">
-		<volume type="double">0</volume>
+		<power-btn type="bool">true</power-btn>
+		<volume type="double">1.0</volume>
 		<test-btn type="bool">false</test-btn>
 	</comm>
 	<nav n="1">
-		<power-btn type="bool">0</power-btn>
+		<power-btn type="bool">false</power-btn>
 		<audio-btn type="bool">false</audio-btn>
 		<volume type="double">0</volume>
 	</nav>

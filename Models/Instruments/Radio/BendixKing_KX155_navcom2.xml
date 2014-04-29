@@ -19,7 +19,7 @@ Settings for use as COMM1/NAV1
 <params>
 	<comm-serviceable>instrumentation/comm[1]/serviceable</comm-serviceable>
 	<nav-serviceable>instrumentation/nav[1]/serviceable</nav-serviceable>
-	<power>instrumentation/nav[1]/power-btn</power>
+	<power>instrumentation/comm[1]/power-btn</power>
 
 	<comm-frq-swp>instrumentation/comm[1]/frq-swap-btn</comm-frq-swp>
 	<comm-frq-selected>instrumentation/comm[1]/frequencies/selected-mhz</comm-frq-selected>
