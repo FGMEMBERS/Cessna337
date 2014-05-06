@@ -56,6 +56,8 @@ var RadarSimulator = {
         m.index = 0;
         m.active = 0;
 
+        m._generatePingPattern();
+
         return m;
     },
 
