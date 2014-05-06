@@ -286,8 +286,8 @@
 		<file>Aircraft/Cessna337/Nasal/autostart.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/Transponder/KT76A.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/ADF/KR87.nas</file>
-		<file>Aircraft/Cessna337/Models/Instruments/DME/KI266.nas</file>
-		<script><![CDATA[ki266.new(0);]]></script>
+		<file>Aircraft/Cessna337/Models/Instruments/DME/KN62A.nas</file>
+		<script><![CDATA[KN62A.new(0);]]></script>
 	</Cessna337>
     <Navomatic>
 		<file>Aircraft/Cessna337/Models/Instruments/Navomatic/navomatic.nas</file>
@@ -305,13 +305,14 @@
 
 <instrumentation>
 	<adf n="0">
-		<power-btn type="bool">0</power-btn>
+		<power-btn type="bool">true</power-btn>
 		<volume-norm type="double">0</volume-norm>
 		<adf-btn type="bool">true</adf-btn>
 		<mode type="string">adf</mode>
 	</adf>
 	<dme>
-		<power-btn type="bool">0</power-btn>
+		<power-btn type="bool">true</power-btn>
+		<mode-btn type="int">0</mode-btn>
 	</dme>
 	<comm n="0">
 		<power-btn type="bool">true</power-btn>
