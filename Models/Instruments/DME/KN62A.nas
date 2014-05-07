@@ -2,6 +2,17 @@
 #
 # KN62A DME Support
 #
+# Usage:
+#     KN62A.new(index: 0, rmtIndex: 0);
+#
+# For multiple DME receivers, vary the 'index' argument. To connect to 
+# different NAV radios for DME remote operation, vary the rmtIndex argument.
+#
+# The default is to use a zero index, so KN62A.new() creates a single DME
+# receiver with NAV[0] as the remote.
+#
+# ------------------------------------------------------------------------------
+#
 # Copyright (c) 2014, Richard Senior
 #
 # This program is free software; you can redistribute it and/or
@@ -45,8 +56,8 @@ var KN62A = {
 
     # Constructor
     #
-    new: func(index) {
-        var m = {parents: [KN62A], index: index};
+    new: func(index = 0, rmtIndex = 0) {
+        var m = {parents: [KN62A], index: index, rmtIndex: rmtIndex};
 
         var instrumentationN = props.globals.getNode('instrumentation');
         m.rootN = instrumentationN.getChild('dme', index);
@@ -55,6 +66,10 @@ var KN62A = {
 
         var freqN = m.rootN.getChild('frequencies');
         m.internalFreqN = freqN.initNode('internal-mhz', 0.0); 
+
+        # Remote frequency comes from one of the NAV radios
+        var rmtN = instrumentationN.getChild('nav', rmtIndex);
+        m.rmtFreqN = rmtN.getChild('frequencies').getChild('selected-mhz');
     
         m.leftDisplayN = m.rootN.initNode('left-display', 0, 'INT');
         m.leftDotN = m.rootN.initNode('left-dot', 0, 'BOOL');
@@ -67,10 +82,9 @@ var KN62A = {
         m.minAnnunciatorN = m.rootN.initNode('min-annunciator', 1, 'BOOL');
         m.rmtAnnunciatorN = m.rootN.initNode('rmt-annunciator', 1, 'BOOL');
         
-        # Initialize the internal frequency to the NAV frequency. It's an
+        # Initialize the internal frequency to the remote NAV frequency. It's an
         # arbitrary value but this makes the most sense of any value.
-        var navFreq = getprop('instrumentation/nav/frequencies/selected-mhz');
-        m.internalFreqN.setValue(navFreq);
+        m.internalFreqN.setValue(m.rmtFreqN.getValue());
 
         setlistener(
             node: m.modeBtnN.getPath(), 
@@ -155,7 +169,7 @@ var KN62A = {
     setSource: func(sourceType) {
         var sourceN = me.rootN.getChild('frequencies').getChild('source');
         if (sourceType == SourceType.remote)
-            sourceN.setValue('instrumentation/nav/frequencies/selected-mhz');
+            sourceN.setValue(me.rmtFreqN.getPath());
         else
             sourceN.setValue(me.internalFreqN.getPath());
     },

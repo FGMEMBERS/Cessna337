@@ -284,23 +284,25 @@
 		<file>Aircraft/Cessna337/Nasal/liveries.nas</file>
 		<file>Aircraft/Cessna337/Nasal/dialogs.nas</file>
 		<file>Aircraft/Cessna337/Nasal/autostart.nas</file>
-		<file>Aircraft/Cessna337/Models/Instruments/Transponder/KT76A.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/ADF/KR87.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/DME/KN62A.nas</file>
-		<script><![CDATA[KN62A.new(0);]]></script>
-	</Cessna337>
-    <Navomatic>
+        <file>Aircraft/Cessna337/Models/Instruments/ELT/ELTmessage.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/Navomatic/navomatic.nas</file>
-    </Navomatic>
-    <Hobbs>
-		<file>Aircraft/Cessna337/Models/Instruments/Hobbs/hobbs.nas</file>
-    </Hobbs>
+		<file>Aircraft/Cessna337/Models/Instruments/Transponder/KT76A.nas</file>
+		<script><![CDATA[
+            KN62A.new();
+            KT76A.new();
+        ]]></script>
+	</Cessna337>
+    <HobbsMeter>
+        <file>Aircraft/Cessna337/Models/Instruments/Hobbs/hobbs.nas</file>
+		<script><![CDATA[
+            HobbsMeter.new(index: 0, switchPath: 'gear/gear/wow', inverted: 1);
+        ]]></script>
+    </HobbsMeter>
 	<tyresmoke>
 		<file>Aircraft/Cessna337/Nasal/tyresmoke.nas</file>
 	</tyresmoke>
-	<ELT>
-		<file>Aircraft/Cessna337/Models/Instruments/ELT/ELTmessage.nas</file>
-	</ELT>
 </nasal>
 
 <instrumentation>
@@ -310,7 +312,7 @@
 		<adf-btn type="bool">true</adf-btn>
 		<mode type="string">adf</mode>
 	</adf>
-	<dme>
+	<dme n="0">
 		<power-btn type="bool">true</power-btn>
 		<mode-btn type="int">0</mode-btn>
 	</dme>
@@ -334,24 +336,10 @@
 		<audio-btn type="bool">false</audio-btn>
 		<volume type="double">0</volume>
 	</nav>
-    <hobbs-meter>
-        <seconds type="int"/>
-        <thousands type="int"/>
-        <hundreds type="int"/>
-        <tens type="int"/>
-        <hours type="int"/>
-        <tenths type="int"/>
-    </hobbs-meter>
     <transponder>
-        <powered type="bool">false</powered>
         <inputs>
             <knob-mode type="int">0</knob-mode>
         </inputs>
-        <outputs>
-            <ident-light-on type="bool">false</ident-light-on>
-            <power-light-on type="bool">false</power-light-on>
-        </outputs>
-        <show-radar-in-range type="bool">false</show-radar-in-range>
     </transponder>
 </instrumentation>
 

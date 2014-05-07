@@ -12,6 +12,13 @@
 # and towers, the ping light flickers frequently. In a remote area, there
 # are fewer pings.
 #
+# Usage:
+#     KT76A.new(index: 0)
+#
+# For a single transponder, the argument can be omitted and defaults to zero.
+#
+# ------------------------------------------------------------------------------
+#
 # Copyright (c) 2014, Richard Senior
 #
 # This program is free software; you can redistribute it and/or
@@ -68,8 +75,8 @@ var RadarSimulator = {
     start: func {
         if (me.active) return;
         me.active = 1;
-        me._refresh(me);
-        me._sweep(me);
+        me._refresh();
+        me._sweep();
     },
 
     # Stop the radar simulation. Does nothing if already stopped.
@@ -145,21 +152,21 @@ var RadarSimulator = {
 
     # Regenerate the ping pattern, but only when moving.
     #
-    _refresh: func(me) {
+    _refresh: func {
         if (!me.active) return;
         if (me._moving())
             me._generatePingPattern();
-        settimer(func me._refresh(me), 120);
+        settimer(func { me._refresh() }, 120);
     },
 
     # Radar sweep. Iterates over the ping pattern and calls the delegate
     # with the contents of each slot. This will be the ICAO code of the 
     # airport or an empty string.
     #
-    _sweep: func(me) {
+    _sweep: func {
         if (!me.active) return;
         me.delegate.ping(me._nextPing());
-        settimer(func me._sweep(me), me.pulseTime);
+        settimer(func { me._sweep() }, me.pulseTime);
     },
 };
 
@@ -175,35 +182,39 @@ var KT76A = {
 
     # Constructor:
     #
-    new: func(transponderPath = 'instrumentation/transponder') {
-        var m = { 
-            parents: [KT76A], 
-            transponderPath: transponderPath 
-        };
-        m.transponderN = props.globals.getNode(transponderPath);
+    new: func(index = 0) {
+        var m = {parents: [KT76A], index: index};
 
-        m.inputsN = m.transponderN.getChild('inputs');
-        m.outputsN = m.transponderN.getChild('outputs');
+        var instrumentationN = props.globals.getNode('instrumentation');
+        m.rootN = instrumentationN.getChild('transponder', index, 1);
+
+        m.inputsN = m.rootN.getChild('inputs', 0, 1);
+        m.outputsN = m.rootN.getChild('outputs', 0, 1);
         m.radar = RadarSimulator.new(delegate: m);
 
-        settimer(func m.electricalPollFunc(m), 0.1);
+        m.rootN.initNode('powered', 0, 'BOOL');
+        m.outputsN.initNode('ident-light-on', 0, 'BOOL');
+        m.outputsN.initNode('power-light-on', 0, 'BOOL');
+
+        settimer(func { m.electricalPollFunc() }, 0.1);
 
         setlistener(
-            node: m.transponderN.getChild('ident').getPath(), 
-            fn: func m.identListenerFunc(m),
+            node: m.rootN.getChild('ident').getPath(),
+            fn: func { m.identListenerFunc() },
             runtime: 0
         );
         setlistener(
-            node: m.transponderN.getChild('powered').getPath(), 
-            fn: func m.poweredListenerFunc(m),
+            node: m.rootN.getChild('powered').getPath(),
+            fn: func { m.poweredListenerFunc() },
             runtime: 0
         );
         setlistener(
             node: m.inputsN.getChild('knob-mode').getPath(), 
-            fn: func m.transponderModeListenerFunc(m),
+            fn: func { m.transponderModeListenerFunc() },
             runtime: 0
         );
 
+        print('KT76A Transponder #', index, ' loaded');
         return m;
     },
 
@@ -214,7 +225,7 @@ var KT76A = {
     },
 
     getIdent: func {
-        return me.transponderN.getChild('ident').getValue();
+        return me.rootN.getChild('ident').getValue();
     },
 
     getIdentLight: func {
@@ -278,30 +289,24 @@ var KT76A = {
     # Electrical output seems to vary with frame rate, so it is cheaper to
     # poll for changes rather than use a listener.
     #
-    electricalPollFunc: func(me) {
-        var powered = me.transponderN.getChild('powered').getValue();
+    electricalPollFunc: func {
+        var powered = me.rootN.getChild('powered').getValue();
         if ((powered and !me.hasPower()) or (!powered and me.hasPower())) {
-            me.transponderN.getChild('powered').setValue(me.hasPower());
+            me.rootN.getChild('powered').setValue(me.hasPower());
         }
-        settimer(func me.electricalPollFunc(me), 0.1);
+        settimer(func { me.electricalPollFunc() }, 0.1);
     },
 
-    identListenerFunc: func(me) {
+    identListenerFunc: func {
         me._configure();
     },
 
-    poweredListenerFunc: func(me) {
+    poweredListenerFunc: func {
         me._configure();
     },
 
-    transponderModeListenerFunc: func(me) {
+    transponderModeListenerFunc: func {
         me._configure();
     },
 
 };
-
-setlistener('sim/signals/fdm-initialized', func() {
-    KT76A.new();
-    print("KT76A Transponder loaded");
-});
-

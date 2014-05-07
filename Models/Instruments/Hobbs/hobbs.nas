@@ -10,10 +10,10 @@
 # The HobbsMeter class can be constructed with different switches, e.g.
 #
 # Airborne:
-#   HobbsMeter.new(switchPath: 'gear/gear/wow', inverted: 1);
+#   HobbsMeter.new(index: 0, switchPath: 'gear/gear/wow', inverted: 1);
 #
 # Engines running:
-#   HobbsMeter.new(switchPath: 'engines/engine/running', inverted: 0);
+#   HobbsMeter.new(index: 0, switchPath: 'engines/engine/running', inverted: 0);
 #
 # Note the use of the inverted parameter to invert the sense of a property
 # so that the Hobbs meter runs when the property is false.
@@ -53,28 +53,39 @@ var HobbsMeter = {
     # Constructor:
     # switchPath -- property tree path that switches the timer on and off
     # inverted -- inverts switch so that when it goes false, timer starts
-    # hobbsNode -- root property for this meter. (Must match model XML file).
+    # rootNode -- root property for this meter. (Must match model XML file).
     #
-    new: func(switchPath, inverted, hobbsPath='instrumentation/hobbs-meter') {
+    new: func(index, switchPath, inverted) {
         var m = { 
             parents: [HobbsMeter], 
+            index: index,
             switchPath: switchPath, 
             inverted: inverted 
         };
+        m.index = index;
         m.switchPath = switchPath;
         m.inverted = inverted;
-        m.hobbsN = props.globals.getNode(hobbsPath);
 
-        var secondsPath = m.hobbsN.getChild('seconds').getPath();
+        var instrumentationN = props.globals.getNode('instrumentation');
+        m.rootN = instrumentationN.getChild('hobbs-meter', index, 1);
 
-        # Timer for the Hobbs meter. Most Hobbs meters only show tenths of
-        # an hour so there is no need to update the Hobbs time too often.
-        m.timer = aircraft.timer.new(prop: secondsPath, res: 30, save: 1);
+        # Ensure the display nodes are the correct type.
+        m.rootN.initNode('tenths', 0, 'INT');
+        m.rootN.initNode('hours', 0, 'INT');
+        m.rootN.initNode('tens', 0, 'INT');
+        m.rootN.initNode('hundreds', 0, 'INT');
+        m.rootN.initNode('thousands', 0, 'INT');
+
+        # The seconds node is driven by the timer and holds the Hobbs time.
+        var secondsN = m.rootN.initNode('seconds', 0, 'INT');
+        var secondsPath = secondsN.getPath();
+
+        m.hobbsTimer = aircraft.timer.new(prop: secondsPath, res: 30, save: 1);
 
         # Listener to update the digit properties when the meter value changes
         setlistener(
             node: secondsPath, 
-            fn: func m._hobbsListenerFunc(m), 
+            fn: func { m._hobbsListenerFunc() },
             init: 1, 
             runtime: 0
         );
@@ -82,15 +93,16 @@ var HobbsMeter = {
         # Listener to start and stop the meter when the switch changes
         setlistener(
             node: m.switchPath, 
-            fn: func m._switchListenerFunc(m), 
+            fn: func { m._switchListenerFunc() },
             runtime: 0
         );
 
+        print('Hobbs Meter #', index, ' loaded');
         return m;        
     },
 
     getHobbsSeconds: func {
-        return me.hobbsN.getChild('seconds').getValue();
+        return me.rootN.getChild('seconds').getValue();
     },
 
     # Updates a digit of the Hobbs meter.
@@ -98,7 +110,7 @@ var HobbsMeter = {
     # scale -- the scale of the corresponding digit relative to seconds
     #
     _update: func(name, scale) {
-        var digitN = me.hobbsN.getChild(name);
+        var digitN = me.rootN.getChild(name);
         digitN.setIntValue(math.mod(int(me.getHobbsSeconds() / scale), 10));
     },
 
@@ -106,7 +118,7 @@ var HobbsMeter = {
 
     # Called when the Hobbs timer changes value.
     #
-    _hobbsListenerFunc: func(me) {
+    _hobbsListenerFunc: func {
         me._update(name: 'tenths', scale: Scale.tenths);
         me._update(name: 'hours', scale: Scale.hours);
         me._update(name: 'tens', scale: Scale.tens);
@@ -116,21 +128,14 @@ var HobbsMeter = {
 
     # Called when the switch property changes value.
     #
-    _switchListenerFunc: func(me) {
+    _switchListenerFunc: func {
         var switch = getprop(me.switchPath);
         if (me.inverted) 
             switch = !switch;
         if (switch)
-            me.timer.start();
+            me.hobbsTimer.start();
         else
-            me.timer.stop();
+            me.hobbsTimer.stop();
     },
+
 };
-
-setlistener('sim/signals/fdm-initialized', func() {
-    # Create a Hobbs meter based on a sensor in the nose wheel. The timer
-    # should start when wow is false, so it is an inverted switch.
-    HobbsMeter.new(switchPath: 'gear/gear/wow', inverted: 1);
-    print('Hobbs Meter loaded');
-});
-
