@@ -424,8 +424,8 @@
             <Kp>-4.0</Kp>
             <Ki>-0.25</Ki>
         </config>
-        <min>-4.0</min>
-        <max>4.0</max>
+        <min>-10.0</min>
+        <max>3.0</max>
     </pi-simple-controller>
 
     <!-- Elevator Servo Controller -->
