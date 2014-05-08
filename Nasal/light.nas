@@ -26,3 +26,15 @@ aircraft.light.new("sim/model/Cessna337/lighting/strobes", [0.015, 1.985], strob
 # beacons ===========================================================
 var beacon_switch = props.globals.getNode("controls/lighting/beacon", 1);
 aircraft.light.new("sim/model/Cessna337/lighting/beacon-top", [0.10, 0.90], beacon_switch);
+
+var autoInstrumentDimmingListener = func {
+    var panel = getprop('controls/lighting/panel-norm');
+    var dimming = panel < 0.1 ? 0.0 : 0.7 - panel;
+    if (dimming < 0) dimming = 0.0;
+    setprop('instrumentation/comm[0]/dimming-norm', dimming);
+    setprop('instrumentation/comm[1]/dimming-norm', dimming);
+    setprop('instrumentation/dme[0]/dimming-norm', dimming);
+    setprop('instrumentation/adf[0]/dimming-norm', dimming);
+}
+
+setlistener('controls/lighting/panel-norm', autoInstrumentDimmingListener);

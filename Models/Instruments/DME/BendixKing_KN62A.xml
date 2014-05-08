@@ -15,6 +15,7 @@ License: GPL
     <mode-btn>instrumentation/dme[0]/mode-btn</mode-btn>
     <electrical>systems/electrical/outputs/dme</electrical>
     <serviceable>instrumentation/dme[0]/serviceable</serviceable>
+    <dimming>instrumentation/dme[0]/dimming-norm</dimming>
     <in-range>instrumentation/dme[0]/in-range</in-range>
     <dme-frq-internal>instrumentation/dme[0]/frequencies/internal-mhz</dme-frq-internal>
     <left-display>instrumentation/dme[0]/left-display</left-display>
@@ -58,12 +59,13 @@ License: GPL
     <object-name>Digit_KT</object-name>
     <object-name>Digit_MHZ</object-name>
     <object-name>Digit_MIN</object-name>
-    <emission>
-        <red>0.7</red>
-        <green>0.7</green>
-        <blue>0.7</blue>
-        <property alias="../../params/power-btn"/>
-    </emission>
+	<emission>
+		<red>-1.0</red>
+		<green>-1.0</green>
+		<blue>-1.0</blue>
+		<factor-prop alias="../../../params/dimming"/>
+		<offset>1</offset>
+	</emission>
 </animation>
 
 <!-- POWER SWITCH -->
