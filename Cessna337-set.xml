@@ -1,0 +1,447 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<sim>
+	<author>Fernando Espinosa, Pavel Cueto</author>
+	<description>Cessna 337G Skymaster</description>
+	<aircraft-version>v20120429</aircraft-version>
+	<rating>
+		<FDM type="int">3</FDM>
+		<systems type="int">3</systems>
+		<cockpit type="int">5</cockpit>
+		<model type="int">5</model>
+	</rating>
+	<status>early-production</status>
+	<flight-model>jsb</flight-model>
+	<aero>Cessna337-JSBSim</aero>
+        
+	<model>
+		<path archive="y">Aircraft/Cessna337/Models/Cessna337.xml</path>
+	</model>
+
+	<!-- Configuracion de la vista del piloto -->
+
+	<view>
+		<internal archive="y">true</internal>
+		<config>
+			<x-offset-m archive="y">-0.270</x-offset-m>  <!-- Lateral -->
+			<y-offset-m archive="y"> 0.372</y-offset-m>  <!-- Altura -->
+			<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
+			<pitch-offset-deg>-8</pitch-offset-deg>
+			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			<limits>
+				<enabled type="bool">true</enabled>
+				<left>
+					<heading-max-deg type="double">165</heading-max-deg>
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</left>
+				<right>
+					<heading-max-deg type="double">165</heading-max-deg> 
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</right>
+			</limits>
+		</config>
+	</view>
+
+	<view n="100">
+		<name>Copilot view</name>
+		<type>lookfrom</type>
+		<internal type="bool">true</internal>
+		<config>
+			<from-model type="bool">true</from-model>
+			<x-offset-m archive="y"> 0.270</x-offset-m>  <!-- Lateral -->
+			<y-offset-m archive="y"> 0.372</y-offset-m>  <!-- Altura -->
+			<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
+			<pitch-offset-deg>-8</pitch-offset-deg>
+			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			<limits>
+				<enabled type="bool">true</enabled>
+				<left>
+					<heading-max-deg type="double">165</heading-max-deg>
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</left>
+				<right>
+					<heading-max-deg type="double">165</heading-max-deg> 
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</right>
+			</limits>
+		</config>
+	</view>
+
+	<view n="101">
+		<name>Passenger view</name>
+		<type>lookfrom</type>
+		<internal type="bool">true</internal>
+		<config>
+			<from-model type="bool">true</from-model>
+			<x-offset-m archive="y"> 0.270</x-offset-m>  <!-- Lateral -->
+			<y-offset-m archive="y"> 0.377</y-offset-m>  <!-- Altura -->
+			<z-offset-m archive="y"> 0.600</z-offset-m>  <!-- Profundidad -->
+			<pitch-offset-deg>-8</pitch-offset-deg>
+			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			<limits>
+				<enabled type="bool">true</enabled>
+				<left>
+					<heading-max-deg type="double">165</heading-max-deg>
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</left>
+				<right>
+					<heading-max-deg type="double">165</heading-max-deg> 
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</right>
+			</limits>
+		</config>
+	</view>
+
+	<view n="102">
+		<name>UTILITY VIEW</name>
+		<type>lookfrom</type>
+		<internal type="bool">true</internal>
+		<config>
+			<from-model type="bool">true</from-model>
+			<x-offset-m archive="y"> 0    </x-offset-m>  <!-- Lateral -->
+			<y-offset-m archive="y"> 0.377</y-offset-m>  <!-- Altura -->
+			<z-offset-m archive="y">-0.160</z-offset-m>  <!-- Profundidad -->
+			<pitch-offset-deg>-8</pitch-offset-deg>
+			<default-field-of-view-deg type="double">60.0</default-field-of-view-deg>
+			<limits>
+				<enabled type="bool">false</enabled>
+				<left>
+					<heading-max-deg type="double">165</heading-max-deg>
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</left>
+				<right>
+					<heading-max-deg type="double">165</heading-max-deg> 
+					<x-offset-max-m type="double">0.15</x-offset-max-m>
+					<x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+				</right>
+			</limits>
+		</config>
+	</view>
+
+	<startup>
+		<splash-texture>Aircraft/Cessna337/Cessna337-splash.png</splash-texture>
+	</startup>
+
+	<gui>
+		<style>
+			<colors>
+				<splash-screen>
+					<red>  1</red>
+					<green>1</green>
+					<blue> 1</blue>
+				</splash-screen>
+			</colors>
+		</style>
+	</gui>
+
+	<sound>
+		<path>Aircraft/Cessna337/Cessna337-sound.xml</path>
+	</sound>
+  
+	<model>
+		<path>Aircraft/Cessna337/Models/Cessna337.xml</path>
+		<livery>
+			<file type="string">Default</file>
+		</livery>
+	</model> 
+
+	<crashed type="bool">0</crashed>
+	<yokes-visible type="bool">1</yokes-visible>
+	
+	<menubar include="Dialogs/Cessna337-menu.xml"/>
+	<help include="Dialogs/Cessna337-help.xml"/>
+
+	<systems>
+		<path>Aircraft/Cessna337/Systems/Cessna337-systems.xml</path>
+        <autopilot>
+            <path>Aircraft/Cessna337/Systems/Cessna337-autopilot.xml</path>
+        </autopilot>
+		<property-rule n="100">
+			<name>Instrument-Filter</name>
+			<path>Aircraft/Cessna337/Systems/Cessna337-filters.xml</path>
+		</property-rule>
+	</systems>
+
+	<instrumentation>
+		<path>Aircraft/Cessna337/Systems/Cessna337-instrumentation.xml</path>
+	</instrumentation>
+
+  <!-- <alarms>
+    <stall-warning type="double">0</stall-warning>
+  </alarms> -->
+		
+</sim>
+
+<autopilot>
+    <locks>
+        <altitude type="string"></altitude>
+        <heading type="string"></heading>
+    </locks>
+    <settings>
+        <bank-auto type="double">20.0</bank-auto>
+        <bank-select type="double">0</bank-select>
+        <pitch-select type="double">0</pitch-select>
+    </settings>
+</autopilot>
+
+<gear>
+	<gear n="0">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+		<caster-angle-deg-damped type="double">0</caster-angle-deg-damped>
+	</gear>
+	<gear n="1">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+	</gear>
+	<gear n="2">
+		<tyre-smoke type="int">0</tyre-smoke>
+		<sprayspeed-ms type="double">0</sprayspeed-ms>
+		<spray-density type="double">0</spray-density>
+	</gear>
+</gear>
+   
+<controls>
+	<engines>
+		<engine n="0">
+			<cowl-flaps-norm>0</cowl-flaps-norm>
+			<master-bat>false</master-bat>
+			<master-alt>false</master-alt>
+			<primer type="bool">false</primer>
+			<fuel-pump type="bool">false</fuel-pump>
+		</engine>
+		<engine n="1">
+			<cowl-flaps-norm>0</cowl-flaps-norm>
+			<!-- <master-bat>false</master-bat> -->
+			<master-alt>false</master-alt>
+			<primer type="bool">false</primer>
+			<fuel-pump type="bool">false</fuel-pump>
+		</engine>
+	</engines>
+
+	<electric>
+		<external-power type ="bool">false</external-power>
+		<battery-switch type ="bool">false</battery-switch>
+	</electric>
+
+	<gear>
+		<brake-parking>1</brake-parking>
+	</gear>
+
+	<door>0.0</door>
+
+	<flight> <!-- los valores ajustan los grados del trim en el inicio*pero no la sesibilidad de ellos -->
+		<aileron-trim type="double">0.0</aileron-trim>
+		<elevator-trim type="double">0.0</elevator-trim>
+		<rudder-trim type="double">0.0</rudder-trim> 
+	</flight>
+
+	<lighting>
+		<beacon type="bool">false</beacon>
+		<strobe type="bool">false</strobe>
+		<nav-lights type="bool">false</nav-lights>
+		<taxi-light>false</taxi-light>
+		<landing-lights>false</landing-lights>				
+	</lighting>
+</controls>
+
+<Cessna337>
+	<sunshade>
+		<left>0.0</left>
+		<right>0.0</right>
+	</sunshade>
+	<storage-drawer>0.0</storage-drawer>
+</Cessna337>  
+  
+<Navomatic400A>
+    <switches>
+        <ap-on type="bool">false</ap-on>
+        <alt type="bool">false</alt>
+        <nav type="bool">false</nav>
+    </switches>
+    <push-pull-dial>
+        <pulled-out type="bool">true</pulled-out>
+    </push-pull-dial>
+    <bank-limit type="double">25.0</bank-limit>
+    <powered type="bool">false</powered>
+</Navomatic400A>
+
+<nasal>
+	<Cessna337>
+		<file>Aircraft/Cessna337/Nasal/autopilot.nas</file>
+		<file>Aircraft/Cessna337/Nasal/light.nas</file>
+		<file>Aircraft/Cessna337/Nasal/liveries.nas</file>
+		<file>Aircraft/Cessna337/Nasal/dialogs.nas</file>
+		<file>Aircraft/Cessna337/Nasal/autostart.nas</file>
+		<file>Aircraft/Cessna337/Models/Instruments/ADF/KR87.nas</file>
+		<file>Aircraft/Cessna337/Models/Instruments/DME/KN62A.nas</file>
+        <file>Aircraft/Cessna337/Models/Instruments/ELT/ELTmessage.nas</file>
+		<file>Aircraft/Cessna337/Models/Instruments/Navomatic/navomatic.nas</file>
+		<file>Aircraft/Cessna337/Models/Instruments/Transponder/KT76A.nas</file>
+		<script><![CDATA[
+            KN62A.new();
+            KT76A.new();
+        ]]></script>
+	</Cessna337>
+    <HobbsMeter>
+        <file>Aircraft/Cessna337/Models/Instruments/Hobbs/hobbs.nas</file>
+		<script><![CDATA[
+            HobbsMeter.new(index: 0, switchPath: 'gear/gear/wow', inverted: 1);
+        ]]></script>
+    </HobbsMeter>
+	<tyresmoke>
+		<file>Aircraft/Cessna337/Nasal/tyresmoke.nas</file>
+	</tyresmoke>
+</nasal>
+
+<instrumentation>
+	<adf n="0">
+		<power-btn type="bool">true</power-btn>
+		<volume-norm type="double">0</volume-norm>
+		<adf-btn type="bool">true</adf-btn>
+		<mode type="string">adf</mode>
+	</adf>
+	<dme n="0">
+		<power-btn type="bool">true</power-btn>
+		<mode-btn type="int">0</mode-btn>
+	</dme>
+	<comm n="0">
+		<power-btn type="bool">true</power-btn>
+		<volume type="double">1.0</volume>
+		<test-btn type="bool">false</test-btn>
+	</comm>
+	<nav n="0">
+		<power-btn type="bool">false</power-btn>
+		<audio-btn type="bool">false</audio-btn>
+		<volume type="double">0</volume>
+	</nav>
+	<comm n="1">
+		<power-btn type="bool">true</power-btn>
+		<volume type="double">1.0</volume>
+		<test-btn type="bool">false</test-btn>
+	</comm>
+	<nav n="1">
+		<power-btn type="bool">false</power-btn>
+		<audio-btn type="bool">false</audio-btn>
+		<volume type="double">0</volume>
+	</nav>
+    <transponder>
+        <inputs>
+            <knob-mode type="int">0</knob-mode>
+        </inputs>
+    </transponder>
+</instrumentation>
+
+	<!-- configuracion teclado -->
+
+<input>
+	<keyboard>
+		<key n="100">
+			<name>d</name>
+			<desc>Open/Close door</desc>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("controls/door[0]") > 0) {
+					interpolate("controls/door[0]", 0, 1);
+					} else {
+					interpolate("controls/door[0]", 1, 1);
+				}
+				</script>
+			</binding>
+		</key>
+
+		<key n="99">
+			<name>c</name>
+			<desc>Open/Close_Cowl_Flaps_Del</desc>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("controls/engines/engine[0]/cowl-flaps-norm") > 0) {
+					interpolate("controls/engines/engine[0]/cowl-flaps-norm", 0, 1);
+					} else {
+					interpolate("controls/engines/engine[0]/cowl-flaps-norm", 1, 1);
+				}
+				</script>
+			</binding>
+		</key> 
+
+		<key n="67">
+			<name>C</name>
+				<desc>Open/Close_Cowl_Flaps_Tras</desc>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("controls/engines/engine[1]/cowl-flaps-norm") > 0) {
+					interpolate("controls/engines/engine[1]/cowl-flaps-norm", 0, 1);
+					} else {
+					interpolate("controls/engines/engine[1]/cowl-flaps-norm", 1, 1);
+				}
+				</script>
+			</binding>
+		</key>       
+	</keyboard>
+</input>
+ 
+<payload>
+	<weight>
+		<name type="string">Pilot</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+		<min-lb type="double">0  </min-lb>
+		<max-lb type="double">300</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Passenger 1</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+		<min-lb type="double">0  </min-lb>
+		<max-lb type="double">300</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Passenger 2</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[2]"/>
+		<min-lb type="double">0  </min-lb>
+		<max-lb type="double">300</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Passenger 3</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[3]"/>
+		<min-lb type="double">0  </min-lb>
+		<max-lb type="double">300</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Passenger 4</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+		<min-lb type="double">0  </min-lb>
+		<max-lb type="double">300</max-lb>
+	</weight>
+	<weight>
+		<name type="string">Passenger 5</name>
+		<weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[5]"/>
+		<min-lb type="double">0  </min-lb>
+		<max-lb type="double">300</max-lb>
+	</weight>
+</payload>
+
+<fdm>
+	<jsbsim>
+		<ice>
+			<wing type="double">0.0</wing>
+			<stabilizer type="double">0.0</stabilizer>
+			<propeller type="double">0.0</propeller>
+			<fuselage type="double">0.0</fuselage>
+		</ice>
+	</jsbsim>
+</fdm>
+
+</PropertyList>

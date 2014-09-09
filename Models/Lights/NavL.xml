@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	
+	  <path>NavL.ac</path>
+
+ <animation>
+  <type>select</type>
+  <object-name>NavL</object-name>
+  <condition>
+   <property>controls/lighting/nav-lights</property>
+  </condition>
+ </animation>
+
+
+</PropertyList>

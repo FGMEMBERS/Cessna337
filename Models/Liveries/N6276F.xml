@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+	<model>
+		<livery>
+			<name type="string">N6276F</name>
+			<texture>Textures/livery_N6276F.png</texture>
+		</livery>
+		<videocam type="bool">false</videocam>
+		<device type="bool">false</device>
+		<frontcone type="bool">true</frontcone>
+		<rearcone type="bool">true</rearcone>
+		<wingfins type="bool">false</wingfins>
+	</model>
+</sim>
+</PropertyList>

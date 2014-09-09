@@ -1,0 +1,320 @@
+<?xml version="1.0"?>
+<!--
+Copyright (C) 2010 Fernando Espinosa
+
+This program is free software; you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation; either version 2 of the License, or 
+(at your option) any later version. 
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software 
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA. 
+-->
+
+<PropertyList>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Compass/Compass.xml</path>
+	<offsets>
+		<x-m>-0.937</x-m>
+		<y-m> 0    </y-m>
+		<z-m> 0.370</z-m>
+	</offsets>
+</model>
+
+<!-- LEFT PANEL -->
+
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Clock/Clock.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m>-0.522</y-m>
+		<z-m> 0.1455</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Synchroscope/Synchroscope.xml</path>
+	<offsets>
+		<x-m>-0.973</x-m>
+		<y-m>-0.501</y-m>
+		<z-m> 0.1915</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/TC/5550-8340N5L.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m>-0.5225</y-m>
+		<z-m> 0.081</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/ASI/EA-5174.xml</path>
+	<offsets>
+		<x-m>-0.977</x-m>
+		<y-m>-0.438</y-m>
+		<z-m> 0.182</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/ADF/KI-227.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m>-0.438</y-m>
+		<z-m> 0.094</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/AI/EA-5000F6.xml</path>
+	<offsets>
+		<x-m>-0.977</x-m>
+		<y-m>-0.337</y-m>
+		<z-m> 0.189</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/HI/RCA15AK.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m>-0.337</y-m>
+		<z-m> 0.094</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Altimeter/EA-401A.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m>-0.236</y-m>
+		<z-m> 0.182</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/VSI/VSI.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m>-0.236</y-m>
+		<z-m> 0.0935</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/VOR/KI-206-nav1.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m>-0.135</y-m>
+		<z-m> 0.214</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/VOR/KI-206-nav2.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m>-0.135</y-m>
+		<z-m> 0.126</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/RadarAltimeter/BendixKing_KI250.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m>-0.135</y-m>
+		<z-m> 0.03809</z-m>
+	</offsets>
+</model>
+
+	<!-- RIGHT PANEL -->
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/MP/MP.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m> 0.137</y-m>
+		<z-m> 0.214</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/RPM/RPM.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m> 0.137</y-m>
+		<z-m> 0.126</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/FuelFlow/FuelFlow.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m> 0.137</y-m>
+		<z-m> 0.038</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/EGT/AlcorDualEGT.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m> 0.2315</y-m>
+		<z-m> 0.038</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Hobbs/HobbsMeter.xml</path>
+	<offsets>
+		<x-m>-0.972</x-m>
+		<y-m> 0.288</y-m>
+		<z-m> 0.2315</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Fuel-CHT-Oil/Fuel-Oil.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m> 0.288</y-m>
+		<z-m> 0.191</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Fuel-CHT-Oil/CHT-Oil.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m> 0.288</y-m>
+		<z-m> 0.135</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Vacuum/Vacuum.xml</path>
+	<offsets>
+		<x-m>-0.976</x-m>
+		<y-m> 0.446</y-m>
+		<z-m> 0.177</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Altimeter/EA-401A.xml</path>
+	<offsets>
+		<x-m>-0.977</x-m>
+		<y-m> 0.446</y-m>
+		<z-m> 0.0955</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Amp/Amp.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m> 0.516</y-m>
+		<z-m> 0.1645</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Volt/Volt.xml</path>
+	<offsets>
+		<x-m>-0.975</x-m>
+		<y-m> 0.516</y-m>
+		<z-m> 0.1215</z-m>
+	</offsets>
+</model>
+
+
+	<!-- RADIO STACK & PEDESTAL -->
+
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/AudioPanel/BendixKing_KMA24.xml</path>
+	<offsets>
+		<x-m>-0.973</x-m>
+		<y-m> 0.001</y-m>
+		<z-m> 0.206</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Radio/BendixKing_KX155_navcom1.xml</path>
+	<offsets>
+		<x-m>-0.973</x-m>
+		<y-m> 0.001</y-m>
+		<z-m> 0.163</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Radio/BendixKing_KX155_navcom2.xml</path>
+	<offsets>
+		<x-m>-0.973</x-m>
+		<y-m> 0.001</y-m>
+		<z-m> 0.111</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/DME/BendixKing_KN62A.xml</path>
+	<offsets>
+		<x-m>-0.973</x-m>
+		<y-m> 0.001</y-m>
+		<z-m> 0.068</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/ADF/BendixKing_KR87.xml</path>
+	<offsets>
+		<x-m>-0.973</x-m>
+		<y-m> 0.001</y-m>
+		<z-m> 0.034</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Transponder/BendixKing_KT76A.xml</path>
+	<offsets>
+		<x-m>-0.973</x-m>
+		<y-m> 0.001</y-m>
+		<z-m>-0.004</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/ELT/ArtexELT.xml</path>
+	<offsets>
+		<x-m>-0.977</x-m>
+		<y-m>-0.485</y-m>
+		<z-m>-0.110</z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Instruments/Navomatic/Navomatic400A.xml</path>
+	<offsets>
+		<x-m>-0.848</x-m>
+		<y-m> 0.001</y-m>
+		<z-m>-0.350</z-m>
+		<pitch-deg>-38</pitch-deg>
+	</offsets>
+</model>
+
+</PropertyList>

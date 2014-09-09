@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+<name>utility-dialog</name>
+<layout>vbox</layout>
+
+<group>
+	<layout>hbox</layout>
+	<empty>
+		<stretch>1</stretch>
+	</empty>
+	<text>
+		<label>Cessna 337 Skymaster</label>
+	</text>
+	<empty>
+		<stretch>1</stretch>
+	</empty>
+	<button>
+		<pref-width>16</pref-width>
+		<pref-height>16</pref-height>
+		<legend></legend>
+		<keynum>27</keynum>
+		<border>2</border>
+		<binding>
+			<command>dialog-close</command>
+		</binding>
+	</button>
+</group>
+	
+	<hrule />
+
+<group>
+	<layout>hbox</layout>
+	<text>
+		<label>Aircraft Autostart</label>
+	</text>
+	<button>
+		<legend>Press</legend>
+		<default>false</default>
+		<binding>
+			<command>property-toggle</command>
+			<property>sim/model/autostart</property>
+		</binding>
+	</button>
+</group>
+
+	<hrule />
+
+<group>
+	<layout>hbox</layout>
+	<default-padding>8</default-padding>
+
+	<!-- ENGINES -->
+
+	<group>
+		<layout>vbox</layout>
+		<text>
+			<label>Engine Selection</label>
+		</text>
+		<group>
+			<layout>table</layout>
+			<button>
+				<row>0</row>
+				<col>0</col>
+				<legend>Select</legend>
+				<default>false</default>
+				<binding>
+					<command>nasal</command>
+					<script>controls.selectEngine(0)</script> <!-- <key>!</key> -->
+				</binding>
+			</button>
+			<text>
+				<label>Front Engine</label>
+				<halign>left</halign>
+				<row>0</row>
+				<col>1</col>
+			</text>
+			<button>
+				<row>1</row>
+				<col>0</col>
+				<legend>Select</legend>
+				<default>false</default>
+				<binding>
+					<command>nasal</command>
+					<script>controls.selectEngine(1)</script> <!-- <key>@</key> -->
+				</binding>
+			</button>
+			<text>
+				<label>Rear Engine</label>
+				<halign>left</halign>
+				<row>1</row>
+				<col>1</col>
+			</text>
+			<button>
+				<row>2</row>
+				<col>0</col>
+				<legend>Select</legend>
+				<default>false</default>
+				<binding>
+					<command>nasal</command>
+					<script>controls.selectAllEngines()</script> <!-- <key>~</key> -->
+				</binding>
+			</button>
+			<text>
+				<label>Both Engines</label>
+				<halign>left</halign>
+				<row>2</row>
+				<col>1</col>
+			</text>
+		</group>
+	</group>
+
+	<vrule />
+
+	<!-- AIRCRAFT LIGHTS -->
+
+	<group>
+		<layout>vbox</layout>
+		<text>
+			<label>Aircraft Lights</label>
+		</text>
+		<group>
+			<layout>vbox</layout>
+			<checkbox>
+				<halign>left</halign>
+				<label>Navigation</label>
+				<live type="bool">true</live>
+				<property>controls/lighting/nav-lights</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</checkbox>
+			<checkbox>
+				<halign>left</halign>
+				<label>Beacon</label>
+				<live type="bool">true</live>
+				<property>controls/lighting/beacon</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</checkbox>
+			<checkbox>
+				<halign>left</halign>
+				<label>Strobes</label>
+				<live type="bool">true</live>
+				<property>controls/lighting/strobe</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</checkbox>
+			<checkbox>
+				<halign>left</halign>
+				<label>Landing</label>
+				<live type="bool">true</live>
+				<property>controls/lighting/landing-lights</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</checkbox>
+			<checkbox>
+				<halign>left</halign>
+				<label>Taxi</label>
+				<live type="bool">true</live>
+				<property>controls/lighting/taxi-light</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</checkbox>
+		</group>
+		<group>
+			<layout>hbox</layout>
+			<text>
+				<label>Instrument Lights</label>
+			</text>
+			<slider>
+				<min>0</min>
+				<max>1</max>
+				<property>controls/lighting/panel-norm</property>
+				<binding>
+					<command>dialog-apply</command>
+				</binding>
+			</slider>
+		</group>
+	</group>
+</group>
+
+	<hrule />
+
+<!-- UTILITY -->
+
+<group>
+	<layout>hbox</layout>
+	<button>
+		<legend>HELP!</legend>
+		<default>false</default>
+		<binding>
+			<command>nasal</command>
+			<script>gui.showHelpDialog("/sim/help")</script>
+		</binding>
+	</button>
+	<button>
+		<legend>Checklist</legend>
+		<default>false</default>
+		<binding>
+			<command>dialog-show</command>
+			<dialog-name>checklists</dialog-name>
+		</binding>
+	</button>
+	<button>
+		<legend>Autopilot</legend>
+		<default>false</default>
+		<binding>
+			<command>dialog-show</command>
+			<dialog-name>autopilot</dialog-name>
+		</binding>
+	</button>
+	<button>
+		<legend>Livery</legend>
+		<default>false</default>
+		<binding>
+			<command>nasal</command>
+			<script>aircraft.livery.dialog.toggle()</script>
+		</binding>
+	</button>
+</group>
+
+</PropertyList>

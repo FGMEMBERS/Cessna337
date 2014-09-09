@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>Fuel-Oil.ac</path>
+ 
+ <animation>
+  <type>material</type>
+  <!-- <object-name>Base</object-name> -->
+  <object-name>Meter</object-name>
+  <object-name>NeedleFuel_FRONT</object-name>
+  <object-name>NeedleFuel_REAR</object-name>
+  <object-name>NeedleOil_FRONT</object-name>
+  <object-name>NeedleOil_REAR</object-name>
+     <emission>
+         <red>0.7</red>           
+         <green>0.7</green>       
+         <blue>0.7</blue>         
+         <factor-prop>controls/lighting/panel-norm</factor-prop> <!-- <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop> -->
+     </emission>
+ </animation> 
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleFuel_FRONT</object-name>
+  <property>consumables/fuel/tank[0]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>40</ind>
+    <dep>49</dep>
+   </entry>
+   <entry>
+    <ind>75</ind>
+    <dep>90</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m>-0.067146</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleFuel_REAR</object-name>
+  <property>consumables/fuel/tank[1]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>40</ind>
+    <dep>49</dep>
+   </entry>
+   <entry>
+    <ind>75</ind>
+    <dep>90</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m>-0.022146</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleOil_FRONT</object-name>
+  <property>engines/engine[0]/oil-pressure-psi</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>50</ind>
+    <dep>51</dep>
+   </entry>
+   <entry>
+    <ind>100</ind>
+    <dep>88</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m> 0.022854</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>NeedleOil_REAR</object-name>
+  <property>engines/engine[1]/oil-pressure-psi</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>50</ind>
+    <dep>51</dep>
+   </entry>
+   <entry>
+    <ind>100</ind>
+    <dep>88</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m> 0.001   </x-m>
+   <y-m> 0.067854</y-m>
+   <z-m>-0.012079</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<!-- Label Text -->
+
+<text>
+	<name>LabelText</name>
+	<type type="string">literal</type>
+		<text type="string">Fuel Quantity and Oil Press</text>
+	<draw-text type="bool">true</draw-text>
+	<font>Helvetica.txf</font>
+		<character-size type="double">0.012</character-size>
+		<character-aspect-ratio type="double">1.0</character-aspect-ratio>
+	<axis-alignment>yz-plane</axis-alignment>
+	<max-height>0.2</max-height>
+	<max-width>0.15</max-width>
+	<font-resolution>
+		<width type="int">32</width>
+		<height type="int">32</height>
+	</font-resolution>
+	<alignment>center-center</alignment>
+	<offsets>
+		<x-m> 0.01</x-m>
+		<y-m> 0.0 </y-m>
+		<z-m> 0.0 </z-m>
+	</offsets>
+</text>
+
+<animation>
+	<type>material</type>
+		<object-name>LabelText</object-name>
+	<emission>
+		<red>1.0</red>
+		<green>0.8</green>
+		<blue>0.0</blue>
+	</emission>
+</animation>
+
+<animation>
+	<type>select</type>
+		<object-name>LabelText</object-name>
+	<condition>
+		<property>/sim/panel-hotspots</property>
+	</condition>
+</animation>
+
+</PropertyList>
