@@ -1,0 +1,34 @@
+<PropertyList>
+	<title>Cessna 337 Skymaster</title>
+	<line></line>
+	<key>
+		<name>d</name>
+		<desc>Open/close door</desc>
+	</key>
+	<key>
+		<name>c</name>
+		<desc>Open/close front cowl flaps</desc>
+	</key>
+	<key>
+		<name>Ctrl + c</name>
+		<desc>Open/close rear cowl flaps</desc>
+	</key>
+	<line>Startup procedure:</line>
+	<line>1.Turn ON battery and front and rear generators</line>
+	<line>2.Turn ON master avionics button (left wall panel)</line>
+	<line>3.Turn ON fuel pumps</line>
+	<line>4.Turn ON required lights and pitot heat</line>
+	<line>5.Open front and rear cowl flaps</line>
+	<line>6.Turn ON rear magnetos, continue turning the knob for starter</line>
+	<line>7.Turn ON front magnetos, continue turning the knob for starter</line>
+	<text>
+See "Equipment/Fuel and Payload" menu to adjust aircraft weights. Being able to adjust the weight of each passenger, take a tip: The rear seats works fine with kids or baggage, it's not recomended to fly with 6 adult passengers, due to balance issues.
+	
+The Cessna 337 Skymaster has a constant-speed propeller; so, you can increase propeller pitch to get more airspeed, but with a loss of engine RPM and power.
+
+About knobs, use scroll mouse for gross adjustments, and left-central buttons for fine tunning. When setting radio frequencies, the mouse scroll will adjust integral numbers, and buttons will tune decimals.
+
+There is a (temporary) guide to the Navomatic 400A autopilot in Models/Instruments/Navomatic/NAVOMATIC-400A-README.
+</text>
+
+</PropertyList>

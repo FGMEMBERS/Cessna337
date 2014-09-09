@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+		<name>Effects/Cessna337-uber-reflect</name>
+    <inherits-from>Effects/model-combined</inherits-from>
+		<parameters>
+		<!-- Normal Map -->
+			<normalmap-enabled type="int"> 0 </normalmap-enabled>
+		<!-- Light Map -->
+			<lightmap-enabled type="int"> 0 </lightmap-enabled>
+			<lightmap-multi type="int"> 0 </lightmap-multi>
+<!--			<texture n="3">
+				<image>path/to/lightmap/image</image>
+				<filter>linear-mipmap-linear</filter>
+				<wrap-s>clamp</wrap-s>
+				<wrap-t>clamp</wrap-t>
+				<internal-format>normalized</internal-format>
+			</texture>-->
+		<!-- Reflection -->
+			<reflection-enabled type="int"> 1 </reflection-enabled>
+			<reflect-map-enabled type="int"> 0 </reflect-map-enabled>
+			<reflection-correction type="float"> 0.7 </reflection-correction>
+			<reflection-dynamic type="int"> 1 </reflection-dynamic>
+<!--			<texture n="4">
+				<image>path/to/reflectmap/texture</image>
+			</texture>-->
+
+			<reflection-fresnel type="float"> 0.5 </reflection-fresnel>
+			<reflection-rainbow type="float"> 0.01 </reflection-rainbow>
+			<reflection-noise type="float"> 0.25 </reflection-noise>
+			<ambient-correction type="float"> 0.4 </ambient-correction>
+			<dirt-enabled type="int"> 0 </dirt-enabled>
+			<dirt-color type="vec3d"> 0.0 0.0 0.0 </dirt-color>
+			<dirt-factor type="float"> 0.0 </dirt-factor>
+		</parameters>
+
+</PropertyList>

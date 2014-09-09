@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<filter>
+		<name>Suction indicator</name>
+		<type>gain</type>
+		<gain>1</gain>
+		<input>
+			<expression>
+				<max>
+					<property>/systems/vacuum[0]/suction-inhg</property>
+					<property>/systems/vacuum[1]/suction-inhg</property>
+				</max>
+			</expression>
+		</input>
+		<output>/instrumentation/vacuum/suction-inhg</output>
+	</filter>
+
+	<logic>
+		<name>Front Suction annunciator</name>
+		<input>
+			<less-than>
+				<property>/systems/vacuum[0]/suction-inhg</property>
+				<value type="double">3.5</value>
+			</less-than>
+		</input>
+		<output>/instrumentation/vacuum/inoperative[0]</output>
+	</logic>
+
+	<logic>
+	<name>Rear Suction annunciator</name>
+	<input>
+		<less-than>
+			<property>/systems/vacuum[1]/suction-inhg</property>
+			<value type="double">3.5</value>
+		</less-than>
+	</input>
+	<output>/instrumentation/vacuum/inoperative[1]</output>
+</logic>
+
+</PropertyList>

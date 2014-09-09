@@ -1,0 +1,3571 @@
+<?xml version="1.0"?>
+
+<!--
+    Copyright (C) 2010  Fernando Espinosa
+
+This program is free software; you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the Free Software Foundation; either version 2 of the License, or 
+(at your option) any later version. 
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the Free Software 
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA. 
+-->
+
+<PropertyList>
+
+<path>Cessna337_Skymaster.ac</path>
+
+	<!-- INSTRUMENTS -->
+
+<model>
+	<path>Aircraft/Cessna337/Models/Cessna337-instruments.xml</path>
+</model>
+
+	<!-- SEATS -->
+
+<model>
+	<path>Aircraft/Cessna337/Models/Cessna337_seat-pilot.xml</path>
+	<offsets>
+		<x-m>-0.290 </x-m>
+		<y-m>-0.280 </y-m>
+		<z-m>-0.292 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Cessna337_seat-pilot.xml</path>
+	<offsets>
+		<x-m>-0.290 </x-m>
+		<y-m> 0.280 </y-m>
+		<z-m>-0.292 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Cessna337_seat-pilot.xml</path>
+	<offsets>
+		<x-m> 0.440 </x-m>
+		<y-m>-0.280 </y-m>
+		<z-m>-0.272 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Cessna337_seat-pilot.xml</path>
+	<offsets>
+		<x-m> 0.440 </x-m>
+		<y-m> 0.280 </y-m>
+		<z-m>-0.272 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Cessna337_seat-pilot.xml</path>
+	<offsets>
+		<x-m> 1.170 </x-m>
+		<y-m>-0.270 </y-m>
+		<z-m>-0.272 </z-m>
+	</offsets>
+</model>
+
+<model>
+	<path>Aircraft/Cessna337/Models/Cessna337_seat-pilot.xml</path>
+	<offsets>
+		<x-m> 1.170 </x-m>
+		<y-m> 0.270 </y-m>
+		<z-m>-0.272 </z-m>
+	</offsets>
+</model>
+
+	<!-- LIVERY SETTINGS -->
+
+<nasal>
+	<load>
+		var livery_update = aircraft.livery_update.new("Aircraft/Cessna337/Models/Liveries");
+	</load>
+	<unload>
+		livery_update.stop();
+	</unload>
+</nasal>
+
+<animation>
+	<type>material</type>
+		<object-name>Alas</object-name>
+		<object-name>AleronDER</object-name>
+		<object-name>AleronIZQ</object-name>
+		<object-name>AletasAlas</object-name>
+		<object-name>Antenas</object-name>
+		<object-name>ColaDER</object-name>
+		<object-name>ColaIZQ</object-name>
+		<object-name>CompTrenDEL_01</object-name>
+		<object-name>CompTrenDEL_02</object-name>
+		<object-name>CompTrenDEL_03</object-name>
+		<object-name>CompTrenDER_01</object-name>
+		<object-name>CompTrenDER_02</object-name>
+		<object-name>CompTrenDER_03</object-name>
+		<object-name>CompTrenIZQ_01</object-name>
+		<object-name>CompTrenIZQ_02</object-name>
+		<object-name>CompTrenIZQ_03</object-name>
+		<object-name>CowlFlaps_01</object-name>
+		<object-name>CowlFlaps_02</object-name>
+		<object-name>CowlFlaps_03</object-name>
+		<object-name>CowlFlaps_04</object-name>
+		<object-name>Dispositivo</object-name>
+		<object-name>Elevador_01</object-name>
+		<object-name>Elevador_02</object-name>
+		<object-name>EstabH</object-name>
+		<object-name>Flaps_01</object-name>
+		<object-name>Flaps_02</object-name>
+		<object-name>Flaps_03</object-name>
+		<object-name>Flaps_04</object-name>
+		<object-name>Fuselaje</object-name>
+		<object-name>GiroHeliceDEL_02</object-name>
+		<object-name>GiroHeliceTRAS_02</object-name>
+		<object-name>HeliceDEL_02</object-name>
+		<object-name>HeliceDEL_03</object-name>
+		<object-name>HeliceDEL_04</object-name>
+		<object-name>HeliceTRAS_02</object-name>
+		<object-name>HeliceTRAS_03</object-name>
+		<object-name>HeliceTRAS_04</object-name>
+		<object-name>IntakeDorsal</object-name>
+		<object-name>PuertaINF</object-name>
+		<object-name>PuertaSUP</object-name>
+		<object-name>RuedaDEL</object-name>
+		<object-name>RuedaDER</object-name>
+		<object-name>RuedaIZQ</object-name>
+		<object-name>SoporteAlaDER</object-name>
+		<object-name>SoporteAlaIZQ</object-name>
+		<object-name>TimonDER</object-name>
+		<object-name>TimonIZQ</object-name>
+		<object-name>TrenDER_01</object-name>
+		<object-name>TrenIZQ_01</object-name>
+		<object-name>VideoCam_03</object-name>
+			<property-base>sim/model/livery</property-base>
+			<texture-prop>texture</texture-prop>
+			<texture>Textures/Livery_EC-ISD.png</texture>
+</animation>
+
+	<!-- LIVERY OPTIONS -->
+
+	<!-- videoCam ON/OFF -->
+
+<animation>
+	<type>select</type>
+	<object-name>VideoCam_03</object-name>
+	<condition>
+		<property>sim/model/videocam</property>
+	</condition>
+</animation>
+
+	<!-- comm device ON/OFF -->
+
+<animation>
+	<type>select</type>
+	<object-name>Dispositivo</object-name>
+	<condition>
+		<property>sim/model/device</property>
+	</condition>
+</animation>
+
+	<!-- Front propeller cone ON/OFF -->
+
+<animation>
+	<type>select</type>
+	<object-name>HeliceDEL_02</object-name>
+	<object-name>GiroHeliceDEL_02</object-name>
+	<condition>
+		<property>sim/model/frontcone</property>
+	</condition>
+</animation>
+
+	<!-- Rear propeller cone ON/OFF -->
+
+<animation>
+	<type>select</type>
+	<object-name>HeliceTRAS_02</object-name>
+	<object-name>GiroHeliceTRAS_02</object-name>
+	<condition>
+		<property>sim/model/rearcone</property>
+	</condition>
+</animation>
+
+	<!-- wing fins ON/OFF -->
+
+<animation>
+	<type>select</type>
+	<object-name>AletasAlas</object-name>
+	<condition>
+		<property>sim/model/wingfins</property>
+	</condition>
+</animation>
+  
+	<!-- PANEL CONTROL ANIMATIONS -->
+
+	<!-- YOKES ON/OFF -->
+
+<animation>
+	<type>pick</type>
+	<object-name>YokeBase</object-name>
+	<visible>true</visible>
+	<action>
+		<name>yokes-visible</name>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>sim/yokes-visible</property>
+		</binding>
+	</action>
+</animation>
+
+	<!-- FRONT ENGINE MAGNETOS & STARTER -->
+
+<animation>
+	<type>pick</type>
+	<object-name>Perilla_01</object-name>
+	<visible>true</visible>
+	<action>
+		<name>starter</name>
+		<button>0</button>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/engines/engine[0]/starter</property>
+			<value>1</value>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[0]/magnetos</property>
+					<value>3</value>
+				</equals>
+			</condition>
+		</binding>
+		<mod-up>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[0]/starter</property>  
+				<value>0</value>
+			</binding>
+		</mod-up>
+	</action>
+	<action>
+		<name>increase mags</name>
+		<button>3</button>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[0]/magnetos</property>
+			<step>1</step>
+			<min>0</min>
+			<max>3</max>
+		</binding>
+	</action>
+	<action>
+		<name>decrease mags</name>
+		<button>4</button>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[0]/magnetos</property>
+			<step>-1</step>
+			<min>0</min>
+			<max>3</max>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Perilla_01</object-name>
+	<property>controls/engines/engine[0]/magnetos</property>
+	<interpolation>
+		<entry><ind>0</ind><dep>  0</dep></entry>
+		<entry><ind>1</ind><dep>-30</dep></entry>
+		<entry><ind>2</ind><dep>-60</dep></entry>
+		<entry><ind>3</ind><dep>-90</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.963693</x-m>
+		<y-m>-0.510022</y-m>
+		<z-m>-0.047977</z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Perilla_01</object-name>
+		<property>/controls/engines/engine[0]/starter</property>
+	<factor>-30</factor>
+	<center>
+		<x-m>-0.963693</x-m>
+		<y-m>-0.510022</y-m>
+		<z-m>-0.047977</z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+	<!-- REAR ENGINE MAGNETOS -->
+
+<animation>
+	<type>pick</type>
+	<object-name>Perilla_02</object-name>
+	<visible>true</visible>
+	<action>
+		<name>starter</name>
+		<button>0</button>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/engines/engine[1]/starter</property>
+			<value>1</value>
+			<condition>
+				<equals>
+					<property>controls/engines/engine[1]/magnetos</property>
+					<value>3</value>
+				</equals>
+			</condition>
+		</binding>
+		<mod-up>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[1]/starter</property>  
+				<value>0</value>
+			</binding>
+		</mod-up>
+	</action>
+	<action>
+		<name>increase mags</name>
+		<button>3</button>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[1]/magnetos</property>
+			<step>1</step>
+			<min>0</min>
+			<max>3</max>
+		</binding>
+	</action>
+	<action>
+		<name>decrease mags</name>
+		<button>4</button>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[1]/magnetos</property>
+			<step>-1</step>
+			<min>0</min>
+			<max>3</max>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Perilla_02</object-name>
+	<property>controls/engines/engine[1]/magnetos</property>
+	<interpolation>
+		<entry><ind>0</ind><dep>  0</dep></entry>
+		<entry><ind>1</ind><dep>-30</dep></entry>
+		<entry><ind>2</ind><dep>-60</dep></entry>
+		<entry><ind>3</ind><dep>-90</dep></entry>
+	</interpolation>
+	<center>
+		<x-m>-0.963693</x-m>
+		<y-m>-0.460022</y-m>
+		<z-m>-0.047977</z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Perilla_02</object-name>
+		<property>/controls/engines/engine[1]/starter</property>
+	<factor>-30</factor>
+	<center>
+		<x-m>-0.963693</x-m>
+		<y-m>-0.460022</y-m>
+		<z-m>-0.047977</z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+	<!-- FRONT ENGINE PRIMER -->
+
+<animation>
+	<type>translate</type>
+	<object-name>Primer1_01</object-name>
+	<object-name>Primer1_02</object-name>
+	<object-name>Primer1_03</object-name>
+	<property>controls/engines/engine[0]/primer</property>
+	<factor>-0.03</factor>
+	<axis>
+		<x1-m>-0.866554</x1-m>
+		<y1-m>-0.04    </y1-m>
+		<z1-m>-0.302524</z1-m>
+		<x2-m>-0.8989  </x2-m>
+		<y2-m>-0.04    </y2-m>
+		<z2-m>-0.325173</z2-m>
+	</axis>
+</animation>
+    	
+ <animation>
+	<type>pick</type>
+	<object-name>Primer1_01</object-name>
+	<object-name>Primer1_02</object-name>
+	<object-name>Primer1_03</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/engines/engine[0]/primer</property>
+			<value type="bool">true</value>
+		</binding>
+		<mod-up>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[0]/primer</property>
+				<value type="bool">false</value>
+			</binding>
+		</mod-up>
+	</action>
+</animation>
+
+	<!-- REAR ENGINE PRIMER -->
+
+<animation>
+	<type>translate</type>
+	<object-name>Primer2_01</object-name>
+	<object-name>Primer2_02</object-name>
+	<object-name>Primer2_03</object-name>
+	<property>controls/engines/engine[1]/primer</property>
+	<factor>-0.03</factor>
+	<axis>
+		<x1-m>-0.866554</x1-m>
+		<y1-m> 0.04    </y1-m>
+		<z1-m>-0.302524</z1-m>
+		<x2-m>-0.8989  </x2-m>
+		<y2-m> 0.04    </y2-m>
+		<z2-m>-0.325173</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Primer2_01</object-name>
+	<object-name>Primer2_02</object-name>
+	<object-name>Primer2_03</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-assign</command>
+			<property>controls/engines/engine[1]/primer</property>
+			<value type="bool">true</value>
+		</binding>
+		<mod-up>
+			<binding>
+				<command>property-assign</command>
+				<property>controls/engines/engine[1]/primer</property>
+				<value type="bool">false</value>
+			</binding>
+		</mod-up>
+	</action>
+</animation>
+
+	<!-- LEFT YOKE -->
+
+<animation>
+	<type>translate</type>
+	<object-name>YokeIZQ_01</object-name>
+	<object-name>YokeIZQ_02</object-name>
+	<object-name>BtnRadio</object-name>  
+	<property>controls/flight/elevator</property>
+	<factor>-0.1</factor>
+	<center>
+		<x-m>-0.838264</x-m>
+		<y-m>-0.308519</y-m>
+		<z-m>-0.015   </z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>YokeIZQ_01</object-name>
+	<object-name>YokeIZQ_02</object-name>
+	<object-name>BtnRadio</object-name>
+	<property>controls/flight/aileron</property>
+	<factor>-45.0</factor>
+	<center>
+		<x-m>-0.838264</x-m>
+		<y-m>-0.308519</y-m>
+		<z-m>-0.015   </z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>YokeIZQ_01</object-name>
+	<object-name>YokeIZQ_02</object-name>
+	<object-name>BtnRadio</object-name>
+	<condition>
+		<property>sim/yokes-visible</property>
+	</condition>
+</animation>
+
+	<!-- RIGHT YOKE -->
+
+<animation>
+	<type>translate</type>
+	<object-name>YokeDER_01</object-name>
+	<object-name>YokeDER_02</object-name>     
+	<property>controls/flight/elevator</property>
+	<factor>-0.1</factor>
+	<center>
+		<x-m>-0.838264</x-m>
+		<y-m> 0.311482</y-m>
+		<z-m>-0.015   </z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>YokeDER_01</object-name>
+	<object-name>YokeDER_02</object-name>
+	<property>controls/flight/aileron</property>
+	<factor>-45.0</factor>
+	<center>
+		<x-m>-0.838264</x-m>
+		<y-m> 0.311482</y-m>
+		<z-m>-0.015   </z-m>
+	</center>
+	<axis>
+		<x>1.0</x>
+		<y>0.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>select</type>
+	<object-name>YokeDER_01</object-name>
+	<object-name>YokeDER_02</object-name>
+	<condition>
+		<property>sim/yokes-visible</property>
+	</condition>
+</animation>
+
+	<!-- QUADRANT -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>PalancaAcelerador1_01</object-name>
+	<object-name>PalancaAcelerador1_02</object-name>
+	<property>controls/engines/engine[0]/throttle</property>
+	<interpolation>
+		<entry><ind>-1.0</ind><dep> 18.0</dep></entry>
+		<entry><ind> 0.0</ind><dep> 25.0</dep></entry>
+		<entry><ind> 1.0</ind><dep>-23.0</dep></entry>
+	</interpolation>                                      
+	<axis>
+		<x1-m>-0.962993</x1-m>
+		<y1-m>-0.046736</y1-m>
+		<z1-m>-0.223839</z1-m>
+		<x2-m>-0.962993</x2-m>
+		<y2-m> 0.049904</y2-m>
+		<z2-m>-0.223839</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>PalancaAcelerador2_01</object-name>
+	<object-name>PalancaAcelerador2_02</object-name>
+	<property>controls/engines/engine[1]/throttle</property>
+	<interpolation>
+		<entry><ind>-1.0</ind><dep> 18.0</dep></entry>
+		<entry><ind> 0.0</ind><dep> 25.0</dep></entry>
+		<entry><ind> 1.0</ind><dep>-23.0</dep></entry>
+	</interpolation>
+	<axis>
+		<x1-m>-0.962993</x1-m>
+		<y1-m>-0.046736</y1-m>
+		<z1-m>-0.223839</z1-m>
+		<x2-m>-0.962993</x2-m>
+		<y2-m> 0.049904</y2-m>
+		<z2-m>-0.223839</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>PalancaPitch1_01</object-name>
+	<object-name>PalancaPitch1_02</object-name>
+	<property>controls/engines/engine[0]/propeller-pitch</property>
+	<interpolation>
+		<entry><ind>-1.0</ind><dep> 18.0</dep></entry>
+		<entry><ind> 0.0</ind><dep> 25.0</dep></entry>
+		<entry><ind> 1.0</ind><dep>-23.0</dep></entry>
+	</interpolation>
+	<axis>
+		<x1-m>-0.962993</x1-m>
+		<y1-m>-0.046736</y1-m>
+		<z1-m>-0.223839</z1-m>
+		<x2-m>-0.962993</x2-m>
+		<y2-m> 0.049904</y2-m>
+		<z2-m>-0.223839</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>PalancaPitch2_01</object-name>
+	<object-name>PalancaPitch2_02</object-name>
+	<property>controls/engines/engine[1]/propeller-pitch</property>
+	<interpolation>
+		<entry><ind>-1.0</ind><dep> 18.0</dep></entry>
+		<entry><ind> 0.0</ind><dep> 25.0</dep></entry>
+		<entry><ind> 1.0</ind><dep>-23.0</dep></entry>
+	</interpolation>
+	<axis>
+		<x1-m>-0.962993</x1-m>
+		<y1-m>-0.046736</y1-m>
+		<z1-m>-0.223839</z1-m>
+		<x2-m>-0.962993</x2-m>
+		<y2-m> 0.049904</y2-m>
+		<z2-m>-0.223839</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>PalancaMezcla1_01</object-name>
+	<object-name>PalancaMezcla1_02</object-name>
+	<property>controls/engines/engine[0]/mixture</property>
+	<interpolation>
+		<entry><ind>-1.0</ind><dep> 18.0</dep></entry>
+		<entry><ind> 0.0</ind><dep> 25.0</dep></entry>
+		<entry><ind> 1.0</ind><dep>-23.0</dep></entry>
+	</interpolation>
+	<axis>
+		<x1-m>-0.962993</x1-m>
+		<y1-m>-0.046736</y1-m>
+		<z1-m>-0.223839</z1-m>
+		<x2-m>-0.962993</x2-m>
+		<y2-m> 0.049904</y2-m>
+		<z2-m>-0.223839</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>PalancaMezcla2_01</object-name>
+	<object-name>PalancaMezcla2_02</object-name>
+	<property>controls/engines/engine[1]/mixture</property>
+	<interpolation>
+		<entry><ind>-1.0</ind><dep> 18.0</dep></entry>
+		<entry><ind> 0.0</ind><dep> 25.0</dep></entry>
+		<entry><ind> 1.0</ind><dep>-23.0</dep></entry>
+	</interpolation>
+	<axis>
+		<x1-m>-0.962993</x1-m>
+		<y1-m>-0.046736</y1-m>
+		<z1-m>-0.223839</z1-m>
+		<x2-m>-0.962993</x2-m>
+		<y2-m> 0.049904</y2-m>
+		<z2-m>-0.223839</z2-m>
+	</axis>
+</animation>
+
+	<!-- PEDALS -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>PedalIZQ1_01</object-name>
+	<object-name>PedalIZQ1_02</object-name>
+	<object-name>PedalIZQ2_01</object-name>
+	<object-name>PedalIZQ2_02</object-name>
+	<property>controls/flight/rudder</property>
+	<interpolation>
+		<entry><ind> 1.0</ind><dep>-15.0</dep></entry>
+		<entry><ind> 0.0</ind><dep>  0.0</dep></entry>
+		<entry><ind>-1.0</ind><dep> 20.0</dep></entry>
+	</interpolation>  
+	<axis>
+		<x1-m>-1.17248</x1-m>
+		<y1-m>-0.290653</y1-m>
+		<z1-m>-0.261483</z1-m>
+		<x2-m>-1.17248</x2-m>
+		<y2-m> 0.293616</y2-m>
+		<z2-m>-0.261483</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>PedalIZQ1_02</object-name>
+	<object-name>PedalIZQ2_02</object-name>
+	<property>controls/gear/brake-left</property>
+	<factor>-6</factor>
+	<axis>
+		<x1-m>-1.13208</x1-m>
+		<y1-m>-0.379079</y1-m>
+		<z1-m>-0.456874</z1-m>
+		<x2-m>-1.13208</x2-m>
+		<y2-m> 0.382042</y2-m>
+		<z2-m>-0.456874</z2-m>
+	</axis>
+</animation> 
+
+<animation>
+	<type>rotate</type>
+	<object-name>PedalDER1_01</object-name>
+	<object-name>PedalDER1_02</object-name>
+	<object-name>PedalDER2_01</object-name>
+	<object-name>PedalDER2_02</object-name>
+	<property>controls/flight/rudder</property>
+	<interpolation>
+		<entry><ind>-1.0</ind><dep>-15.0</dep></entry>
+		<entry><ind> 0.0</ind><dep>  0.0</dep></entry>
+		<entry><ind> 1.0</ind><dep> 20.0</dep></entry>
+	</interpolation>  
+	<axis>
+		<x1-m>-1.17248</x1-m>
+		<y1-m>-0.290653</y1-m>
+		<z1-m>-0.261483</z1-m>
+		<x2-m>-1.17248</x2-m>
+		<y2-m> 0.293616</y2-m>
+		<z2-m>-0.261483</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>PedalDER1_02</object-name>
+	<object-name>PedalDER2_02</object-name>
+	<property>controls/gear/brake-right</property>
+	<factor>-6</factor>
+	<axis>
+		<x1-m>-1.13208</x1-m>
+		<y1-m>-0.379079</y1-m>
+		<z1-m>-0.456874</z1-m>
+		<x2-m>-1.13208</x2-m>
+		<y2-m> 0.382042</y2-m>
+		<z2-m>-0.456874</z2-m>
+	</axis>
+</animation> 
+
+<!-- Elevator trim -->
+ <animation>
+  <type>rotate</type>
+  <object-name>TrimElevador</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <factor>-360</factor>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+  <center>
+   <x-m>-0.97    </x-m>
+   <y-m>-0.143766</y-m>
+   <z-m>-0.08    </z-m>
+  </center>
+ </animation>  
+
+<animation>
+	<type>pick</type>
+	<object-name>TrimElevador</object-name>
+	<visible>true</visible>
+	<action>
+		<button>3</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/elevator-trim</property>
+			<step>0.01</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/elevator-trim</property>
+			<step>0.0002</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>4</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/elevator-trim</property>
+			<step>-0.01</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/elevator-trim</property>
+			<step>-0.0002</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+</animation>
+
+<!--  Rudder Trim -->
+ <animation>
+  <type>rotate</type>
+  <object-name>TrimAleron</object-name>
+  <property>controls/flight/rudder-trim</property>
+  <factor>-360</factor>
+  <axis>
+   <x>0.0</x>
+   <y>0.0</y>
+   <z>1.0</z>
+  </axis>
+  <center>
+   <x-m>-0.906477</x-m>
+   <y-m> 0.0     </y-m>
+   <z-m>-0.276246</z-m>
+  </center>
+ </animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>TrimAleron</object-name>
+	<visible>true</visible>
+	<action>
+		<button>3</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/rudder-trim</property>
+			<step>-0.01</step> 
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/rudder-trim</property>
+			<step>-0.0002</step> 
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>4</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/rudder-trim</property>
+			<step>0.01</step>    
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/flight/rudder-trim</property>
+			<step>0.0002</step>    
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+</animation>
+ 
+<!-- Parking Brake -->
+ <animation>
+	<type>rotate</type>
+		<object-name>PalancaBrakes_01</object-name>
+		<object-name>PalancaBrakes_02</object-name>
+	<property>/controls/gear/brake-parking</property>
+		 <interpolation>
+   <entry>
+    <ind>0.0</ind>
+    <dep>0</dep>
+   </entry>
+      <entry>
+    <ind>1</ind>
+    <dep>70</dep>
+   </entry>
+  </interpolation>
+		<axis>
+			<x>0.0</x>
+			<y>1.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>-0.953361</x-m>
+			<y-m>-0.516796</y-m>
+			<z-m>-0.29003</z-m>
+		</center>
+ </animation>
+
+ <animation>
+	<type>pick</type>
+		<object-name>PalancaBrakes_01</object-name>
+		<object-name>PalancaBrakes_02</object-name>
+		<visible>true</visible>
+	<action>
+		<name>Select</name>
+		<button>0</button>
+		<binding>
+			<command>property-toggle</command>
+			<property>/controls/gear/brake-parking</property>
+		</binding>
+	</action>
+ </animation>
+ 
+    <!-- Palanca y alarmas tren de aterrizaje -->
+    <animation>
+        <type>noshadow</type>
+        <object-name>PalancaTren_01</object-name>
+        <object-name>PalancaTren_02</object-name>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>PalancaTren_01</object-name>
+        <object-name>PalancaTren_02</object-name>
+        <property>controls/gear/gear-down</property>
+         <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>-30</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>30</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-0.9686  </x-m>
+            <y-m> 0.168852</y-m>
+            <z-m>-0.07    </z-m>
+        </center>
+    </animation>
+    
+    <animation>
+      <type>pick</type>
+      <object-name>PalancaTren_01</object-name>
+      <object-name>PalancaTren_02</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/gear/gear-down</property>
+        </binding>
+      </action>
+    </animation>
+    
+    <animation>
+        <type>material</type>
+        <object-name>LuzAlrm_08</object-name>
+        <condition>
+        	<factor-prop>controls/gear/gear-down</factor-prop> 
+              <greater-than>
+                <property>gear/gear/position-norm</property>
+                <value>0.01</value> 
+              </greater-than>
+              <less-than>
+                <property>gear/gear/position-norm</property>
+                <value>0.90</value>  
+              </less-than>
+        </condition>
+        <emission>
+            <red>0.60</red>
+            <green>0.40</green>
+            <blue>0.0</blue>
+        </emission>
+    </animation>
+   
+  <animation>
+    <type>material</type>
+    <object-name>LuzAlrm_09</object-name>    
+    <condition>
+        <factor-prop>controls/gear/gear-down</factor-prop>
+      <greater-than>
+      	<property>gear/gear/position-norm</property>
+      	<value>0.9</value>
+      </greater-than>
+     </condition>
+        <emission>
+            <red>0.0</red>
+            <green>0.40</green>
+            <blue>0.0</blue>
+        </emission>
+    </animation>
+    
+    <!-- Palanca Flaps -->
+ <animation>
+  <type>translate</type>
+  <object-name>PalancaFlaps_01</object-name>
+  <object-name>PalancaFlaps_02</object-name>
+  <property>/controls/flight/flaps</property>
+  <interpolation>
+      <entry>
+          <ind>0.0</ind>
+          <dep>0.0</dep>
+      </entry>
+      <entry>
+          <ind>0.33</ind>
+          <dep>0.033977</dep>
+      </entry>
+      <entry>
+          <ind>0.66</ind>
+          <dep>0.0509655</dep>
+      </entry> 
+      <entry>
+          <ind>1.0</ind>
+          <dep>0.067954</dep>
+      </entry>
+  </interpolation>
+  <axis>
+   <x1-m>-0.976149</x1-m>
+   <y1-m> 0.13017 </y1-m>
+   <z1-m>-0.047244</z1-m>
+   <x2-m>-0.976685</x2-m>
+   <y2-m> 0.13017 </y2-m>
+   <z2-m>-0.115843</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>PalancaFlaps_01</object-name>
+  <object-name>PalancaFlaps_02</object-name>
+  <visible>true</visible>
+   <action>
+     <button>0</button>
+     <repeatable>false</repeatable>
+      <binding>
+       <command>nasal</command>
+       <script>controls.flapsDown(1)</script>
+      </binding>
+      <mod-up>
+      <binding>
+        <command>nasal</command>
+        <script>controls.flapsDown(0)</script>
+      </binding>
+      </mod-up>
+   </action>
+   <action>
+     <button>1</button>
+     <repeatable>false</repeatable>
+      <binding>
+       <command>nasal</command>
+       <script>controls.flapsDown(-1)</script>
+      </binding>
+      <mod-up>
+      <binding>
+       <command>nasal</command>
+       <script>controls.flapsDown(0)</script>
+      </binding>
+      </mod-up>
+   </action>
+</animation>
+ 
+	<!-- Interruptor Cowl Flaps delanteros -->
+
+<animation>
+	<type>rotate</type>    
+	<object-name>Switch_19_1</object-name>
+	<object-name>Switch_19_2</object-name>
+	<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>45.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-45</dep>
+		</entry>
+	</interpolation>
+	<center>
+		<x-m>-0.969485</x-m>
+		<y-m>-0.253852</y-m>
+		<z-m>-0.06</z-m>		
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_19_1</object-name>
+	<object-name>Switch_19_2</object-name>
+	<object-name>BaseSwitch_19</object-name>
+	<visible>true</visible>
+	<action>
+		<button>3</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+			<step>0.2</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+    </binding>
+  </action>
+	<action>
+		<button>4</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>  
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+			<step>-0.2</step> 
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+</animation>
+ 
+<animation>  <!-- Luz alarma -->
+	<type>material</type>
+	<object-name>LuzAlrm_06</object-name>    
+	<condition>
+		<factor-prop>controls/engines/engine[0]/cowl-flaps-norm</factor-prop>
+		<greater-than>
+			<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+			<value>0.1</value>
+		</greater-than>
+	</condition>
+	<emission>
+		<red>0.0</red>
+		<green>0.0</green>
+		<blue>1.0</blue>
+	</emission>
+</animation>
+ 
+ <!-- Interruptor Cowl Flaps traseros -->
+<animation>
+	<type>rotate</type>    
+	<object-name>Switch_20_1</object-name>
+	<object-name>Switch_20_2</object-name>
+	<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+	<interpolation>
+		<entry>
+			<ind>0.0</ind>
+			<dep>45.0</dep>
+		</entry>
+		<entry>
+			<ind>1.0</ind>
+			<dep>-45</dep>
+		</entry>
+	</interpolation>
+	<center>
+		<x-m>-0.969485</x-m>
+		<y-m>-0.223852</y-m>
+		<z-m>-0.06</z-m>		
+	</center>
+	<axis>
+		<x>0.0</x>
+		<y>1.0</y>
+		<z>0.0</z>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_20_1</object-name>
+	<object-name>Switch_20_2</object-name>
+	<object-name>BaseSwitch_20</object-name>
+	<visible>true</visible>
+	<action>
+		<button>3</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+			<step>0.2</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-toggle</command>
+      <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+    </binding>
+  </action>
+	<action>
+		<button>4</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.004</interval-sec>  
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+			<step>-0.2</step> 
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+</animation>
+
+<animation>  <!-- Luz alarma -->
+	<type>material</type>
+	<object-name>LuzAlrm_07</object-name>    
+	<condition>
+		<factor-prop>controls/engines/engine[1]/cowl-flaps-norm</factor-prop>
+		<greater-than>
+			<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+			<value>0.1</value>
+		</greater-than>
+	</condition>
+	<emission>
+		<red>0.0</red>
+		<green>0.0</green>
+		<blue>1.0</blue>
+	</emission>
+</animation>
+
+<!-- Bateria -->
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_01</object-name>
+  <property>controls/engines/engine[0]/master-bat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975185 </x1-m>
+		<y1-m>-0.528639 </y1-m>
+		<z1-m>-0.0057865</z1-m>
+		<x2-m>-0.975185 </x2-m>
+		<y2-m>-0.440608 </y2-m>
+	  <z2-m>-0.0057865</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_01</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+	  <binding>
+			<command>property-toggle</command>  
+			<property>controls/engines/engine[0]/master-bat</property> 
+		</binding>
+	</action>
+</animation>
+
+<!-- Alternador delantero -->
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_02</object-name>
+	<property>controls/engines/engine[0]/master-alt</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975185 </x1-m>
+		<y1-m>-0.528639 </y1-m>
+		<z1-m>-0.0057865</z1-m>
+		<x2-m>-0.975185 </x2-m>
+		<y2-m>-0.440608 </y2-m>
+		<z2-m>-0.0057865</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_02</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/engines/engine[0]/master-alt</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- Alternador trasero -->
+<animation>
+  <type>rotate</type>
+  <object-name>Switch_03</object-name>
+  <property>controls/engines/engine[1]/master-alt</property>
+  <factor>-20</factor>
+	  <axis>
+        <x1-m>-0.975185 </x1-m>
+        <y1-m>-0.528639 </y1-m>
+        <z1-m>-0.0057865</z1-m>
+        <x2-m>-0.975185 </x2-m>
+        <y2-m>-0.440608 </y2-m>
+        <z2-m>-0.0057865</z2-m>
+    </axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_03</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/engines/engine[1]/master-alt</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- Front fuel pump switch * Interruptor bomba combustible delantera * -->
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_04</object-name>
+	<object-name>Switch_05</object-name>
+	<property>controls/engines/engine[0]/fuel-pump</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975185 </x1-m>
+		<y1-m>-0.528639 </y1-m>
+		<z1-m>-0.0057865</z1-m>
+		<x2-m>-0.975185 </x2-m>
+		<y2-m>-0.440608 </y2-m>
+		<z2-m>-0.0057865</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_04</object-name>
+	<object-name>Switch_05</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/engines/engine[0]/fuel-pump</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- Rear fuel pump switch * Interruptor bomba combustible trasera * -->
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_06</object-name>
+	<object-name>Switch_07</object-name>
+	<property>controls/engines/engine[1]/fuel-pump</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975185 </x1-m>
+		<y1-m>-0.528639 </y1-m>
+		<z1-m>-0.0057865</z1-m>
+		<x2-m>-0.975185 </x2-m>
+		<y2-m>-0.440608 </y2-m>
+		<z2-m>-0.0057865</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_06</object-name>
+	<object-name>Switch_07</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/engines/engine[1]/fuel-pump</property>
+		</binding>
+	</action>
+</animation>
+
+	<!--  interruptores calefaccion -->    
+<animation>
+	<name>ElectronicsGroup</name>  
+	<object-name>Switch_08</object-name> 
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_08</object-name>
+	<property>controls/anti-ice/pitot-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_08</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/pitot-heat</property>
+		</binding>
+	</action>
+</animation>
+    
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_09</object-name>
+	<property>controls/anti-ice/window-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_09</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/window-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<!-- <animation>
+	<type>rotate</type>
+	<object-name>Switch_10</object-name>
+	<property>controls/anti-ice/engine[0]/carb-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_10</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[0]/carb-heat</property>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[0]/inlet-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_11</object-name>
+	<property>controls/anti-ice/engine[1]/carb-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_11</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[1]/carb-heat</property>
+		</binding>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/engine[1]/inlet-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_12</object-name>
+	<property>controls/anti-ice/wing-heat</property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_12</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/anti-ice/wing-heat</property>
+		</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_13</object-name>
+	<property></property>
+	<factor>-20</factor>
+	<axis>
+		<x1-m>-0.975253</x1-m>
+		<y1-m>-0.418639</y1-m>
+		<z1-m>-0.001358</z1-m>
+		<x2-m>-0.975253</x2-m>
+		<y2-m>-0.199695</y2-m>
+		<z2-m>-0.001358</z2-m>
+	</axis>
+</animation>
+ 
+<animation>
+	<type>pick</type>
+	<object-name>Switch_13</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property></property>
+		</binding>
+	</action>
+</animation> -->
+
+<!-- Luz Alarma Stall -->
+
+<animation>
+	<type>material</type>
+	<object-name>LuzAlrm_01</object-name>
+		<condition>
+			<or>
+				<and>
+					<or>
+						<property>controls/engines/engine/master-bat</property>
+						<property>controls/engines/engine[0]/master-alt</property>
+						<property>controls/engines/engine[1]/master-alt</property>
+					</or>
+					<less-than>
+						<property>velocities/airspeed-kt</property>
+						<value>65</value>
+					</less-than>
+					<not>
+						<property>gear/gear[0]/wow</property>
+						<property>gear/gear[1]/wow</property>
+						<property>gear/gear[2]/wow</property>
+					</not>
+				</and>
+				<and>
+					<or>
+						<less-than>
+							<property>gear/gear[0]/position-norm</property>
+							<value>0.95</value>
+						</less-than>
+						<less-than>
+							<property>gear/gear[1]/position-norm</property>
+							<value>0.95</value>
+						</less-than>
+						<less-than>
+							<property>gear/gear[2]/position-norm</property>
+							<value>0.95</value>
+						</less-than>
+					</or>
+					<or>
+						<less-than>
+							<property>controls/engines/engine[0]/throttle</property>
+							<value>0.2</value>
+						</less-than>
+						<less-than>
+							<property>controls/engines/engine[1]/throttle</property>
+							<value>0.2</value>
+						</less-than>
+					</or>
+					<or>
+						<less-than>
+							<property>/position/altitude-agl-ft</property>
+							<value>500</value>
+						</less-than>
+					</or>
+				</and>
+			</or>
+		</condition>
+    <emission>
+       <red>0.60</red>
+       <green>0.40</green>
+       <blue>0.0</blue>
+    </emission>
+</animation>
+
+<animation>
+	<type>material</type>
+	<object-name>LuzAlrm_01</object-name>
+		<condition>
+    		<property>autopilot/locks/gs-captured</property>
+		</condition>
+    <emission>
+       <red>0.1</red>
+       <green>0.5</green>
+       <blue>0.0</blue>
+    </emission>
+</animation>
+
+<!-- AVIONICS POWER -->
+
+<animation>
+	<type>rotate</type>
+	<object-name>Switch_21</object-name>
+	<property>controls/switches/master-avionics</property> 
+	<interpolation>
+		<entry><ind>0</ind><dep> 0</dep></entry>
+		<entry><ind>1</ind><dep>30</dep></entry>
+	</interpolation>
+	<axis>
+		<x1-m>-0.873436</x1-m>
+		<y1-m>-0.529742</y1-m>
+		<z1-m>-0.216293</z1-m>
+		<x2-m>-0.873436</x2-m>
+		<y2-m>-0.533432</y2-m>
+		<z2-m>-0.207601</z2-m>
+	</axis>
+</animation>
+
+<animation>
+	<type>pick</type>
+	<object-name>Switch_21</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>
+		<binding>
+			<command>property-toggle</command>
+			<property>controls/switches/master-avionics</property>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/adf</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/audio-panel[0]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/audio-panel[1]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/autopilot</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/avionics-fan</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/dme</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/hsi</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/nav[0]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/nav[1]</property>
+			<value>0</value>
+		</binding>
+		<binding>
+			<command>property-assign</command>
+			<property>systems/electrical/outputs/transponder</property>
+			<value>0</value>
+		</binding>
+	</action>
+</animation>
+
+	<!-- INSTRUMENT LIGHTS -->
+
+<animation>
+	<type>pick</type>
+	<object-name>Perilla_04</object-name>
+	<visible>true</visible>
+	<action>
+		<button>0</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.008</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+		 	<property>controls/lighting/panel-norm</property>
+			<step>0.002</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>1</button>
+		<repeatable>true</repeatable>
+		<interval-sec>0.008</interval-sec>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/panel-norm</property>
+			<step>-0.002</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>3</button>
+		<binding>
+			<command>property-adjust</command>
+		 	<property>controls/lighting/panel-norm</property>
+			<step>0.1</step>
+			<min>-1</min>
+			<max>1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+	<action>
+		<button>4</button>
+		<binding>
+			<command>property-adjust</command>
+			<property>controls/lighting/panel-norm</property>
+			<step>-0.1</step>
+			<min>-1</min>
+			<max> 1</max>
+			<wrap>0</wrap>
+		</binding>
+	</action>
+</animation> 
+
+<animation>
+	<type>rotate</type>
+	<object-name>Perilla_04</object-name>
+	<property>controls/lighting/panel-norm</property>
+	<interpolation>
+		<entry><ind>0</ind><dep>  0</dep></entry>
+		<entry><ind>1</ind><dep>120</dep></entry>
+	</interpolation>   
+	<axis>
+		<x>-1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+	<center>
+		<x-m>-0.963693</x-m>
+		<y-m>-0.324022</y-m>
+		<z-m>-0.064977</z-m>
+	</center>
+</animation>
+
+      <!-- Parasoles *sunshade* -->
+<animation>
+	<type>pick</type>
+	<object-name>ViseraIZQ_01</object-name>
+	<visible>true</visible>
+	<action>
+		<name>Select</name>
+		<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("Cessna337/sunshade/left") > 0) {
+					interpolate("Cessna337/sunshade/left", 0, 0.6);
+					} else {
+					interpolate("Cessna337/sunshade/left", 1, 0.6);
+				}
+				</script>
+			</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>ViseraIZQ_01</object-name>
+	<property>/Cessna337/sunshade/left</property>
+	<factor>-130</factor>
+	<axis>
+		<x1-m>-0.476395</x1-m>
+		<y1-m> 0.346198</y1-m>
+		<z1-m> 0.568136</z1-m>
+		<x2-m>-0.476395</x2-m>
+		<y2-m>-0.344396</y2-m>
+		<z2-m> 0.568136</z2-m>
+	</axis>
+</animation>      
+
+<animation>
+	<type>pick</type>
+	<object-name>ViseraDER_01</object-name>
+	<visible>true</visible>
+	<action>
+		<name>Select</name>
+		<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("Cessna337/sunshade/right") > 0) {
+					interpolate("Cessna337/sunshade/right", 0, 0.6);
+					} else {
+					interpolate("Cessna337/sunshade/right", 1, 0.6);
+				}
+				</script>
+			</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>ViseraDER_01</object-name>
+	<property>/Cessna337/sunshade/right</property>
+	<factor>-130</factor>
+	<axis>
+		<x1-m>-0.476395</x1-m>
+		<y1-m> 0.346198</y1-m>
+		<z1-m> 0.568136</z1-m>
+		<x2-m>-0.476395</x2-m>
+		<y2-m>-0.344396</y2-m>
+		<z2-m> 0.568136</z2-m>
+	</axis>
+</animation>    
+
+<!-- Guantera *Storage-Drawer* -->
+
+<animation>
+	<type>pick</type>
+	<object-name>TapaPanel_02</object-name>
+	<visible>true</visible>
+	<action>
+		<name>Select</name>
+		<button>0</button>
+			<binding>
+				<command>nasal</command>
+				<script>
+				if(getprop("Cessna337/storage-drawer") > 0) {
+					interpolate("Cessna337/storage-drawer", 0, 0.6);
+					} else {
+					interpolate("Cessna337/storage-drawer", 1, 0.6);
+				}
+				</script>
+			</binding>
+	</action>
+</animation>
+
+<animation>
+	<type>rotate</type>
+	<object-name>TapaPanel_01a</object-name>
+	<object-name>TapaPanel_01b</object-name>
+	<object-name>TapaPanel_02</object-name>
+	<property>/Cessna337/storage-drawer</property>
+	<factor>-60</factor>
+	<axis>
+		<x1-m>-0.97601</x1-m>
+		<y1-m> 0.504692</y1-m>
+		<z1-m>-0.144485</z1-m>
+		<x2-m>-0.97601</x2-m>
+		<y2-m> 0.361938</y2-m>
+		<z2-m>-0.144485</z2-m>
+	</axis>
+</animation>   
+
+    <!-- **Motores** -->
+
+<!-- Propulsor delantero -->
+ <animation>
+  <type>noshadow</type>
+ <object-name>GiroHeliceDEL_01</object-name>
+ <object-name>GiroHeliceDEL_02</object-name>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HeliceDEL_01</object-name>
+  <object-name>HeliceDEL_02</object-name>
+  <object-name>HeliceDEL_03</object-name>
+  <object-name>HeliceDEL_04</object-name>
+  <condition>
+   <less-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>350</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>GiroHeliceDEL_01</object-name>
+  <object-name>GiroHeliceDEL_02</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[0]/rpm</property>
+    <value>300</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>HeliceDEL_01</object-name>
+  <object-name>HeliceDEL_02</object-name>
+  <object-name>HeliceDEL_03</object-name>
+  <object-name>HeliceDEL_04</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>1</factor>
+  <axis>
+   <x1-m>-2.72221 </x1-m>
+   <y1-m> 0.00    </y1-m>
+   <z1-m>-0.112182</z1-m>
+   <x2-m>-2.05873 </x2-m>
+   <y2-m> 0.00    </y2-m>
+   <z2-m>-0.07741 </z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>GiroHeliceDEL_01</object-name>
+  <object-name>GiroHeliceDEL_02</object-name>
+  <property>engines/engine[0]/rpm</property>
+  <factor>-01</factor>
+  <axis>
+   <x1-m> -2.92325</x1-m>
+   <y1-m> 0.00    </y1-m>
+   <z1-m>-0.122718</z1-m>
+   <x2-m>-2.05873 </x2-m>
+   <y2-m> 0.00    </y2-m>
+   <z2-m>-0.07741 </z2-m>
+  </axis>
+ </animation>
+ 
+ <!-- Prop pitch -->
+    <animation>
+        <type>rotate</type>
+        <object-name>HeliceDEL_03</object-name>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>45.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind><dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-2.5299  </x1-m>
+            <y1-m> 0.065879</y1-m>
+            <z1-m>-0.037637</z1-m>
+            <x2-m>-2.56234</x2-m>
+            <y2-m> 0.689582</y2-m>
+            <z2-m> 0.581531</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>HeliceDEL_04</object-name>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>45.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind><dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-2.52315 </x1-m>
+            <y1-m>-0.062918</y1-m>
+            <z1-m>-0.166258</z1-m>
+            <x2-m>-2.4907  </x2-m>
+            <y2-m>-0.679249</y2-m>
+            <z2-m>-0.785424</z2-m>
+        </axis>
+    </animation>
+
+<!-- Propulsor trasero -->
+ <animation>
+  <type>noshadow</type>
+  <object-name>GiroHeliceTRAS_01</object-name>
+  <object-name>GiroHeliceTRAS_02</object-name>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>HeliceTRAS_01</object-name>
+  <object-name>HeliceTRAS_02</object-name>
+  <object-name>HeliceTRAS_03</object-name>
+  <object-name>HeliceTRAS_04</object-name>
+  <condition>
+   <less-than>
+    <property>engines/engine[1]/rpm</property>
+    <value>350</value>
+   </less-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>select</type>
+  <object-name>GiroHeliceTRAS_01</object-name>
+  <object-name>GiroHeliceTRAS_02</object-name>
+  <condition>
+   <greater-than>
+    <property>engines/engine[1]/rpm</property>
+    <value>300</value>
+   </greater-than>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>HeliceTRAS_01</object-name> 
+  <object-name>HeliceTRAS_02</object-name>
+  <object-name>HeliceTRAS_03</object-name>
+  <object-name>HeliceTRAS_04</object-name>
+  <property>engines/engine[1]/rpm</property>
+  <factor>1</factor>
+  <axis>
+   <x1-m> 3.2473  </x1-m>
+   <y1-m> 0.00    </y1-m>
+   <z1-m> 0.295342</z1-m>
+   <x2-m> 2.38159 </x2-m>
+   <y2-m> 0.00    </y2-m>
+   <z2-m> 0.295342</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>spin</type>
+  <object-name>GiroHeliceTRAS_01</object-name>
+  <object-name>GiroHeliceTRAS_02</object-name>
+  <property>engines/engine[1]/rpm</property>
+  <factor>01</factor>
+  <center>
+   <x-m> 2.85155 </x-m>
+   <y-m> 0.0     </y-m>
+   <z-m> 0.295342</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <!-- Prop pitch -->
+    <animation>
+        <type>rotate</type>
+        <object-name>HeliceTRAS_03</object-name>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>45.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind><dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.85081</x1-m>
+            <y1-m> 0.065881</y1-m>
+            <z1-m> 0.359742</z1-m>
+            <x2-m> 2.8508</x2-m>
+            <y2-m> 0.685897</y2-m>
+            <z2-m> 0.979758</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>HeliceTRAS_04</object-name>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind><dep>45.0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind><dep>0.0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 2.85081</x1-m>
+            <y1-m>-0.062916</y1-m>
+            <z1-m> 0.230944</z1-m>
+            <x2-m> 2.8508</x2-m>
+            <y2-m>-0.682934</y2-m>
+            <z2-m>-0.389073</z2-m>
+        </axis>
+    </animation>
+ 
+ 
+    <!-- **Fuselaje** -->
+    
+  <!-- Animacion de los alerones -->  
+ <animation>
+  <type>rotate</type>
+  <object-name>AleronIZQ</object-name>
+  <property>surface-positions/left-aileron-pos-norm</property>
+  <factor>25</factor>
+  <axis>
+   <x1-m> 1.00836 </x1-m>
+   <y1-m>-5.73835 </y1-m>
+   <z1-m> 0.783696</z1-m>
+   <x2-m> 1.13381 </x2-m>
+   <y2-m>-4.06815 </y2-m>
+   <z2-m> 0.690848</z2-m>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>AleronDER</object-name>
+  <property>surface-positions/right-aileron-pos-norm</property>
+  <factor>25</factor>
+  <axis>
+   <x1-m> 1.00836 </x1-m>
+   <y1-m> 5.74257 </y1-m>
+   <z1-m> 0.783696</z1-m>
+   <x2-m> 1.13381 </x2-m>
+   <y2-m> 4.07237 </y2-m>
+   <z2-m> 0.690848</z2-m>
+  </axis>
+ </animation>
+ 
+ 
+  <!-- Animacion del elevador -->
+ <animation>
+  <type>rotate</type>
+  <object-name>Elevador_01</object-name>
+  <object-name>Elevador_02</object-name>
+  <property>surface-positions/elevator-pos-norm</property>
+  <interpolation>
+   <entry>
+    <ind>-1</ind>
+    <dep>-29</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>34</dep>
+   </entry>
+  </interpolation>
+    <axis>
+        <x1-m> 5.19984 </x1-m>
+        <y1-m>-1.46813 </y1-m>
+        <z1-m> 0.524536</z1-m>
+        <x2-m> 5.19984 </x2-m>
+        <y2-m> 1.47187 </y2-m>
+        <z2-m> 0.524536</z2-m>
+    </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>Elevador_02</object-name>
+  <property>controls/flight/elevator-trim</property>
+  <interpolation>
+   <entry>
+    <ind>-1</ind>
+    <dep>-39</dep>
+   </entry>
+   <entry>
+    <ind>1</ind>
+    <dep>44</dep>
+   </entry>
+  </interpolation>
+    <axis>
+        <x1-m> 5.47666 </x1-m>
+        <y1-m> 0.207157</y1-m>
+        <z1-m> 0.532734</z1-m>
+        <x2-m> 5.4825  </x2-m>
+        <y2-m> 1.41969 </y2-m>
+        <z2-m> 0.532773</z2-m>
+    </axis>
+ </animation>
+ 
+ 
+ <!-- Animacion del timon de direccion -->
+  <animation>
+  <type>rotate</type>
+  <object-name>TimonIZQ</object-name>
+  <object-name>AntiestaticaTimonIZQ</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>25</factor>
+    <axis>
+        <x1-m> 5.11007 </x1-m>
+        <y1-m>-1.52013 </y1-m>
+        <z1-m> 0.223422</z1-m>
+        <x2-m> 5.72172 </x2-m>
+        <y2-m>-1.52013 </y2-m>
+        <z2-m> 1.4093  </z2-m>
+    </axis>
+ </animation>
+ 
+  <animation>
+  <type>rotate</type>
+  <object-name>TimonDER</object-name>
+  <object-name>AntiestaticaTimonDER</object-name>
+  <property>surface-positions/rudder-pos-norm</property>
+  <factor>25</factor>
+    <axis>
+        <x1-m> 5.11007 </x1-m>
+        <y1-m> 1.52013 </y1-m>
+        <z1-m> 0.223422</z1-m>
+        <x2-m> 5.72172 </x2-m>
+        <y2-m> 1.52013 </y2-m>
+        <z2-m> 1.4093  </z2-m>
+    </axis>
+ </animation>
+ 
+ 
+ <!-- Animacion de los Flaps --> 
+ <animation>
+    <type>rotate</type>
+    <object-name>Flaps_01</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>35</factor>
+    <axis>
+        <x1-m> 1.23555</x1-m>
+        <y1-m>-4.06034</y1-m>
+        <z1-m> 0.681542</z1-m>
+        <x2-m> 1.44636</x2-m>
+        <y2-m>-1.63786</y2-m>
+        <z2-m> 0.546962</z2-m>
+    </axis>
+   </animation>
+   
+ <animation>
+    <type>rotate</type>
+    <object-name>Flaps_02</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>35</factor>
+    <axis>
+        <x1-m> 1.44664 </x1-m>
+        <y1-m>-1.40234 </y1-m>
+        <z1-m> 0.535123</z1-m>
+        <x2-m> 1.44664 </x2-m>
+        <y2-m>-0.547671</y2-m>
+        <z2-m> 0.49022 </z2-m>
+    </axis>
+   </animation>
+
+ <animation>
+    <type>rotate</type>
+    <object-name>Flaps_03</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>35</factor>
+    <axis>
+        <x1-m> 1.44664 </x1-m>
+        <y1-m> 0.551193</y1-m>
+        <z1-m> 0.49022 </z1-m>
+        <x2-m> 1.44664 </x2-m>
+        <y2-m> 1.40586 </y2-m>
+        <z2-m> 0.535123</z2-m>
+    </axis>
+ </animation>
+ 
+  <animation>
+    <type>rotate</type>
+    <object-name>Flaps_04</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <factor>35</factor>
+    <axis>
+        <x1-m> 1.44636 </x1-m>
+        <y1-m> 1.64134 </y1-m>
+        <z1-m> 0.546962</z1-m>
+        <x2-m> 1.23555 </x2-m>
+        <y2-m> 4.06383 </y2-m>
+        <z2-m> 0.681542</z2-m>
+    </axis>
+ </animation>
+ 
+ 
+ <!-- Animacion de las puertas -->
+ <animation>
+  <type>rotate</type>
+  <object-name>PuertaSUP</object-name>
+  <object-name>CristalPuertaSUP</object-name>
+  <object-name>PuertaSUPinterior</object-name>
+  <object-name>Apoyabrazos_PuertaSUP</object-name>
+  <object-name>Manilla</object-name>
+  <property>controls/door[0]</property>    
+  <factor>-88.0</factor>
+   <axis>
+       <x1-m>-0.02002 </x1-m>
+       <y1-m> 0.565133</y1-m>
+       <z1-m> 0.484942</z1-m>
+       <x2-m>-0.311865</x2-m>
+       <y2-m> 0.553085</y2-m>
+       <z2-m> 0.499948</z2-m>
+   </axis>
+</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>PuertaINF</object-name>
+  <object-name>PuertaINFinterior</object-name>
+  <object-name>Escalerilla</object-name>
+  <property>controls/door[0]</property>    
+  <factor>120.0</factor>
+   <axis>
+       <x1-m> 0.172443</x1-m>
+       <y1-m> 0.512538</y1-m>
+       <z1-m>-0.684745</z1-m>
+       <x2-m>-0.675291</x2-m>
+       <y2-m> 0.512538</y2-m>
+       <z2-m>-0.684745</z2-m>
+   </axis>
+</animation>
+
+ <!-- Cowl Flaps delanteros -->
+ <animation>
+  <type>rotate</type>    
+  <object-name>CowlFlaps_01</object-name> 
+	<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+	<factor>-20</factor>
+   <axis>
+			<x1-m>-1.77088 </x1-m>
+			<y1-m>-0.20412 </y1-m>
+			<z1-m>-0.713063</z1-m>
+			<x2-m>-1.77088 </x2-m>
+			<y2-m>-0.325812</y2-m>
+			<z2-m>-0.674938</z2-m>			
+		</axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>    
+  <object-name>CowlFlaps_02</object-name> 
+	<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+	<factor>20</factor>
+   <axis>
+			<x1-m>-1.77088 </x1-m>
+			<y1-m> 0.208102</y1-m>
+			<z1-m>-0.713063</z1-m>
+			<x2-m>-1.77088 </x2-m>
+			<y2-m> 0.329794</y2-m>
+			<z2-m>-0.674938</z2-m>			
+		</axis>
+ </animation>
+ 
+ <!-- Cowl Flaps traseros --> 
+ <animation>
+  <type>rotate</type>    
+  <object-name>CowlFlaps_03</object-name>
+  <object-name>CowlFlaps_03_int</object-name> 
+	<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+	<factor>20</factor>
+   <axis>
+			<x1-m> 1.86702 </x1-m>
+			<y1-m>-0.496767</y1-m>
+			<z1-m> 0.27185 </z1-m>
+			<x2-m> 1.86702 </x2-m>
+			<y2-m>-0.489094</y2-m>
+			<z2-m> 0.068792</z2-m>			
+		</axis>
+ </animation> 
+ 
+ <animation>
+  <type>rotate</type>    
+  <object-name>CowlFlaps_04</object-name>
+  <object-name>CowlFlaps_04_int</object-name> 
+	<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+	<factor>-20</factor>
+   <axis>
+			<x1-m> 1.86702 </x1-m>
+			<y1-m> 0.50075 </y1-m>
+			<z1-m> 0.27185 </z1-m>
+			<x2-m> 1.86702 </x2-m>
+			<y2-m> 0.493077</y2-m>
+			<z2-m> 0.068792</z2-m>			
+		</axis>
+ </animation>  
+
+<!-- **Tren de aterrizaje** -->
+
+<!-- Direccion -->
+ <animation>
+  <type>rotate</type>  
+  <object-name>RuedaDEL</object-name> 
+  <object-name>TrenDEL_01</object-name>
+  <object-name>TrenDEL_02</object-name>
+  <object-name>TrenDEL_03</object-name>
+  <object-name>TrenDEL_04</object-name>
+  <object-name>TrenDEL_05</object-name>
+  <object-name>TrenDEL_06</object-name>
+  <property>gear/gear/steering-norm</property>
+  <factor>45</factor>		
+   <axis>
+			<x1-m>-1.53078</x1-m>
+			<y1-m> 0.00   </y1-m>
+			<z1-m>-0.61484</z1-m>
+			<x2-m>-1.59993</x2-m>
+			<y2-m> 0.00   </y2-m>
+			<z2-m>-1.14163</z2-m>			
+		</axis>
+ </animation>
+  
+<!-- Amortiguacion Delantera -->
+ <animation>
+  <type>translate</type> 
+  <object-name>RuedaDEL</object-name> 
+  <object-name>TrenDEL_02</object-name>
+  <object-name>TrenDEL_03</object-name>
+  <object-name>TrenDEL_05</object-name>
+  <object-name>TrenDEL_06</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>-0.20</factor>
+       <axis>
+			<x1-m>-1.53078</x1-m>
+			<y1-m> 0.00   </y1-m>
+			<z1-m>-0.61484</z1-m>
+			<x2-m>-1.59993</x2-m>
+			<y2-m> 0.00   </y2-m>
+			<z2-m>-1.14163</z2-m>			
+		</axis>
+  </animation>
+  
+ <animation>
+   <type>rotate</type>
+   <object-name>TrenDEL_05</object-name>
+   <property>gear/gear[0]/compression-norm</property>
+    <interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.33</ind>
+				<dep>-22</dep>
+			</entry>
+			<entry>
+				<ind>0.66</ind>
+				<dep>-44</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>-66</dep>
+			</entry>
+		</interpolation>
+   <center>
+   <x-m>-1.60583 </x-m>
+   <y-m> 0.00    </y-m>
+   <z-m>-0.867226</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+   <type>rotate</type>
+   <object-name>TrenDEL_04</object-name>
+   <property>gear/gear[0]/compression-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.33</ind>
+				<dep>22</dep>
+			</entry>
+			<entry>
+				<ind>0.66</ind>
+				<dep>44</dep>
+			</entry>
+			<entry>
+				<ind>1</ind>
+				<dep>66</dep>
+			</entry>
+		</interpolation>
+   <center>
+   <x-m>-1.59118 </x-m>
+   <y-m>0.00     </y-m>
+   <z-m>-0.755831</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+<!-- Amortiguacion Trasera Izquierda -->
+<!-- <animation>
+  <type>rotate</type> 
+    <object-name>RuedaIZQ</object-name>
+    <object-name>TrenIZQ_01</object-name>
+    <object-name>TrenIZQ_02</object-name>
+    <object-name>TrenIZQ_03</object-name>
+   <property>gear/gear[1]/compression-norm</property>
+  <factor>-1.9</factor>
+  <center>
+   <x-m> 0.314692</x-m>
+   <y-m>-0.368953</y-m>
+   <z-m>-0.700351</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation> -->
+  
+<!-- Amortiguacion Trasera Derecha -->
+<!-- <animation>
+  <type>rotate</type> 
+    <object-name>RuedaDER</object-name>
+    <object-name>TrenDER_01</object-name>
+    <object-name>TrenDER_02</object-name>
+    <object-name>TrenDER_03</object-name>
+   <property>gear/gear[2]/compression-norm</property>
+  <factor>1.9</factor>
+   <center>
+   <x-m> 0.314692</x-m>
+   <y-m> 0.368962</y-m>
+   <z-m>-0.700351</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation> -->
+ 
+ 
+<!-- Tren de aterrizaje retractil -->
+<!-- Delantero -->
+    <animation>
+     <type>rotate</type>
+     <object-name>RuedaDEL</object-name> 
+     <object-name>TrenDEL_01</object-name>
+     <object-name>TrenDEL_02</object-name>
+     <object-name>TrenDEL_03</object-name>
+     <object-name>TrenDEL_04</object-name>
+     <object-name>TrenDEL_05</object-name>
+     <object-name>TrenDEL_06</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>100</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-1.53078</x-m>
+            <y-m> 0.00   </y-m>
+            <z-m>-0.61484</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    
+        <animation>
+     <type>rotate</type>
+     <object-name>RuedaDEL</object-name> 
+     <object-name>TrenDEL_01</object-name>
+     <object-name>TrenDEL_02</object-name>
+     <object-name>TrenDEL_03</object-name>
+     <object-name>TrenDEL_04</object-name>
+     <object-name>TrenDEL_05</object-name>
+     <object-name>TrenDEL_06</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>90</dep>
+            </entry>
+            <entry>
+                <ind>0.5</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-1.53078 </x1-m>
+            <y1-m> 0.00    </y1-m>
+            <z1-m>-0.61484 </z1-m>
+            <x2-m>-1.56766 </x2-m>
+            <y2-m> 0.00    </y2-m>
+            <z2-m>-0.894645</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>CompTrenDEL_03</object-name>
+        <object-name>CompTrenDEL_03_int</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>120</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>-1.43467 </x-m>
+            <y-m> 0.00    </y-m>
+            <z-m>-0.754121</z-m>
+        </center>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>CompTrenDEL_01</object-name>
+        <object-name>CompTrenDEL_01_int</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>-110</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>-110</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-2.08798 </x1-m>
+            <y1-m>-0.212493</y1-m>
+            <z1-m>-0.624575</z1-m>
+            <x2-m>-2.0115  </x2-m>
+            <y2-m>-0.219583</y2-m>
+            <z2-m>-0.654417</z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>CompTrenDEL_02</object-name>
+        <object-name>CompTrenDEL_02_int</object-name>
+        <property>gear/gear[0]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>110</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>110</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m>-2.08798 </x1-m>
+            <y1-m> 0.216475</y1-m>
+            <z1-m>-0.624575</z1-m>
+            <x2-m>-2.0115  </x2-m>
+            <y2-m> 0.223565</y2-m>
+            <z2-m>-0.654417</z2-m>
+        </axis>
+    </animation>
+    
+<!-- Trasero izquierdo -->
+    <animation>
+      <type>rotate</type>
+        <object-name>RuedaIZQ</object-name>
+        <object-name>TrenIZQ_01</object-name>
+        <object-name>TrenIZQ_02</object-name>
+        <object-name>TrenIZQ_03</object-name>
+      <property>gear/gear[1]/position-norm</property>
+     <interpolation>
+        <entry>
+          <ind>0</ind>
+         <dep>-50</dep> 
+        </entry>
+        <entry>
+          <ind>0.5</ind>
+          <dep>-50</dep> 
+        </entry>
+        <entry>
+          <ind>1.0</ind>
+          <dep>0.0</dep>
+        </entry>
+      </interpolation> 
+      <axis>
+        <x1-m> 0.900309</x1-m>
+        <y1-m>-0.211212</y1-m>
+        <z1-m>-0.608023</z1-m>
+        <x2-m> 0.763211</x2-m>   
+        <y2-m>-0.211241</y2-m> 
+        <z2-m>-0.607862</z2-m> 
+      </axis>
+    </animation>
+    
+    <animation>
+      <type>rotate</type>
+        <object-name>RuedaIZQ</object-name>
+        <object-name>TrenIZQ_01</object-name>
+        <object-name>TrenIZQ_02</object-name>
+        <object-name>TrenIZQ_03</object-name>
+      <property>gear/gear[1]/position-norm</property>
+      <interpolation>
+        <entry>
+          <ind>0</ind>
+          <dep>107</dep>   
+        </entry>
+        <entry>
+          <ind>0.1</ind>
+          <dep>107</dep>   
+        </entry>
+        <entry>
+          <ind>0.5</ind>
+          <dep>0.0</dep>
+        </entry>
+        <entry>
+          <ind>1.0</ind>
+          <dep>0.0</dep>
+        </entry>
+      </interpolation>
+      <center>
+          <x-m> 0.719796</x-m> 
+          <y-m>-0.36785 </y-m>  
+          <z-m>-0.593094</z-m>
+      </center> 
+        <axis>
+            <x> 0.0 </x>
+            <y>-0.35</y>
+            <z> 0.9 </z> 
+        </axis>
+    </animation>
+  
+    <animation>
+        <type>rotate</type>
+      <object-name>CompTrenIZQ_03</object-name>
+      <object-name>CompTrenIZQ_03_int</object-name>
+        <property>gear/gear[1]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>-110</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>-110</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 1.59174 </x1-m>
+            <y1-m>-0.524051</y1-m>
+            <z1-m>-0.282249</z1-m>
+            <x2-m> 2.00962 </x2-m>
+            <y2-m>-0.413693</y2-m>
+            <z2-m>-0.22371 </z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+      <object-name>CompTrenIZQ_01</object-name>
+      <object-name>CompTrenIZQ_02</object-name>
+      <object-name>CompTrenIZQ_01_int</object-name>
+      <object-name>CompTrenIZQ_02_int</object-name>
+        <property>gear/gear[1]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>110</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>110</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 1.13279 </x1-m>
+            <y1-m>-0.285813</y1-m>
+            <z1-m>-0.764917</z1-m>
+            <x2-m> 1.36023 </x2-m>
+            <y2-m>-0.277614</y2-m>
+            <z2-m>-0.724199</z2-m>
+        </axis>
+    </animation>
+    
+<!-- Trasero derecho -->
+    <animation>
+      <type>rotate</type>
+      <object-name>RuedaDER</object-name>
+      <object-name>TrenDER_01</object-name>
+      <object-name>TrenDER_02</object-name>
+      <object-name>TrenDER_03</object-name>
+      <property>gear/gear[1]/position-norm</property>
+     <interpolation>
+        <entry>
+          <ind>0</ind>
+         <dep> 50</dep> 
+        </entry>
+        <entry>
+          <ind>0.5</ind>
+          <dep> 50</dep> 
+        </entry>
+        <entry>
+          <ind>1.0</ind>
+          <dep>0.0</dep>
+        </entry>
+      </interpolation> 
+      <axis>
+        <x1-m> 0.900309</x1-m>
+        <y1-m> 0.211212</y1-m>
+        <z1-m>-0.608023</z1-m>
+        <x2-m> 0.763211</x2-m>   
+        <y2-m> 0.211241</y2-m> 
+        <z2-m>-0.607862</z2-m> 
+      </axis>
+    </animation>
+    
+    <animation>
+      <type>rotate</type>
+      <object-name>RuedaDER</object-name>
+      <object-name>TrenDER_01</object-name>
+      <object-name>TrenDER_02</object-name>
+      <object-name>TrenDER_03</object-name>
+      <property>gear/gear[1]/position-norm</property>
+      <interpolation>
+        <entry>
+          <ind>0</ind>
+          <dep>-107</dep>   
+        </entry>
+        <entry>
+          <ind>0.1</ind>
+          <dep>-107</dep>   
+        </entry>
+        <entry>
+          <ind>0.5</ind>
+          <dep>0.0</dep>
+        </entry>
+        <entry>
+          <ind>1.0</ind>
+          <dep>0.0</dep>
+        </entry>
+      </interpolation>
+      <center>
+          <x-m> 0.719796</x-m>
+          <y-m> 0.36785 </y-m>  
+          <z-m>-0.593094</z-m>
+      </center> 
+        <axis>
+            <x> 0.0 </x>
+            <y> 0.35</y>
+            <z> 0.9 </z> 
+        </axis>
+    </animation>    
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>CompTrenDER_03</object-name>
+        <object-name>CompTrenDER_03_int</object-name>
+        <property>gear/gear[1]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>110</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>110</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+                <axis>
+            <x1-m> 1.59174 </x1-m>
+            <y1-m> 0.524051</y1-m>
+            <z1-m>-0.282249</z1-m>
+            <x2-m> 2.00962 </x2-m>
+            <y2-m> 0.413693</y2-m>
+            <z2-m>-0.22371 </z2-m>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>rotate</type>
+        <object-name>CompTrenDER_01</object-name>
+        <object-name>CompTrenDER_02</object-name>
+        <object-name>CompTrenDER_01_int</object-name>
+        <object-name>CompTrenDER_02_int</object-name>
+        <property>gear/gear[1]/position-norm</property>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>-110</dep>
+            </entry>
+            <entry>
+                <ind>0.8</ind>
+                <dep>-110</dep>
+            </entry>
+            <entry>
+                <ind>1.0</ind>
+                <dep>0</dep>
+            </entry>
+        </interpolation>
+        <axis>
+            <x1-m> 1.13279 </x1-m>
+            <y1-m> 0.285813</y1-m>
+            <z1-m>-0.764917</z1-m>
+            <x2-m> 1.36023 </x2-m>
+            <y2-m> 0.277614</y2-m>
+            <z2-m>-0.724199</z2-m>
+        </axis>
+    </animation>
+    
+  <!-- Rotacion de las ruedas -->
+    <animation>
+        <type>spin</type>
+        <object-name>RuedaDEL</object-name>
+     <property>gear/gear[0]/rollspeed-ms</property> 
+        <factor>-13.8</factor> 
+        <center>
+            <x-m>-1.59993</x-m>
+            <y-m> 0.00   </y-m>
+            <z-m>-1.14163</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>spin</type>
+        <object-name>RuedaIZQ</object-name>
+        <property>gear/gear[1]/rollspeed-ms</property>  
+        <factor>-13.8</factor>
+        <center>
+            <x-m> 0.802023</x-m>
+            <y-m>-1.342   </y-m>
+            <z-m>-1.05834 </z-m>
+        </center>        
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    
+    <animation>
+        <type>spin</type>
+        <object-name>RuedaDER</object-name>
+        <property>gear/gear[2]/rollspeed-ms</property>
+        <factor>-13.8</factor>
+        <center>
+            <x-m> 0.802022</x-m>
+            <y-m> 1.342   </y-m>
+            <z-m>-1.05834 </z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+    </animation>
+    
+<!-- Humo Ruedas *tyre smoke* -->
+<!-- Delantera -->  
+ <model>
+  <path>Aircraft/Generic/Effects/tyre-smoke-nose.xml</path>
+  <name>tyre-smoke-n</name>
+  <offsets>
+   <x-m>-1.60136</x-m>
+   <y-m> 0.00   </y-m>
+   <z-m>-1.35708</z-m>
+  </offsets>
+ </model>
+ 
+ <!-- Trasera izquierda -->  
+ <model>
+  <path>Aircraft/Generic/Effects/tyre-smoke-port.xml</path> 
+  <name>tyre-smoke-p</name>
+  <offsets>
+   <x-m> 0.803253</x-m>
+   <y-m>-1.34673 </y-m>
+   <z-m>-1.33294 </z-m>
+  </offsets>
+ </model>
+
+<!-- Trasera derecha -->  
+ <model>
+  <path>Aircraft/Generic/Effects/tyre-smoke-stbd.xml</path>
+  <name>tyre-smoke-s</name>
+  <offsets>
+   <x-m> 0.803253</x-m>
+   <y-m> 1.34673 </y-m>
+   <z-m>-1.33294 </z-m>
+  </offsets>
+ </model>
+
+<!--  Luces *lights* con interruptores -->
+
+<animation>
+	<name>ElectronicsGroup</name>  
+	<object-name>Switch_14</object-name>  
+	<object-name>Switch_15</object-name>
+	<object-name>Switch_16</object-name>
+	<object-name>Switch_17</object-name>
+	<object-name>Switch_18</object-name>
+</animation>
+
+<!-- Baliza  *Beacon* -->   
+	
+<model> 
+	<path>Aircraft\Cessna337\Models\Lights\Beacon.xml</path>
+	<offsets>
+		<x-m> 5.46929</x-m>
+		<y-m> 1.52348</y-m>
+		<z-m> 1.58905</z-m>
+	</offsets>
+</model>
+  
+ <animation>  <!-- Interruptor beacon -->
+  <type>rotate</type> 
+  <object-name>Switch_16</object-name>
+  <property>controls/lighting/beacon</property>
+  <factor>-20</factor>
+  <axis>
+      <x1-m>-0.975253</x1-m>
+      <y1-m>-0.418639</y1-m>
+      <z1-m>-0.001358</z1-m>
+      <x2-m>-0.975253</x2-m>
+      <y2-m>-0.199695</y2-m>
+      <z2-m>-0.001358</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>  <!-- Interruptor beacon -->
+      <type>pick</type> 
+      <object-name>Switch_16</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/beacon</property>
+        </binding>
+      </action>
+</animation>
+  
+ <!-- Luces de navegacion *Lights of navigation* -->
+
+  <model>   <!-- Navegacion Izquierda --> 
+    <path>Aircraft\Cessna337\Models\Lights\NavL.xml</path>
+    <offsets>
+      <x-m> 0.163207</x-m>
+      <y-m>-5.86852 </y-m>
+      <z-m> 0.771891</z-m>
+    </offsets>
+  </model>
+  
+  <model>   <!-- Navegacion Derecha --> 
+    <path>Aircraft\Cessna337\Models\Lights\NavR.xml</path>
+    <offsets>
+      <x-m> 0.163206</x-m>
+      <y-m> 5.87148 </y-m>
+      <z-m> 0.771891</z-m>
+    </offsets>
+  </model>  
+  
+  <model>   <!-- Navegacion Trasera -->  
+    <path>Aircraft\Cessna337\Models\Lights\NavBack.xml</path>
+    <offsets>
+      <x-m> 5.62651 </x-m>
+      <y-m> 1.52342 </y-m>
+      <z-m> 0.093985</z-m>
+    </offsets>
+  </model> 
+  
+  <animation>  <!-- Interruptor navegacion -->
+  <type>rotate</type>
+  <object-name>Switch_14</object-name>
+  <property>controls/lighting/nav-lights</property>
+  <factor>-20</factor>
+  <axis>
+      <x1-m>-0.975253</x1-m>
+      <y1-m>-0.418639</y1-m>
+      <z1-m>-0.001358</z1-m>
+      <x2-m>-0.975253</x2-m>
+      <y2-m>-0.199695</y2-m>
+      <z2-m>-0.001358</z2-m>
+  </axis>
+</animation>
+ 
+<animation>  <!-- Interruptor navegacion -->
+      <type>pick</type>
+      <object-name>Switch_14</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/nav-lights</property>
+        </binding>
+      </action>
+</animation>
+
+<!-- Luces de aterrizaje *Landing Light* -->
+
+  <model>   <!-- Izquierda -->   
+    <path>Aircraft\Cessna337\Models\Lights\LandingLights.xml</path>
+    <offsets>
+      <x-m>-2.30516 </x-m>
+      <y-m>-0.108519</y-m>
+      <z-m>-0.446167</z-m>
+    </offsets>
+  </model>    
+  
+  <model>   <!-- Derecha -->  
+    <path>Aircraft\Cessna337\Models\Lights\LandingLights.xml</path>
+    <offsets>
+      <x-m>-2.30516 </x-m>
+      <y-m> 0.111481</y-m>
+      <z-m>-0.446167</z-m>
+    </offsets>
+  </model>   
+  
+ <animation>  <!-- Interruptor luces aterrizaje -->
+  <type>rotate</type> 
+  <object-name>Switch_18</object-name> 	                                       
+  <property>controls/lighting/landing-lights</property> 
+  <condition>
+	 <not>
+		 <property>controls/lighting/taxi-light</property>
+	 </not>
+ </condition>
+  <factor>-20</factor>
+  <axis>
+      <x1-m>-0.975253</x1-m>
+      <y1-m>-0.418639</y1-m>
+      <z1-m>-0.001358</z1-m>
+      <x2-m>-0.975253</x2-m>
+      <y2-m>-0.199695</y2-m>
+      <z2-m>-0.001358</z2-m>
+  </axis>
+ </animation> 
+ 
+ <animation>  <!-- Interruptor luces aterrizaje -->
+      <type>pick</type>
+      <object-name>Switch_18</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/landing-lights</property>
+        <condition>
+			   <not>
+				  <property>controls/lighting/taxi-light</property>
+			   </not>
+		    </condition>
+        </binding> 
+      </action>
+</animation>
+
+<!-- Luces de rodadura  * Taxi Lights* -->
+    
+  <model>   <!-- Derecha -->  
+    <path>Aircraft\Cessna337\Models\Lights\taxi.xml</path>
+    <offsets>
+      <x-m>-2.30516 </x-m>
+      <y-m> 0.111481</y-m>
+      <z-m>-0.446167</z-m>
+    </offsets>
+  </model>  
+  
+ <animation>  <!-- Interruptor taxi -->
+  <type>rotate</type>  
+  <object-name>Switch_17</object-name>
+  <property>controls/lighting/taxi-light</property>
+  <condition>
+	 <not>
+		 <property>controls/lighting/landing-lights</property>
+	 </not>
+ </condition>
+  <factor>-20</factor>
+  <axis>
+      <x1-m>-0.975253</x1-m>
+      <y1-m>-0.418639</y1-m>
+      <z1-m>-0.001358</z1-m>
+      <x2-m>-0.975253</x2-m>
+      <y2-m>-0.199695</y2-m>
+      <z2-m>-0.001358</z2-m>
+  </axis>
+ </animation>
+ 
+ <animation>  <!-- Interruptor taxi -->
+      <type>pick</type> 
+      <object-name>Switch_17</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/taxi-light</property>
+        <condition>
+	       <not>
+		      <property>controls/lighting/landing-lights</property>
+	       </not>
+        </condition>
+        </binding>
+      </action>
+</animation>
+
+  
+  <!-- estroboscopico  *strobe* -->
+ 
+   <model>  <!-- Strobe Izquierdo -->  
+    <path>Aircraft\Cessna337\Models\Lights\Strobe.xml</path>
+    <offsets>
+      <x-m> 0.278507</x-m>
+      <y-m>-5.90852 </y-m>
+      <z-m> 0.753573</z-m>
+    </offsets>
+  </model>
+
+  <model> <!-- Strobe derecho -->  
+    <path>Aircraft\Cessna337\Models\Lights\Strobe.xml</path>
+    <offsets>
+      <x-m> 0.278507</x-m>
+      <y-m> 5.91148 </y-m>
+      <z-m> 0.753573</z-m>
+    </offsets>
+  </model>  
+  
+   <animation>  <!-- Interruptor strobes -->
+  <type>rotate</type>  
+  <object-name>Switch_15</object-name>
+  <property>controls/lighting/strobe</property>
+  <factor>-20</factor>
+  <axis>
+      <x1-m>-0.975253</x1-m>
+      <y1-m>-0.418639</y1-m>
+      <z1-m>-0.001358</z1-m>
+      <x2-m>-0.975253</x2-m>
+      <y2-m>-0.199695</y2-m>
+      <z2-m>-0.001358</z2-m>
+  </axis>
+ </animation>
+ 
+<animation>  <!-- Interruptor strobes -->
+      <type>pick</type> 
+      <object-name>Switch_15</object-name>
+      <visible>true</visible>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/lighting/strobe</property>
+        </binding>
+      </action>
+</animation>
+
+
+	<!-- **SHADERS** -->
+
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-glass</inherits-from>
+	<object-name>Cristales</object-name>
+	<object-name>CristalPuertaSUP</object-name>
+</effect>
+
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-reflect</inherits-from>
+		<object-name>Ceniceros</object-name>
+		<object-name>Manilla</object-name>
+		<object-name>PalancaAcelerador1_01</object-name>
+		<object-name>PalancaAcelerador2_01</object-name>
+		<object-name>PalancaPitch1_01</object-name>
+		<object-name>PalancaPitch2_01</object-name>
+		<object-name>PalancaMezcla1_01</object-name>
+		<object-name>PalancaMezcla2_01</object-name>
+		<object-name>PalancaBrakes_01</object-name>
+		<object-name>YokeIZQ_01</object-name>
+		<object-name>YokeDER_01</object-name>
+		<object-name>ViseraIZQ_02</object-name>
+		<object-name>ViseraDER_02</object-name>
+		<object-name>BasesPalancasYLuces</object-name>
+		<object-name>BaseSwitch_19</object-name>
+		<object-name>BaseSwitch_20</object-name>
+		<object-name>AirConditioner</object-name>
+</effect>
+
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-opaque</inherits-from>
+		<object-name>Parasol</object-name>
+		<object-name>PuertaSUPinterior</object-name>
+		<object-name>PuertaINFinterior</object-name>
+		<object-name>Escalerilla</object-name>
+		<object-name>Piso</object-name>
+		<object-name>Interior</object-name>
+		<object-name>FondoInterior</object-name>
+		<object-name>FrontalInterior</object-name>
+		<object-name>PanelParkBrake</object-name>
+		<object-name>CircuitBreakersPanel</object-name>
+		<object-name>Overhead</object-name>
+		<object-name>ViseraIZQ_01</object-name>
+		<object-name>ViseraDER_01</object-name>
+		<object-name>SoporteViseras</object-name>
+		<object-name>TapaPanel_01</object-name>
+		<object-name>Apoyabrazos</object-name>
+		<object-name>Apoyabrazos_PuertaSUP</object-name>
+</effect>
+
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-bump</inherits-from>
+		<object-name>Alas</object-name>
+		<object-name>AleronDER</object-name>
+		<object-name>AleronIZQ</object-name>
+		<object-name>AletasAlas</object-name>
+		<object-name>ColaDER</object-name>
+		<object-name>ColaIZQ</object-name>
+		<object-name>CompTrenDEL_01</object-name>
+		<object-name>CompTrenDEL_02</object-name>
+		<object-name>CompTrenDEL_03</object-name>
+		<object-name>CompTrenDER_01</object-name>
+		<object-name>CompTrenDER_02</object-name>
+		<object-name>CompTrenDER_03</object-name>
+		<object-name>CompTrenIZQ_01</object-name>
+		<object-name>CompTrenIZQ_02</object-name>
+		<object-name>CompTrenIZQ_03</object-name>
+		<object-name>CowlFlaps_01</object-name>
+		<object-name>CowlFlaps_02</object-name>
+		<object-name>CowlFlaps_03</object-name>
+		<object-name>CowlFlaps_04</object-name>
+		<object-name>Dispositivo</object-name>
+		<object-name>Elevador_01</object-name>
+		<object-name>Elevador_02</object-name>
+		<object-name>EstabH</object-name>
+		<object-name>Flaps_01</object-name>
+		<object-name>Flaps_02</object-name>
+		<object-name>Flaps_03</object-name>
+		<object-name>Flaps_04</object-name>
+		<object-name>Fuselaje</object-name>
+		<object-name>GiroHeliceDEL_02</object-name>
+		<object-name>GiroHeliceTRAS_02</object-name>
+		<object-name>HeliceDEL_02</object-name>
+		<object-name>HeliceDEL_03</object-name>
+		<object-name>HeliceDEL_04</object-name>
+		<object-name>HeliceTRAS_02</object-name>
+		<object-name>HeliceTRAS_03</object-name>
+		<object-name>HeliceTRAS_04</object-name>
+		<object-name>IntakeDorsal</object-name>
+		<object-name>PuertaINF</object-name>
+		<object-name>PuertaSUP</object-name>
+		<object-name>SoporteAlaDER</object-name>
+		<object-name>SoporteAlaIZQ</object-name>
+		<object-name>TimonDER</object-name>
+		<object-name>TimonIZQ</object-name>
+		<object-name>TrenDER_01</object-name>
+		<object-name>TrenIZQ_01</object-name>
+		<object-name>VideoCam_03</object-name>
+</effect>
+
+<effect>
+	<inherits-from>Aircraft/Cessna337/Models/Effects/Cessna337-uber-rubber</inherits-from>
+		<object-name>RuedaDEL</object-name>
+		<object-name>RuedaDER</object-name>
+		<object-name>RuedaIZQ</object-name>
+</effect>
+
+</PropertyList>

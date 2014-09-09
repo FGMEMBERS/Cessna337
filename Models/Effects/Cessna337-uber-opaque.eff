@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- override the default effect for .dds textured objects -->
+<PropertyList>
+	<name>Cessna337-uber-opaque</name>
+	<inherits-from>Effects/model-default</inherits-from>
+	<parameters>
+		<rendering-hint>opaque</rendering-hint>
+		<transparent>false</transparent>
+		<render-bin>
+			<bin-number>1</bin-number>
+			<bin-name>RenderBin</bin-name>
+		</render-bin>
+	</parameters>
+	<technique n="10">
+		<pass>
+			<rendering-hint>
+				<use>rendering-hint</use>
+			</rendering-hint>
+			<blend>
+				<use>transparent</use>
+			</blend>
+			<alpha-test>
+				<use>transparent</use>
+			</alpha-test>
+			<render-bin>
+				<bin-number>
+					<use>render-bin/bin-number</use>
+				</bin-number>
+				<bin-name>
+					<use>render-bin/bin-name</use>
+				</bin-name>
+			</render-bin>
+		</pass>
+	</technique>
+</PropertyList>
