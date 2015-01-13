@@ -251,8 +251,8 @@
 		<beacon type="bool">false</beacon>
 		<strobe type="bool">false</strobe>
 		<nav-lights type="bool">false</nav-lights>
-		<taxi-light>false</taxi-light>
-		<landing-lights>false</landing-lights>				
+		<landing-lights alias="/sim/rendering/als-secondary-lights/use-landing-light"/>
+		<taxi-light alias="/sim/rendering/als-secondary-lights/use-alt-landing-light"/>
 	</lighting>
 </controls>
 
