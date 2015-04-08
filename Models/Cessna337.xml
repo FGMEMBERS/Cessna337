@@ -3206,7 +3206,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <!-- Baliza  *Beacon* -->   
 	
 <model> 
-	<path>Aircraft\Cessna337\Models\Lights\Beacon.xml</path>
+	<path>Aircraft/Cessna337/Models/Lights/Beacon.xml</path>
 	<offsets>
 		<x-m> 5.46929</x-m>
 		<y-m> 1.52348</y-m>
@@ -3246,7 +3246,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
  <!-- Luces de navegacion *Lights of navigation* -->
 
   <model>   <!-- Navegacion Izquierda --> 
-    <path>Aircraft\Cessna337\Models\Lights\NavL.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/NavL.xml</path>
     <offsets>
       <x-m> 0.163207</x-m>
       <y-m>-5.86852 </y-m>
@@ -3255,7 +3255,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   </model>
   
   <model>   <!-- Navegacion Derecha --> 
-    <path>Aircraft\Cessna337\Models\Lights\NavR.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/NavR.xml</path>
     <offsets>
       <x-m> 0.163206</x-m>
       <y-m> 5.87148 </y-m>
@@ -3264,7 +3264,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   </model>  
   
   <model>   <!-- Navegacion Trasera -->  
-    <path>Aircraft\Cessna337\Models\Lights\NavBack.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/NavBack.xml</path>
     <offsets>
       <x-m> 5.62651 </x-m>
       <y-m> 1.52342 </y-m>
@@ -3304,7 +3304,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <!-- Luces de aterrizaje *Landing Light* -->
 
   <model>   <!-- Izquierda -->   
-    <path>Aircraft\Cessna337\Models\Lights\LandingLights.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/LandingLights.xml</path>
     <offsets>
       <x-m>-2.30516 </x-m>
       <y-m>-0.108519</y-m>
@@ -3313,7 +3313,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   </model>    
   
   <model>   <!-- Derecha -->  
-    <path>Aircraft\Cessna337\Models\Lights\LandingLights.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/LandingLights.xml</path>
     <offsets>
       <x-m>-2.30516 </x-m>
       <y-m> 0.111481</y-m>
@@ -3363,7 +3363,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <!-- Luces de rodadura  * Taxi Lights* -->
     
   <model>   <!-- Derecha -->  
-    <path>Aircraft\Cessna337\Models\Lights\taxi.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/taxi.xml</path>
     <offsets>
       <x-m>-2.30516 </x-m>
       <y-m> 0.111481</y-m>
@@ -3414,7 +3414,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   <!-- estroboscopico  *strobe* -->
  
    <model>  <!-- Strobe Izquierdo -->  
-    <path>Aircraft\Cessna337\Models\Lights\Strobe.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/Strobe.xml</path>
     <offsets>
       <x-m> 0.278507</x-m>
       <y-m>-5.90852 </y-m>
@@ -3423,7 +3423,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   </model>
 
   <model> <!-- Strobe derecho -->  
-    <path>Aircraft\Cessna337\Models\Lights\Strobe.xml</path>
+    <path>Aircraft/Cessna337/Models/Lights/Strobe.xml</path>
     <offsets>
       <x-m> 0.278507</x-m>
       <y-m> 5.91148 </y-m>
