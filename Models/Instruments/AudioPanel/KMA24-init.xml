@@ -4,7 +4,7 @@ Provide a proper(?) initialization of kma20 switches.
 Usage:
 add 
 <instrumentation>
-	<kma20 include="../Instruments-3d/kma20/kma20init.xml"/>
+	<kma20 include="Aircraft/Instruments-3d/kma20/kma20init.xml"/>
 </instrumentation>
 to your aircraft-set.xml
 -->
