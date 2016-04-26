@@ -67,6 +67,11 @@
     <number>1</number>
 </comm-radio>
 
+<marker-beacon>
+    <name>marker-beacon</name>
+    <number>0</number>
+</marker-beacon>
+
 <nav-radio>
 	<name>nav</name>
 	<number>0</number>
