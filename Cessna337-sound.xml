@@ -596,7 +596,7 @@
 		</volume>
 	</click>
 	<click> 
-		<name>Front Alt OFF</name>
+		<name>Front Fuel Pump LO OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
 			<not> 
@@ -607,7 +607,6 @@
 			<factor>0.7</factor>
 		</volume>
 	</click>
-
  	<click> 
 		<name>Rear Fuel Pump LO ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
@@ -619,7 +618,7 @@
 		</volume>
 	</click>
 	<click> 
-		<name>Rear Alt OFF</name>
+		<name>Rear Fuel Pump LO OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
 			<not> 
@@ -784,7 +783,7 @@
 		<!-- TAXI LIGHT -->
 
  	<click>
-		<name>Beacon Light ON</name>
+		<name>Taxi light ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<property>controls/lighting/taxi-light</property>
@@ -794,7 +793,7 @@
 		</volume>
 	</click>
 	<click>
-		<name>Beacon Light OFF</name>
+		<name>Taxi Light OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
@@ -809,7 +808,7 @@
 		<!-- LANDING LIGHTS -->
 
  	<click>
-		<name>Beacon Light ON</name>
+		<name>Landing Light ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<property>controls/lighting/landing-lights</property>
@@ -819,11 +818,174 @@
 		</volume>
 	</click>
 	<click>
-		<name>Beacon Light OFF</name>
+		<name>Landing Light OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
 				<property>controls/lighting/landing-lights</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
+	<!-- COWL FLAPS -->
+
+	<click>
+		<name>Front Cowl OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Front Cowl CLOSE</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Rear Cowl OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Rear Cowl CLOSE</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>controls/engines/engine[1]/cowl-flaps-norm</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
+	<!-- ELT -->
+
+	<click>
+		<name>ELT ARM</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>ELT/armed</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>ELT DISARM</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>ELT/armed</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
+	<!-- Navomatic400A -->
+
+	<click>
+		<name>AP ENGAGE</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>Navomatic400A/switches/ap-on</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AP DISENGAGE</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>Navomatic400A/switches/ap-on</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AP NAV ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>Navomatic400A/switches/nav</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AP NAV OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>Navomatic400A/switches/nav</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AP ALT ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>Navomatic400A/switches/alt</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AP ALT OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>Navomatic400A/switches/alt</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AP DIAL PUSH</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>Navomatic400A/push-pull-dial/pulled-out</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AP DIAL PULL</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>Navomatic400A/push-pull-dial/pulled-out</property>
 			</not>
 		</condition>
 		<volume>

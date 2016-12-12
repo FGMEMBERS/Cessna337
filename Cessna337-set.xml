@@ -5,7 +5,7 @@
 <sim>
 	<author>Fernando Espinosa, Pavel Cueto</author>
 	<description>Cessna 337G Skymaster</description>
-	<aircraft-version>v20120429</aircraft-version>
+	<aircraft-version>v20161212</aircraft-version>
 	<rating>
 		<FDM type="int">3</FDM>
 		<systems type="int">3</systems>
