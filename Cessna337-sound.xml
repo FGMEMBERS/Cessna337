@@ -1000,9 +1000,7 @@
  	<click>
 		<name>ADF Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<property>/instrumentation/adf[0]/adf-btn</property>
-		</condition>
+		<condition><property>/instrumentation/adf[0]/adf-btn</property></condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
@@ -1010,11 +1008,7 @@
 	<click>
 		<name>ADF Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<not>
-				<property>/instrumentation/adf[0]/adf-btn</property>
-			</not>
-		</condition>
+		<condition><not><property>/instrumentation/adf[0]/adf-btn</property></not></condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
@@ -1023,9 +1017,7 @@
  	<click>
 		<name>BFO Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<property>/instrumentation/adf[0]/bfo-btn</property>
-		</condition>
+		<condition><property>/instrumentation/adf[0]/bfo-btn</property></condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
@@ -1033,11 +1025,7 @@
 	<click>
 		<name>BFO Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<not>
-				<property>/instrumentation/adf[0]/bfo-btn</property>
-			</not>
-		</condition>
+		<condition><not><property>/instrumentation/adf[0]/bfo-btn</property></not></condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
@@ -1092,9 +1080,7 @@
  	<click>
 		<name>SENS Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<property>instrumentation/kma24/sens</property>
-		</condition>
+		<condition><property>instrumentation/kma24/sens</property></condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
@@ -1112,361 +1098,406 @@
 		</volume>
 	</click>
 
- 	<click>
-		<name>TEL Btn ON</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/tel</property>
-				<value>-1</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
-	<click>
-		<name>TEL Btn ZERO</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/tel</property>
-				<value>0</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
 	<click>
 		<name>TEL Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/tel</property>
-				<value>1</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
-
- 	<click>
-		<name>COM1 Btn ON</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/com1</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/tel/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>COM1 Btn ZERO</name>
+		<name>TEL Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/com1</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/tel/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
+	<click>
+		<name>TELp Btn OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/tel/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>TELp Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/tel/switch[1]</property>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
 	<click>
 		<name>COM1 Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/com1</property>
-				<value>1</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
-
- 	<click>
-		<name>COM2 Btn ON</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/com2</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/com[0]/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>COM2 Btn ZERO</name>
+		<name>COM1 Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/com2</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/com[0]/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
+	<click>
+		<name>COM1p Btn OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/com[0]/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>COM1p Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/com[0]/switch[1]</property>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
 	<click>
 		<name>COM2 Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/com2</property>
-				<value>1</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
-
- 	<click>
-		<name>NAV1 Btn ON</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/nav1</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/com[1]/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>NAV1 Btn ZERO</name>
+		<name>COM2 Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/nav1</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/com[1]/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
+	<click>
+		<name>COM2p Btn OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/com[1]/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>COM2p Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/com[1]/switch[1]</property>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
 	<click>
 		<name>NAV1 Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/nav1</property>
-				<value>1</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
-
- 	<click>
-		<name>NAV2 Btn ON</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/nav2</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/nav[0]/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>NAV2 Btn ZERO</name>
+		<name>NAV1 Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/nav2</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/nav[0]/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
+	<click>
+		<name>NAV1p Btn OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/nav[0]/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>NAV1p Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/nav[0]/switch[1]</property>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
 	<click>
 		<name>NAV2 Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/nav2</property>
-				<value>1</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
-
- 	<click>
-		<name>ADF Audio Btn ON</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/adf</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/nav[1]/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>ADF Audio Btn ZERO</name>
+		<name>NAV2 Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/adf</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/nav[1]/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
+	<click>
+		<name>NAV2p Btn OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/nav[1]/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>NAV2p Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/nav[1]/switch[1]</property>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
 	<click>
 		<name>ADF Audio Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/adf</property>
-				<value>1</value>
-			</equals>
-		</condition>
-		<volume>
-			<factor>0.6</factor>
-		</volume>
-	</click>
-
- 	<click>
-		<name>DME Audio Btn ON</name>
-		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/dme</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/adf/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>DME Audio Btn ZERO</name>
+		<name>ADF Audio Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/dme</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/adf/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
+	<click>
+		<name>ADFp Audio Btn OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/adf/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>ADFp Audio Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/adf/switch[1]</property>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+
 	<click>
 		<name>DME Audio Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/dme</property>
-				<value>1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/dme/switch[0]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>DME Audio Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/dme/switch[0]</property>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>DMEp Audio Btn OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/dme/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>DMEp Audio Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/dme/switch[1]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 
- 	<click>
-		<name>MKR Btn ON</name>
+	<click>
+		<name>MKR Audio Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/mkr</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/mkr/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>MKR Btn ZERO</name>
+		<name>MKR Audio Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/mkr</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/mkr/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>MKR Btn OFF</name>
+		<name>MKRp Audio Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/mkr</property>
-				<value>1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/mkr/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>MKRp Audio Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/mkr/switch[1]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 
- 	<click>
-		<name>AUTO Btn ON</name>
+	<click>
+		<name>AUTO Audio Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/auto</property>
-				<value>-1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/auto/switch[0]</property>
+                  </not>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>AUTO Btn ZERO</name>
+		<name>AUTO Audio Btn ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/auto</property>
-				<value>0</value>
-			</equals>
-		</condition>
+                <condition>
+                  <property>instrumentation/kma24/auto/switch[0]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
 	<click>
-		<name>AUTO Btn OFF</name>
+		<name>AUTOp Audio Btn OFF</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
-		<condition>
-			<equals>
-				<property>instrumentation/kma24/auto</property>
-				<value>1</value>
-			</equals>
-		</condition>
+                <condition>
+                  <not>
+                    <property>instrumentation/kma24/auto/switch[1]</property>
+                  </not>
+                </condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>AUTOp Audio Btn ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonRadio.wav</path>
+                <condition>
+                  <property>instrumentation/kma24/auto/switch[1]</property>
+                </condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>

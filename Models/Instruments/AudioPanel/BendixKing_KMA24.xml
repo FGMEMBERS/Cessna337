@@ -11,37 +11,57 @@
   flightgear sessions
 
   aircraft.data.add(
-    "instrumentation/kma24/test",
-    "instrumentation/kma24/auto",
-    "instrumentation/kma24/com1",
-    "instrumentation/kma24/com2",
-    "instrumentation/kma24/nav1",
-    "instrumentation/kma24/nav2",
-    "instrumentation/kma24/adf",
-    "instrumentation/kma24/dme",
-    "instrumentation/kma24/mkr",
     "instrumentation/kma24/sens",
     "instrumentation/kma24/knob"
+    "instrumentation/kma24/tel/switch[0]",
+    "instrumentation/kma24/com[0]/switch[0]",
+    "instrumentation/kma24/com[1]/switch[0]",
+    "instrumentation/kma24/nav[0]/switch[0]",
+    "instrumentation/kma24/nav[1]/switch[0]",
+    "instrumentation/kma24/adf/switch[0]",
+    "instrumentation/kma24/dme/switch[0]",
+    "instrumentation/kma24/mkr/switch[0]",
+    "instrumentation/kma24/auto/switch[0]",
+    "instrumentation/kma24/tel/switch[1]",
+    "instrumentation/kma24/com[0]/switch[1]",
+    "instrumentation/kma24/com[1]/switch[1]",
+    "instrumentation/kma24/nav[0]/switch[1]",
+    "instrumentation/kma24/nav[1]/switch[1]",
+    "instrumentation/kma24/adf/switch[1]",
+    "instrumentation/kma24/dme/switch[1]",
+    "instrumentation/kma24/mkr/switch[1]",
+    "instrumentation/kma24/auto/switch[1]"
   );
   -->
 
 <params>
+	<electrical>systems/electrical/outputs/audio-panel</electrical>
 	<outer>instrumentation/marker-beacon/outer</outer>
 	<middle>instrumentation/marker-beacon/middle</middle>
 	<inner>instrumentation/marker-beacon/inner</inner>
 	<test>instrumentation/kma24/test</test>
-	<tel>instrumentation/kma24/tel</tel>
-	<auto>instrumentation/kma24/auto</auto>
-	<com1>instrumentation/kma24/com1</com1>
-	<com2>instrumentation/kma24/com2</com2>
-	<nav1>instrumentation/kma24/nav1</nav1>
-	<nav2>instrumentation/kma24/nav2</nav2>
-	<adf>instrumentation/kma24/adf</adf>
-	<dme>instrumentation/kma24/dme</dme>
-	<mkr>instrumentation/kma24/mkr</mkr>
 	<sens>instrumentation/kma24/sens</sens>
 	<knob>instrumentation/kma24/knob</knob>
-	<electrical>systems/electrical/outputs/audio-panel</electrical>
+<!-- Speaker audio -->
+        <tel>instrumentation/kma24/tel/switch[0]</tel>
+        <com1>instrumentation/kma24/com[0]/switch[0]</com1>
+        <com2>instrumentation/kma24/com[1]/switch[0]</com2>
+        <nav1>instrumentation/kma24/nav[0]/switch[0]</nav1>
+        <nav2>instrumentation/kma24/nav[1]/switch[0]</nav2>
+        <adf>instrumentation/kma24/adf/switch[0]</adf>
+        <dme>instrumentation/kma24/dme/switch[0]</dme>
+        <mkr>instrumentation/kma24/mkr/switch[0]</mkr>
+        <auto>instrumentation/kma24/auto/switch[0]</auto>
+<!--Phones audio -->
+        <telp>instrumentation/kma24/tel/switch[1]</telp>
+        <com1p>instrumentation/kma24/com[0]/switch[1]</com1p>
+        <com2p>instrumentation/kma24/com[1]/switch[1]</com2p>
+        <nav1p>instrumentation/kma24/nav[0]/switch[1]</nav1p>
+        <nav2p>instrumentation/kma24/nav[1]/switch[1]</nav2p>
+        <adfp>instrumentation/kma24/adf/switch[1]</adfp>
+        <dmep>instrumentation/kma24/dme/switch[1]</dmep>
+        <mkrp>instrumentation/kma24/mkr/switch[1]</mkrp>
+        <autop>instrumentation/kma24/auto/switch[1]</autop>
 </params>
 
 	<path>KMA24.ac</path>
@@ -55,7 +75,47 @@
 		<blue>0.3</blue>
 	<factor-prop>controls/lighting/panel-norm</factor-prop>
 	</emission>
-</animation>   
+</animation>
+
+ <animation>
+    <type>knob</type>
+    <object-name>Knob</object-name>
+    <property alias="../../params/knob"/>
+    <interpolation>
+      <entry>
+        <ind>0</ind>
+        <dep>0</dep>
+      </entry>
+      <entry>
+        <ind>4</ind>
+        <dep>120</dep>
+      </entry>
+      <entry>
+        <ind>5</ind>
+        <dep>140</dep>
+      </entry>
+    </interpolation>
+    <center>
+      <x-m>0.0002</x-m>
+      <y-m>0.0605</y-m>
+      <z-m>-0.0010</z-m>
+    </center>
+    <axis>
+      <x>-1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+    <action>
+      <binding>
+        <command>property-adjust</command>
+        <property alias="../../../../params/knob"/>
+        <factor>1</factor>
+        <min>0</min>
+        <max>5</max>
+        <wrap>0</wrap>
+      </binding>
+	</action>
+</animation>
 
 	<!-- MARKER BEACON -->
 
@@ -69,6 +129,16 @@
 		<factor-prop alias="../../../params/inner"/>
 		<offset-prop alias="../../../params/test"/>
 	</emission>
+	<condition>
+          <or>
+            <property alias="../../../../params/test"/>
+            <not-equals>
+              <property alias="../../../../../params/knob"/>
+              <value>0</value>
+            </not-equals>
+          </or>
+          <property alias="../../../params/electrical"/>
+	</condition>
 </animation>
 
 <animation>
@@ -81,6 +151,16 @@
 		<factor-prop alias="../../../params/outer"/>
 		<offset-prop alias="../../../params/test"/>
 	</emission>
+	<condition>
+          <or>
+            <property alias="../../../../params/test"/>
+            <not-equals>
+              <property alias="../../../../../params/knob"/>
+              <value>0</value>
+            </not-equals>
+          </or>
+          <property alias="../../../params/electrical"/>
+	</condition>
 </animation>
 
 <animation>
@@ -93,6 +173,16 @@
 		<factor-prop alias="../../../params/middle"/>
 		<offset-prop alias="../../../params/test"/>
 	</emission>
+	<condition>
+          <or>
+            <property alias="../../../../params/test"/>
+            <not-equals>
+              <property alias="../../../../../params/knob"/>
+              <value>0</value>
+            </not-equals>
+          </or>
+          <property alias="../../../params/electrical"/>
+	</condition>
 </animation>
 
 
@@ -106,15 +196,13 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property>instrumentation/kma24/test</property>
-			<value type="int">1</value>
+			<command>property-toggle</command>
+                        <property alias="../../../../params/test"/>
 		</binding>
 		<mod-up>
 			<binding>
-				<command>property-assign</command>
-				<property>instrumentation/kma24/test</property>
-				<value type="int">0</value>
+				<command>property-toggle</command>
+                                <property alias="../../../../../params/test"/>
 			</binding>
 		</mod-up>
 	</action>
@@ -129,14 +217,15 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<property>instrumentation/kma24/test</property>
+                <property alias="../../../params/electrical"/>
+                <property alias="../../../params/test"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchTEST</object-name>
-	<property>instrumentation/kma24/test</property>
+        <property alias="../../params/test"/>
 	<factor>-0.002</factor>
 	<axis>
 		<x>1</x>
@@ -170,14 +259,15 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<property>instrumentation/kma24/sens</property>
+                <property alias="../../../params/electrical"/>
+                <property alias="../../../params/sens"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchSENS</object-name>
-	<property>instrumentation/kma24/sens</property>
+        <property alias="../../params/sens"/>
 	<factor>-0.002</factor>
 	<axis>
 		<x>1</x>
@@ -197,18 +287,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/tel"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/tel"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -221,22 +301,11 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/tel"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/tel"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/telp"/>
 		</binding>
 	</action>
 </animation>
-
 <animation>
 	<type>material</type>
 	<object-name>SwitchTEL_01</object-name>
@@ -246,10 +315,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/tel"/>
-			<value>-1</value>
-		</equals>
+		<property alias="../../../params/electrical"/>
+		<property alias="../../../params/tel"/>
 	</condition>
 </animation>
 
@@ -262,35 +329,16 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/tel"/>
-			<value>1</value>
-		</equals>
+		<property alias="../../../params/telp"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchTEL_01</object-name>
-	<property>instrumentation/kma24/tel</property>
+        <property alias="../../params/tel"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
-		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
-	</interpolation>
-	<axis>
-		<x>1</x>
-		<y>0</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>translate</type>
-	<object-name>SwitchTEL_02</object-name>
-	<property>instrumentation/kma24/tel</property>
-	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -301,6 +349,20 @@
 	</axis>
 </animation>
 
+<animation>
+	<type>translate</type>
+	<object-name>SwitchTEL_02</object-name>
+        <property alias="../../params/telp"/>
+	<interpolation>
+		<entry><ind> 0</ind><dep> 0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
+	</interpolation>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
 
 	<!-- COM 1 -->
 
@@ -312,18 +374,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/com1"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/com1"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -336,18 +388,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/com1"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/com1"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/com1p"/>
 		</binding>
 	</action>
 </animation>
@@ -361,11 +403,9 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/com1"/>
-			<value>-1</value>
-		</equals>
-	</condition>
+		<property alias="../../../params/com1"/>
+                <property alias="../../../params/electrical"/>
+        </condition>
 </animation>
 
 <animation>
@@ -377,21 +417,18 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/com1"/>
-			<value>1</value>
-		</equals>
+		<property alias="../../../params/com1p"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchCOM1_01</object-name>
-	<property>instrumentation/kma24/com1</property>
+        <property alias="../../params/com1"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
 	<axis>
 		<x>1</x>
@@ -403,9 +440,8 @@
 <animation>
 	<type>translate</type>
 	<object-name>SwitchCOM1_02</object-name>
-	<property>instrumentation/kma24/com1</property>
+        <property alias="../../params/com1p"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -427,18 +463,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/com2"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/com2"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -451,18 +477,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/com2"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/com2"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/com2p"/>
 		</binding>
 	</action>
 </animation>
@@ -476,10 +492,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/com2"/>
-			<value>-1</value>
-		</equals>
+		<property alias="../../../params/com2"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
@@ -492,21 +506,18 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/com2"/>
-			<value>1</value>
-		</equals>
+		<property alias="../../../params/com2p"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchCOM2_01</object-name>
-	<property>instrumentation/kma24/com2</property>
+        <property alias="../../params/com2"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
 	<axis>
 		<x>1</x>
@@ -518,9 +529,8 @@
 <animation>
 	<type>translate</type>
 	<object-name>SwitchCOM2_02</object-name>
-	<property>instrumentation/kma24/com2</property>
+        <property alias="../../params/com2p"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -542,18 +552,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/nav1"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/nav1"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -566,18 +566,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/nav1"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/nav1"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/nav1p"/>
 		</binding>
 	</action>
 </animation>
@@ -591,10 +581,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/nav1"/>
-			<value>-1</value>
-		</equals>
+		<property alias="../../../params/nav1"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
@@ -607,21 +595,18 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/nav1"/>
-			<value>1</value>
-		</equals>
+		<property alias="../../../params/nav1p"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchNAV1_01</object-name>
-	<property>instrumentation/kma24/nav1</property>
+        <property alias="../../params/nav1"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
 	<axis>
 		<x>1</x>
@@ -633,9 +618,8 @@
 <animation>
 	<type>translate</type>
 	<object-name>SwitchNAV1_02</object-name>
-	<property>instrumentation/kma24/nav1</property>
+        <property alias="../../params/nav1p"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -657,18 +641,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/nav2"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/nav2"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -681,18 +655,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/nav2"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/nav2"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/nav2p"/>
 		</binding>
 	</action>
 </animation>
@@ -706,10 +670,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/nav2"/>
-			<value>-1</value>
-		</equals>
+                <property alias="../../../params/nav2"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
@@ -722,21 +684,18 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/nav2"/>
-			<value>1</value>
-		</equals>
+		<property alias="../../../params/nav2p"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchNAV2_01</object-name>
-	<property>instrumentation/kma24/nav2</property>
+        <property alias="../../params/nav2"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
 	<axis>
 		<x>1</x>
@@ -748,9 +707,8 @@
 <animation>
 	<type>translate</type>
 	<object-name>SwitchNAV2_02</object-name>
-	<property>instrumentation/kma24/nav2</property>
+        <property alias="../../params/nav2p"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -772,18 +730,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/dme"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/dme"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -796,18 +744,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/dme"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/dme"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/dmep"/>
 		</binding>
 	</action>
 </animation>
@@ -821,10 +759,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/dme"/>
-			<value>-1</value>
-		</equals>
+		<property alias="../../../params/dme"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
@@ -837,21 +773,18 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/dme"/>
-			<value>1</value>
-		</equals>
+		<property alias="../../../params/dmep"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchDME_01</object-name>
-	<property>instrumentation/kma24/dme</property>
+        <property alias="../../params/dme"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
 	<axis>
 		<x>1</x>
@@ -863,9 +796,8 @@
 <animation>
 	<type>translate</type>
 	<object-name>SwitchDME_02</object-name>
-	<property>instrumentation/kma24/dme</property>
+        <property alias="../../params/dmep"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -887,18 +819,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/mkr"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/mkr"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -911,18 +833,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/mkr"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/mkr"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/mkrp"/>
 		</binding>
 	</action>
 </animation>
@@ -936,10 +848,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/mkr"/>
-			<value>-1</value>
-		</equals>
+                <property alias="../../../params/electrical"/>
+		<property alias="../../../params/mkr"/>
 	</condition>
 </animation>
 
@@ -952,35 +862,16 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/mkr"/>
-			<value>1</value>
-		</equals>
+                <property alias="../../../params/electrical"/>
+		<property alias="../../../params/mkrp"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchMKR_01</object-name>
-	<property>instrumentation/kma24/mkr</property>
+        <property alias="../../params/mkr"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
-		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
-	</interpolation>
-	<axis>
-		<x>1</x>
-		<y>0</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>translate</type>
-	<object-name>SwitchMKR_02</object-name>
-	<property>instrumentation/kma24/mkr</property>
-	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -990,6 +881,21 @@
 		<z>0</z>
 	</axis>
 </animation>
+
+<animation>
+	<type>translate</type>
+	<object-name>SwitchMKR_02</object-name>
+        <property alias="../../params/mkrp"/>
+	<interpolation>
+		<entry><ind> 0</ind><dep> 0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
+	</interpolation>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>-->
 
 
 	<!-- ADF -->
@@ -1002,18 +908,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
+			<command>property-toggle</command>
 			<property alias="../../../../params/adf"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/adf"/>
-			<value>0</value>
 		</binding>
 	</action>
 </animation>
@@ -1026,18 +922,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/adf"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/adf"/>
-			<value>0</value>
+			<command>property-toggle</command>
+			<property alias="../../../../params/adfp"/>
 		</binding>
 	</action>
 </animation>
@@ -1051,10 +937,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/adf"/>
-			<value>-1</value>
-		</equals>
+                <property alias="../../../params/electrical"/>
+		<property alias="../../../params/adf"/>
 	</condition>
 </animation>
 
@@ -1067,35 +951,16 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/adf"/>
-			<value>1</value>
-		</equals>
+                <property alias="../../../params/electrical"/>
+		<property alias="../../../params/adfp"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchADF_01</object-name>
-	<property>instrumentation/kma24/adf</property>
+        <property alias="../../params/adf"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
-		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
-	</interpolation>
-	<axis>
-		<x>1</x>
-		<y>0</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>translate</type>
-	<object-name>SwitchADF_02</object-name>
-	<property>instrumentation/kma24/adf</property>
-	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -1106,6 +971,20 @@
 	</axis>
 </animation>
 
+<animation>
+	<type>translate</type>
+	<object-name>SwitchADF_02</object-name>
+        <property alias="../../params/adfp"/>
+	<interpolation>
+		<entry><ind> 0</ind><dep> 0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
+	</interpolation>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
 
 	<!-- AUTO -->
 
@@ -1117,18 +996,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/auto"/>
-			<value>-1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/auto"/>
-			<value>0</value>
+			<command>property-toggle</command>
+		<property alias="../../../../params/auto"/>
 		</binding>
 	</action>
 </animation>
@@ -1141,18 +1010,8 @@
 		<button>0</button>
 		<repeatable>false</repeatable>
 		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/auto"/>
-			<value>1</value>
-		</binding>
-	</action>
-	<action>
-		<button>1</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-assign</command>
-			<property alias="../../../../params/auto"/>
-			<value>0</value>
+			<command>property-toggle</command>
+		<property alias="../../../../params/autop"/>
 		</binding>
 	</action>
 </animation>
@@ -1166,10 +1025,8 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/auto"/>
-			<value>-1</value>
-		</equals>
+                <property alias="../../../params/auto"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
@@ -1182,35 +1039,16 @@
 		<blue>0</blue>
 	</emission>
 	<condition>
-		<equals>
-			<property alias="../../../../params/auto"/>
-			<value>1</value>
-		</equals>
+                <property alias="../../../params/autop"/>
+                <property alias="../../../params/electrical"/>
 	</condition>
 </animation>
 
 <animation>
 	<type>translate</type>
 	<object-name>SwitchAUTO_01</object-name>
-	<property>instrumentation/kma24/auto</property>
+	<property alias="../../params/auto"/>
 	<interpolation>
-		<entry><ind>-1</ind><dep>-0.002</dep></entry>
-		<entry><ind> 0</ind><dep> 0    </dep></entry>
-		<entry><ind> 1</ind><dep>-0    </dep></entry>
-	</interpolation>
-	<axis>
-		<x>1</x>
-		<y>0</y>
-		<z>0</z>
-	</axis>
-</animation>
-
-<animation>
-	<type>translate</type>
-	<object-name>SwitchAUTO_02</object-name>
-	<property>instrumentation/kma24/auto</property>
-	<interpolation>
-		<entry><ind>-1</ind><dep> 0    </dep></entry>
 		<entry><ind> 0</ind><dep> 0    </dep></entry>
 		<entry><ind> 1</ind><dep>-0.002</dep></entry>
 	</interpolation>
@@ -1220,57 +1058,21 @@
 		<z>0</z>
 	</axis>
 </animation>
-<!--
-  <animation>
-    <type>rotate</type>
-    <object-name>Knob</object-name>
-    <property alias="../../params/knob"/>
-    <factor>-30</factor>
-    <axis>
-      <x>1</x>
-    </axis>
-    <center>
-      <y-m>-0.0605381</y-m>
-      <z-m>0.00559147</z-m>
-    </center>
-  </animation>
 
-  <animation>
-    <type>pick</type>
-    <object-name>MICLeft</object-name>
-    <visible>false</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property alias="../../../../params/knob"/>
-        <step>-1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-  </animation>
-
-  <animation>
-    <type>pick</type>
-    <object-name>MICRight</object-name>
-    <visible>false</visible>
-    <action>
-      <button>0</button>
-      <repeatable>false</repeatable>
-      <binding>
-        <command>property-adjust</command>
-        <property alias="../../../../params/knob"/>
-        <step>1</step>
-        <min>-1</min>
-        <max>1</max>
-        <wrap>0</wrap>
-      </binding>
-    </action>
-  </animation>
--->
+<animation>
+	<type>translate</type>
+	<object-name>SwitchAUTO_02</object-name>
+	<property alias="../../params/autop"/>
+	<interpolation>
+		<entry><ind> 0</ind><dep> 0    </dep></entry>
+		<entry><ind> 1</ind><dep>-0.002</dep></entry>
+	</interpolation>
+	<axis>
+		<x>1</x>
+		<y>0</y>
+		<z>0</z>
+	</axis>
+</animation>
 
 	<!-- Label Text -->
 

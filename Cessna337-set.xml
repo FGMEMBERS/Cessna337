@@ -5,7 +5,7 @@
 <sim>
 	<author>Fernando Espinosa, Pavel Cueto</author>
 	<description>Cessna 337G Skymaster</description>
-	<aircraft-version>v20161212</aircraft-version>
+	<aircraft-version>v20170106</aircraft-version>
 	<rating>
 		<FDM type="int">3</FDM>
 		<systems type="int">3</systems>
@@ -285,8 +285,9 @@
 		<file>Aircraft/Cessna337/Nasal/dialogs.nas</file>
 		<file>Aircraft/Cessna337/Nasal/autostart.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/ADF/KR87.nas</file>
+		<file>Aircraft/Cessna337/Models/Instruments/AudioPanel/KMA24.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/DME/KN62A.nas</file>
-        <file>Aircraft/Cessna337/Models/Instruments/ELT/ELTmessage.nas</file>
+		<file>Aircraft/Cessna337/Models/Instruments/ELT/ELTmessage.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/Navomatic/navomatic.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/Transponder/KT76A.nas</file>
 		<script><![CDATA[
@@ -306,9 +307,53 @@
 </nasal>
 
 <instrumentation>
+	<kma24 n="0">
+          <test type="bool" archive="y">0</test>
+          <sens type="bool" archive="y">0</sens>
+          <knob type="int" archive="y">0</knob>
+          <tel>
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </tel>
+          <com n="0">
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </com>
+          <com n="1">
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </com>
+          <nav n="0">
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </nav>
+          <nav n="1">
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </nav>
+          <dme>
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </dme>
+          <mkr>
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </mkr>
+          <adf>
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </adf>
+          <auto>
+            <switch type="bool" n="0">false</switch>
+            <switch type="bool" n="1">false</switch>
+          </auto>
+	</kma24>
+	<marker-beacon n="0">
+		<audio-btn type="bool">false</audio-btn>
+	</marker-beacon>
 	<adf n="0">
 		<power-btn type="bool">true</power-btn>
-		<volume-norm type="double">0</volume-norm>
+		<volume-norm type="double">0.5</volume-norm>
 		<adf-btn type="bool">true</adf-btn>
 		<mode type="string">adf</mode>
 	</adf>
@@ -318,29 +363,35 @@
 	</dme>
 	<comm n="0">
 		<power-btn type="bool">true</power-btn>
-		<volume type="double">1.0</volume>
+		<volume type="double">0.5</volume>
 		<test-btn type="bool">false</test-btn>
+		<dimming-norm type="double"></dimming-norm>
+		<frq-swap-btn type="bool"></frq-swap-btn>
+		<ptt type="bool">0</ptt>
 	</comm>
 	<nav n="0">
 		<power-btn type="bool">false</power-btn>
-		<audio-btn type="bool">false</audio-btn>
-		<volume type="double">0</volume>
+		<volume type="double">0.5</volume>
+		<ident type="bool">false</ident>
 	</nav>
 	<comm n="1">
 		<power-btn type="bool">true</power-btn>
-		<volume type="double">1.0</volume>
+		<volume type="double">0.5</volume>
 		<test-btn type="bool">false</test-btn>
+		<dimming-norm type="double"></dimming-norm>
+		<frq-swap-btn type="bool"></frq-swap-btn>
+		<ptt type="bool">0</ptt>
 	</comm>
 	<nav n="1">
 		<power-btn type="bool">false</power-btn>
-		<audio-btn type="bool">false</audio-btn>
-		<volume type="double">0</volume>
+		<volume type="double">0.5</volume>
+		<ident type="bool">false</ident>
 	</nav>
-    <transponder>
-        <inputs>
-            <knob-mode type="int">0</knob-mode>
-        </inputs>
-    </transponder>
+	<transponder>
+		<inputs>
+			<knob-mode type="int">0</knob-mode>
+		</inputs>
+	</transponder>
 </instrumentation>
 
 	<!-- configuracion teclado -->

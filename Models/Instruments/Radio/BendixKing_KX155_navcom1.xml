@@ -20,21 +20,17 @@ Settings for use as COMM1/NAV1
 	<comm-serviceable>instrumentation/comm[0]/serviceable</comm-serviceable>
 	<nav-serviceable>instrumentation/nav[0]/serviceable</nav-serviceable>
 	<power>instrumentation/comm[0]/power-btn</power>
-
 	<comm-frq-swp>instrumentation/comm[0]/frq-swap-btn</comm-frq-swp>
 	<comm-frq-selected>instrumentation/comm[0]/frequencies/selected-mhz</comm-frq-selected>
 	<comm-frq-standby>instrumentation/comm[0]/frequencies/standby-mhz</comm-frq-standby>
 	<comm-volume>instrumentation/comm[0]/volume</comm-volume>
 	<comm-test>instrumentation/comm[0]/test-btn</comm-test>
-
 	<nav-frq-swp>instrumentation/nav[0]/frq-swap-btn</nav-frq-swp>
 	<nav-frq-selected>instrumentation/nav[0]/frequencies/selected-mhz</nav-frq-selected>
 	<nav-frq-standby>instrumentation/nav[0]/frequencies/standby-mhz</nav-frq-standby>
 	<nav-volume>instrumentation/nav[0]/volume</nav-volume>
-	<nav-audio>instrumentation/nav[0]/audio-btn</nav-audio>
-
+	<nav-ident>instrumentation/nav[0]/ident</nav-ident>
 	<dimming>instrumentation/comm[0]/dimming-norm</dimming>
-	
 	<nav-electrical>/systems/electrical/outputs/nav[0]</nav-electrical>
 </params>
 
@@ -509,7 +505,7 @@ Settings for use as COMM1/NAV1
 <animation>
 	<type>translate</type>
 	<object-name>Knob_NAV01</object-name>
-	<property alias="../../params/nav-audio"/>
+	<property alias="../../params/nav-ident"/>
 	<factor>0.002</factor>
 	<axis>
 		<x>1</x>
@@ -690,7 +686,7 @@ Settings for use as COMM1/NAV1
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property alias="../../../../params/nav-audio"/>
+			<property alias="../../../../params/nav-ident"/>
 		</binding>
 	</action>
 	<action>
