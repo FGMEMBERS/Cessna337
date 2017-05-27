@@ -31,7 +31,7 @@ Settings for use as COMM1/NAV1
 	<nav-frq-selected>instrumentation/nav[1]/frequencies/selected-mhz</nav-frq-selected>
 	<nav-frq-standby>instrumentation/nav[1]/frequencies/standby-mhz</nav-frq-standby>
 	<nav-volume>instrumentation/nav[1]/volume</nav-volume>
-	<nav-audio>instrumentation/nav[1]/audio-btn</nav-audio>
+	<nav-ident>instrumentation/nav[1]/ident</nav-ident>
 
 	<dimming>instrumentation/comm[1]/dimming-norm</dimming>
 	
@@ -509,7 +509,7 @@ Settings for use as COMM1/NAV1
 <animation>
 	<type>translate</type>
 	<object-name>Knob_NAV01</object-name>
-	<property alias="../../params/nav-audio"/>
+	<property alias="../../params/nav-ident"/>
 	<factor>0.002</factor>
 	<axis>
 		<x>1</x>
@@ -690,7 +690,7 @@ Settings for use as COMM1/NAV1
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property alias="../../../../params/nav-audio"/>
+			<property alias="../../../../params/nav-ident"/>
 		</binding>
 	</action>
 	<action>
