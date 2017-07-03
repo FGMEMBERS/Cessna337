@@ -15,6 +15,25 @@
 	<status>early-production</status>
 	<flight-model>jsb</flight-model>
 	<aero>Cessna337-JSBSim</aero>
+
+	<tags>
+		<tag>ga</tag>
+		<tag>transport</tag>
+		<tag>cessna</tag>
+		<tag>1960s</tag>
+		<tag>1970s</tag>
+		<tag>1980s</tag>
+		<tag>1990s</tag>
+		<tag>high-wing</tag>
+		<tag>fixed-gear</tag>
+		<tag>h-tail</tag>
+		<tag>ifr</tag>
+		<tag>propeller</tag>
+		<tag>twin-engine</tag>
+		<tag>piston</tag>
+		<tag>variable-pitch</tag>
+		<tag>supercharged</tag>
+	</tags>
         
 	<model>
 		<path archive="y">Aircraft/Cessna337/Models/Cessna337.xml</path>
