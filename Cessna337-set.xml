@@ -38,6 +38,9 @@
 	<model>
 		<path archive="y">Aircraft/Cessna337/Models/Cessna337.xml</path>
 	</model>
+	<multiplay>
+		<fallback-model-index type="int">56</fallback-model-index>
+	</multiplay>
 
 	<!-- Configuracion de la vista del piloto -->
 
