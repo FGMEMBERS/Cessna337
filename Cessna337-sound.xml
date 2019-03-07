@@ -499,14 +499,680 @@
 	</wind>
 
 	<!-- SWITCHES -->
+	
+	<!-- CIRCUIT BREAKERS -->
+	
+	<click> 
+		<name>Breaker 1 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[1]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 1 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[1]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 2 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[2]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 2 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[2]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 3 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[3]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 3 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[3]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 4 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[4]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 4 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[4]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 5 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[5]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 5 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[5]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 6 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[6]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 6 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[6]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 7 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[7]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 7 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[7]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 8 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[8]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 8 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[8]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 9 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[9]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 9 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[9]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 10 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[10]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 10 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[10]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 11 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[11]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 11 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[11]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 12 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[12]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 12 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[12]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 13 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[13]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 13 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[13]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 14 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[14]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 14 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[14]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 15 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[15]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 15 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[15]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 16 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[16]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 16 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[16]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 17 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[17]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 17 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[17]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 18 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[18]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 18 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[18]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 19 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[19]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 19 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[19]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 20 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[20]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 20 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[20]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 21 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[21]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 21 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[21]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	<click> 
+		<name>Breaker 22 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[22]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 22 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[22]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 23 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[23]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 23 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[23]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 24 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[24]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 24 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[24]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 25 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[25]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 25 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[25]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 26 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[26]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 26 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[26]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 27 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[27]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 27 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[27]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 28 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[28]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 28 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[28]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 29 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[29]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 29 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[29]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 30 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[30]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 30 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[30]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 31 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[31]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 31 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[31]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 32 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[32]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 32 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[32]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 33 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[33]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 33 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[33]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
+	<click> 
+		<name>Breaker 34 of 34 OPEN</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/breakers/breaker[34]/closed</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Breaker 34 of 34 CLOSED</name>
+		<path>Aircraft/Cessna337/Sounds/Click.wav</path>
+		<condition> 
+			<not><property>sim/systems/electrical/switches/breakers/breaker[34]/closed</property></not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>	
 
-		<!-- BATTERY -->
+	<!-- BATTERY -->
 
 	<click> 
 		<name>Battery ON (switch)</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
-			<property>controls/engines/engine/master-bat</property>
+			<property>sim/systems/electrical/switches/voltage/battery-master</property>
 		</condition>
 		<volume> 
 			<factor>0.7</factor>
@@ -516,7 +1182,7 @@
 		<name>Battery ON (noise)</name>
 		<path>Aircraft/Cessna337/Sounds/BatteryStart.wav</path>
 		<condition> 
-			<property>controls/engines/engine/master-bat</property>
+			<property>sim/systems/electrical/switches/voltage/battery-master</property>
 		</condition>
 		<volume> 
 			<factor>0.2</factor>
@@ -527,7 +1193,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
 			<not> 
-				<property>controls/engines/engine/master-bat</property>
+				<property>sim/systems/electrical/switches/voltage/battery-master</property>
 			</not>
 		</condition>
 		<volume> 
@@ -541,7 +1207,7 @@
 		<name>Front Alt ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
-			<property>controls/engines/engine[0]/master-alt</property>
+			<property>sim/systems/electrical/switches/voltage/alternator-front</property>
 		</condition>
 		<volume> 
 			<factor>0.7</factor>
@@ -552,7 +1218,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
 			<not> 
-				<property>controls/engines/engine[0]/master-alt</property>
+				<property>sim/systems/electrical/switches/voltage/alternator-front</property>
 			</not>
 		</condition>
 		<volume> 
@@ -564,7 +1230,7 @@
 		<name>Rear Alt ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition>
-			<property>controls/engines/engine[1]/master-alt</property>
+			<property>sim/systems/electrical/switches/voltage/alternator-rear</property>
 		</condition>
 		<volume>
 			<factor>0.7</factor>
@@ -575,7 +1241,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition>
 			<not>
-				<property>controls/engines/engine[1]/master-alt</property>
+				<property>sim/systems/electrical/switches/voltage/alternator-rear</property>
 			</not>
 		</condition>
 		<volume>
@@ -585,11 +1251,33 @@
 
 		<!-- FUEL PUMPS -->
 
+		<click> 
+		<name>Front Fuel Pump HI ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/engines/pump-front-hi</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Front Fuel Pump HI OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
+		<condition> 
+			<not> 
+				<property>sim/systems/electrical/switches/engines/pump-front-hi</property>
+			</not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
  	<click> 
 		<name>Front Fuel Pump LO ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
-			<property>/controls/engines/engine[0]/fuel-pump</property>
+			<property>sim/systems/electrical/switches/engines/pump-front-lo</property>
 		</condition>
 		<volume> 
 			<factor>0.7</factor>
@@ -600,7 +1288,29 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
 			<not> 
-				<property>/controls/engines/engine[0]/fuel-pump</property>
+				<property>sim/systems/electrical/switches/engines/pump-front-lo</property>
+			</not>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+ 	<click> 
+		<name>Rear Fuel Pump HI ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
+		<condition> 
+			<property>sim/systems/electrical/switches/engines/pump-rear-hi</property>
+		</condition>
+		<volume> 
+			<factor>0.7</factor>
+		</volume>
+	</click>
+	<click> 
+		<name>Rear Fuel Pump HI OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
+		<condition> 
+			<not> 
+				<property>sim/systems/electrical/switches/engines/pump-rear-hi</property>
 			</not>
 		</condition>
 		<volume> 
@@ -611,7 +1321,7 @@
 		<name>Rear Fuel Pump LO ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
-			<property>/controls/engines/engine[1]/fuel-pump</property>
+			<property>sim/systems/electrical/switches/engines/pump-rear-lo</property>
 		</condition>
 		<volume> 
 			<factor>0.7</factor>
@@ -622,7 +1332,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
 			<not> 
-				<property>/controls/engines/engine[1]/fuel-pump</property>
+				<property>sim/systems/electrical/switches/engines/pump-rear-lo</property>
 			</not>
 		</condition>
 		<volume> 
@@ -636,7 +1346,7 @@
 		<name>Avionics ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
-			<property>controls/switches/master-avionics</property>
+			<property>sim/systems/electrical/switches/voltage/avionics-master</property>
 		</condition>
 		<volume> 
 			<factor>0.7</factor>
@@ -647,7 +1357,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonPower.wav</path>
 		<condition> 
 			<not> 
-				<property>controls/switches/master-avionics</property>
+				<property>sim/systems/electrical/switches/voltage/avionics-master</property>
 			</not>
 		</condition>
 		<volume> 
@@ -661,7 +1371,7 @@
 		<name>Pitot Heat ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
-			<property>/controls/anti-ice/pitot-heat</property>
+			<property>sim/systems/electrical/switches/heat/pitot</property>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
@@ -672,7 +1382,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
-				<property>/controls/anti-ice/pitot-heat</property>
+				<property>sim/systems/electrical/switches/heat/pitot</property>
 			</not>
 		</condition>
 		<volume>
@@ -680,13 +1390,13 @@
 		</volume>
 	</click>
 
-		<!-- PITOT HEAT -->
+		<!-- WINDSHIELD HEAT -->
 
  	<click>
 		<name>Window Heat ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
-			<property>/controls/anti-ice/window-heat</property>
+			<property>sim/systems/electrical/switches/heat/shield</property>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
@@ -697,21 +1407,114 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
-				<property>/controls/anti-ice/window-heat</property>
+				<property>sim/systems/electrical/switches/heat/shield</property>
 			</not>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
 		</volume>
 	</click>
-
+	
+	<!-- PROPELLOR HEAT -->
+	<click>
+		<name>Front Prop Heat ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>sim/systems/electrical/switches/heat/prop-front</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Front Prop Heat OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>sim/systems/electrical/switches/heat/prop-front</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Rear Prop Heat ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>sim/systems/electrical/switches/heat/prop-rear</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Rear Prop Heat OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>sim/systems/electrical/switches/heat/prop-rear</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	
+	<!-- DEICE HEAT -->
+	
+	<click>
+		<name>Wing Deice ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>sim/systems/electrical/switches/heat/deice-wing</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Wing Deice OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>sim/systems/electrical/switches/heat/deice-wing</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Light Deice ON</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<property>sim/systems/electrical/switches/heat/deice-light</property>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	<click>
+		<name>Light Deice Heat OFF</name>
+		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
+		<condition>
+			<not>
+				<property>sim/systems/electrical/switches/heat/deice-light</property>
+			</not>
+		</condition>
+		<volume>
+			<factor>0.6</factor>
+		</volume>
+	</click>
+	
 		<!-- NAV LIGHTS -->
 
  	<click>
 		<name>Nav Lights ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
-			<property>controls/lighting/nav-lights</property>
+			<property>sim/systems/electrical/switches/lighting/nav</property>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
@@ -722,7 +1525,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
-				<property>controls/lighting/nav-lights</property>
+				<property>sim/systems/electrical/switches/lighting/nav</property>
 			</not>
 		</condition>
 		<volume>
@@ -736,7 +1539,7 @@
 		<name>Strobe Lights ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
-			<property>controls/lighting/strobe</property>
+			<property>sim/systems/electrical/switches/lighting/strobes</property>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
@@ -747,7 +1550,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
-				<property>controls/lighting/strobe</property>
+				<property>sim/systems/electrical/switches/lighting/strobes</property>
 			</not>
 		</condition>
 		<volume>
@@ -761,7 +1564,7 @@
 		<name>Beacon Light ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
-			<property>controls/lighting/beacon</property>
+			<property>sim/systems/electrical/switches/lighting/beacon</property>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
@@ -772,7 +1575,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
-				<property>controls/lighting/beacon</property>
+				<property>sim/systems/electrical/switches/lighting/beacon</property>
 			</not>
 		</condition>
 		<volume>
@@ -786,7 +1589,7 @@
 		<name>Taxi light ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
-			<property>controls/lighting/taxi-light</property>
+			<property>sim/systems/electrical/switches/lighting/taxi</property>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
@@ -797,7 +1600,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
-				<property>controls/lighting/taxi-light</property>
+				<property>sim/systems/electrical/switches/lighting/taxi</property>
 			</not>
 		</condition>
 		<volume>
@@ -811,7 +1614,7 @@
 		<name>Landing Light ON</name>
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
-			<property>controls/lighting/landing-lights</property>
+			<property>sim/systems/electrical/switches/lighting/landing</property>
 		</condition>
 		<volume>
 			<factor>0.6</factor>
@@ -822,7 +1625,7 @@
 		<path>Aircraft/Cessna337/Sounds/ButtonLights.wav</path>
 		<condition>
 			<not>
-				<property>controls/lighting/landing-lights</property>
+				<property>sim/systems/electrical/switches/lighting/landing</property>
 			</not>
 		</condition>
 		<volume>

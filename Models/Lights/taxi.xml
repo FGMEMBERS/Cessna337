@@ -5,12 +5,13 @@
 	
 	  <path>taxi.ac</path>
 
- <animation>
+	<animation>
 		<type>select</type>
 		<object-name>light</object-name>
 		<condition>
-  <property>controls/lighting/taxi-light</property>
- </condition>
+			<property>sim/systems/electrical/switches/breakers/breaker[4]/volts</property>
+			<property>controls/lighting/taxi-light</property>
+		</condition>
 	</animation>
 	
 <animation>

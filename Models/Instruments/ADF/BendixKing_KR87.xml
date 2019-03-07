@@ -43,7 +43,8 @@
 		<condition>
 			<property>/instrumentation/adf[0]/serviceable</property>
 			<property>/instrumentation/adf[0]/power-btn</property>
-			<property>systems/electrical/outputs/adf</property>
+		<!--	<property>systems/electrical/outputs/adf</property> -->
+			<property>sim/systems/electrical/switches/breakers/breaker[34]/volts</property>
 		</condition>
 	</animation>
 

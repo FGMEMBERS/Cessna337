@@ -26,6 +26,7 @@
 		<type>select</type>
 		<object-name>Beacon</object-name>
 		<condition>
+			<property>sim/systems/electrical/switches/breakers/breaker[7]/volts</property>
 			<property>/sim/model/Cessna337/lighting/beacon-top/state</property>
 		</condition>
 	</animation>	

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+
+Copyright (c) 2019 by FlyingHigh
+
+This program is unassigned software; you can redistribute it and/or modify 
+it under the terms of the GNU General Public License as published by 
+the unassigned Software Foundation; either version 2 of the License, or 
+(at your option) any later version. 
+
+This program is distributed in the hope that it will be useful, 
+but WITHOUT ANY WARRANTY; without even the implied warranty of 
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+GNU General Public License for more details. 
+
+You should have received a copy of the GNU General Public License 
+along with this program; if not, write to the unassigned Software 
+Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA. 
+
+-->
+ 
+<PropertyList>
+
+	<electrical>
+	<path></path>
+	
+		<amps type="float">0</amps>
+	
+		<suppliers>
+			<battery>
+				<volts type="float">28</volts>
+				<amps type="float">17</amps>
+			</battery>
+			<alternator-front>
+				<volts type="float">28</volts>
+				<amps type="float">60</amps>
+			</alternator-front>
+			<alternator-rear>
+				<volts type="float">28</volts>
+				<amps type="float">60</amps>
+			</alternator-rear>
+		</suppliers>
+		
+		<buses>
+			<main type="float">0</main>
+			<avionics type="float">0</avionics>
+		</buses>
+
+		<switches>
+				<voltage>
+					<battery-master type="bool">false</battery-master>
+					<avionics-master type="bool">false</avionics-master>
+					<alternator-front type="bool">false</alternator-front>
+					<alternator-rear type="bool">false</alternator-rear>
+					<volt-test type="bool">false</volt-test>
+					<alt-restart type="bool">false</alt-restart>
+				</voltage>
+				<engines>
+					<magnetos-front type="int">0</magnetos-front>
+					<magnetos-rear type="int">0</magnetos-rear>
+					<starter-front type="bool">0</starter-front>
+					<starter-rear type="bool">0</starter-rear>
+					<pump-front-hi type="bool">false</pump-front-hi>
+					<pump-front-lo type="bool">false</pump-front-lo>
+					<pump-rear-hi type="bool">false</pump-rear-hi>
+					<pump-rear-lo type="bool">false</pump-rear-lo>
+					<cowl-front type="bool">false</cowl-front><!-- not used -->
+					<cowl-rear type="bool">false</cowl-rear><!-- not used -->
+					<primer-front type="bool">false</primer-front>
+					<primer-rear type="bool">false</primer-rear>
+				</engines>
+				<lighting>
+				<!--<nav type="bool">false</nav>
+					<strobes type="bool">false</strobes>
+					<beacon type="bool">false</beacon>
+					<taxi type="bool">false</taxi>
+					<landing type="bool">false</landing> -->
+					<panel-flood-knob type="double"></panel-flood-knob>
+					<panel-switch-knob type="double"></panel-switch-knob>
+				</lighting>
+				<heat>
+					<pitot type="bool">false</pitot>
+					<shield type="bool">false</shield>
+					<prop-front type="bool">false</prop-front>
+					<prop-rear type="bool">false</prop-rear>
+					<deice-wing type="bool">false</deice-wing>
+					<deice-light type="bool">false</deice-light>
+				</heat>
+				<instruments>
+					<navcom n="0" type="bool">false</navcom>
+					<navcom n="1" type="bool">false</navcom>
+					<autopilot type="bool">false</autopilot>
+				</instruments>
+				<breakers> 
+				
+				<!-- Breaker amp amp-ratings are arbitrary.  The 34 breakers are numbered to
+				correspond to the breaker panel in the 3d cockpit, starting with breaker[1] at 
+				top row left, and ending with breaker[34] at bottom row right -->
+					
+					<!-- top row, left to right -->
+					
+					<breaker n="1"><!-- Inst-map-radio-sw-vhf lighting  -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="2"><!-- Deice-Dome-Hood  -->						
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="3"><!-- landing lights -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="4"><!-- taxi lights -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="5"><!-- nav lights -->					
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="6"><!-- strobe lights -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="7"><!-- beacon light -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="8"><!-- windshield anti-ice -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="9"><!-- ALT -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="10"><!-- elevator trim  -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					
+					<!-- middle row, left to right -->
+					
+					<breaker n="11"><!-- wing flaps -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int"></amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="12"><!-- prop anti-ice  -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="13"><!-- cowl flaps -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="14"><!-- stall warn/gear warn -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="15"><!-- instrument cluster/starters/alt-str -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="16"><!-- deice -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="17"><!-- tach dat -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="18"><!-- gear ind -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="19"><!-- aux ... - eng tab -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="20"><!-- pumps ... pitot -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="21"><!-- front alt field -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="22"><!-- rear alt field -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					
+					<!-- bottom row, left to right -->
+					
+					<breaker n="23">
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<!-- 23 unassigned  -->
+					<breaker n="24">
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<!-- 24 unassigned -->
+					<breaker n="25">
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<!-- 25 unassigned -->
+					<breaker n="26">
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<!-- 26 unassigned -->
+					<breaker n="27">
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<!-- 27 unassigned -->
+					<breaker n="28">
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<!-- 28 unassigned  -->
+					<breaker n="29">
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<!-- 29 unassigned  -->
+					<breaker n="30"><!-- autopilot -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="31"><!-- glide slope --> 
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="32"><!-- slaved gyro --> 
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="33"><!-- sync phase --> 
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+					<breaker n="34"><!-- avionics power  -->
+						<closed type="bool">true</closed><volts type="float">0</volts>
+						<amp-rating type="int">1</amp-rating><amp-load type="float">0</amp-load>
+					</breaker>
+				</breakers>
+		</switches>
+	</electrical>
+</PropertyList>

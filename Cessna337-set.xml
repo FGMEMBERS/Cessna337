@@ -146,6 +146,21 @@
 			</limits>
 		</config>
 	</view>
+	
+	<view n="103">
+		<name>Circuit breaker panel</name>
+		<type>lookfrom</type>
+		<internal type="bool">true</internal>
+		<config>
+			<from-model type="bool">true</from-model>
+			<x-offset-m archive="y">0.35</x-offset-m>  <!-- negative is left -->
+			<y-offset-m archive="y">-.2605</y-offset-m>  <!-- negative is down -->
+			<z-offset-m archive="y">-.78</z-offset-m>  <!--negative is forward -->
+			<heading-offset-deg>-270</heading-offset-deg>
+			<pitch-offset-deg>0</pitch-offset-deg>
+			<default-field-of-view-deg type="double">20</default-field-of-view-deg>
+		</config>
+	</view>
 
 	<startup>
 		<splash-texture>Aircraft/Cessna337/Cessna337-splash.png</splash-texture>
@@ -180,7 +195,7 @@
 	<menubar include="Dialogs/Cessna337-menu.xml"/>
 	<help include="Dialogs/Cessna337-help.xml"/>
 
-	<systems>
+	<systems include="Systems/electrical-debug.xml">
 		<path>Aircraft/Cessna337/Systems/Cessna337-systems.xml</path>
         <autopilot>
             <path>Aircraft/Cessna337/Systems/Cessna337-autopilot.xml</path>
@@ -236,14 +251,14 @@
 	<engines>
 		<engine n="0">
 			<cowl-flaps-norm>0</cowl-flaps-norm>
-			<master-bat>false</master-bat>
+			<master-bat type="bool">false</master-bat>
 			<master-alt>false</master-alt>
 			<primer type="bool">false</primer>
 			<fuel-pump type="bool">false</fuel-pump>
 		</engine>
 		<engine n="1">
 			<cowl-flaps-norm>0</cowl-flaps-norm>
-			<!-- <master-bat>false</master-bat> -->
+			<master-bat type="bool">false</master-bat>
 			<master-alt>false</master-alt>
 			<primer type="bool">false</primer>
 			<fuel-pump type="bool">false</fuel-pump>
@@ -304,12 +319,14 @@
 		<file>Aircraft/Cessna337/Nasal/liveries.nas</file>
 		<file>Aircraft/Cessna337/Nasal/dialogs.nas</file>
 		<file>Aircraft/Cessna337/Nasal/autostart.nas</file>
+		<file>Aircraft/Cessna337/Nasal/electrical-debug.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/ADF/KR87.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/AudioPanel/KMA24.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/DME/KN62A.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/ELT/ELTmessage.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/Navomatic/navomatic.nas</file>
 		<file>Aircraft/Cessna337/Models/Instruments/Transponder/KT76A.nas</file>
+
 		<script><![CDATA[
             KN62A.new();
             KT76A.new();

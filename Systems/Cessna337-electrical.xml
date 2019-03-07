@@ -4,6 +4,7 @@
 
 <PropertyList>
 
+
 	<!-- SUPPLIERS -->
 
 <supplier>
@@ -14,6 +15,7 @@
 	<amps>17</amps>
 </supplier>
 
+<!--
 <supplier>
 	<name>Alternator 1</name>
 	<prop>/systems/electrical/suppliers/alternator[0]</prop>
@@ -39,8 +41,8 @@
 	<volts>0</volts>
 	<amps>0</amps>
 </supplier>
-
-	<!-- BUSSES -->
+-->
+	<!-- BUSES -->
 
 <bus>
     <name>Main Bus</name>
@@ -53,6 +55,7 @@
 </bus>
 
 	<!-- OUTPUTS -->
+
 
 <output>
 	<name>Starter 1 Power</name>
@@ -123,11 +126,11 @@
 	<name>Taxi Lights Power</name>
 	<prop>/systems/electrical/outputs/taxi-lights</prop>
 </output>
-
+<!--
 <output>
 	<name>Pitot Heat Power</name>
 	<prop>/systems/electrical/outputs/pitot-heat</prop>
-</output>
+</output> -->
 
 	<!-- AVIONICS OUTPUTS -->
 
@@ -175,23 +178,36 @@
 	<name>NAV 1 Power</name>
 	<prop>/systems/electrical/outputs/nav[1]</prop>
 </output>
-
+<!--
 <output>
 	<name>Transponder Power</name>
 	<prop>/systems/electrical/outputs/transponder</prop>
-</output>
+</output> -->
 
-	<!-- GENERAL CONNECTIONS -->
+
+	<!-- CONNECTORS -->
+
+	<!-- BUS to SOURCE CONNECTORS -->
 
 <connector>
 	<input>Battery 1</input> 
 	<output>Main Bus</output> 
 	<switch>
-		<prop>/controls/engines/engine[0]/master-bat</prop>
+		<prop>/controls/electric/battery-switch</prop>
 		<initial-state>off</initial-state>
 	</switch>
 </connector>
 
+<connector>
+	<input>Main Bus</input>
+	<output>Avionics Bus</output>
+	<switch>
+		<prop>/controls/switches/master-avionics</prop>
+		<initial-state>off</initial-state>
+	</switch>
+</connector>
+
+<!--
 <connector>
 	<input>Alternator 1</input> 
 	<output>Main Bus</output>   
@@ -209,23 +225,13 @@
 		<initial-state>off</initial-state>
 	</switch>
 </connector>
+-->
 <!--
 <connector>
 	<input>External 1</input>
 	<output>Main Bus</output>
 </connector>
 -->
-
-	<!-- MAIN/AVIONICS BUS CONNECTION (AVIONICS POWER) -->
-
-<connector>
-	<input>Main Bus</input>
-	<output>Avionics Bus</output>
-	<switch>
-		<prop>/controls/switches/master-avionics</prop>
-		<initial-state>off</initial-state>
-	</switch>
-</connector>
 
 	<!-- MAIN BUS CONNECTIONS -->
 
@@ -340,7 +346,7 @@
 		<initial-state>off</initial-state>
 	</switch>
 </connector>
-
+<!--
 <connector>
 	<input>Main Bus</input>
 	<output>Pitot Heat Power</output>
@@ -348,7 +354,7 @@
 		<prop>/controls/switches/pitot-heat</prop>
 		<initial-state>off</initial-state>
 	</switch>
-</connector>
+</connector> -->
 
 	<!-- AVIONICS CONNECTIONS -->
 
@@ -396,10 +402,10 @@
 	<input>Avionics Bus</input>
 	<output>NAV 1 Power</output>
 </connector>
-
+<!--
 <connector>
 	<input>Avionics Bus</input>
 	<output>Transponder Power</output>
-</connector>
+</connector> -->
 
 </PropertyList>
