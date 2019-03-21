@@ -9,11 +9,7 @@
   <type>select</type>
   <object-name>NavL</object-name>
   <condition>
-	<greater-than>
-		<property>sim/systems/electrical/switches/breakers/breaker[5]/volts</property>
-		<value>12</value>
-	</greater-than>
-	<property>controls/lighting/nav-lights</property>
+   <property>controls/lighting/nav-lights</property>
   </condition>
  </animation>
 

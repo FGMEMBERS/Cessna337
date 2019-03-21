@@ -236,8 +236,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<button>0</button>
 		<binding>
 			<command>property-assign</command>
-			<property>sim/systems/electrical/switches/engines/starter-front</property><!-- 2019 - proxy mediation via nasal -->
-		<!--	<property>controls/engines/engine[0]/starter</property> -->
+			<property>controls/engines/engine[0]/starter</property>
 			<value>1</value>
 			<condition>
 				<equals>
@@ -249,8 +248,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<mod-up>
 			<binding>
 				<command>property-assign</command>
-				<property>sim/systems/electrical/switches/engines/starter-front</property>
-			<!--	<property>controls/engines/engine[0]/starter</property>  -->
+				<property>controls/engines/engine[0]/starter</property>  
 				<value>0</value>
 			</binding>
 		</mod-up>
@@ -304,8 +302,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Perilla_01</object-name>
-		<property>sim/systems/electrical/switches/engines/starter-front</property>
-		<!-- <property>/controls/engines/engine[0]/starter</property> -->
+		<property>/controls/engines/engine[0]/starter</property>
 	<factor>-30</factor>
 	<center>
 		<x-m>-0.963693</x-m>
@@ -330,9 +327,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<button>0</button>
 		<binding>
 			<command>property-assign</command>
-			<property>sim/systems/electrical/switches/engines/starter-rear</property>
-		<!-- 2019 - proxy mediation via nasal both starters -->
-		<!--	<property>controls/engines/engine[1]/starter</property> -->
+			<property>controls/engines/engine[1]/starter</property>
 			<value>1</value>
 			<condition>
 				<equals>
@@ -344,8 +339,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<mod-up>
 			<binding>
 				<command>property-assign</command>
-				<property>sim/systems/electrical/switches/engines/starter-rear</property>
-			<!--	<property>controls/engines/engine[1]/starter</property>  -->
+				<property>controls/engines/engine[1]/starter</property>  
 				<value>0</value>
 			</binding>
 		</mod-up>
@@ -399,8 +393,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Perilla_02</object-name>
-		<property>sim/systems/electrical/switches/engines/starter-rear</property>
-		<!-- <property>/controls/engines/engine[1]/starter</property> -->
+		<property>/controls/engines/engine[1]/starter</property>
 	<factor>-30</factor>
 	<center>
 		<x-m>-0.963693</x-m>
@@ -1045,10 +1038,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
         <type>material</type>
         <object-name>LuzAlrm_08</object-name>
         <condition>
-			<greater-than>
-				<property>sim/systems/electrical/switches/breakers/breaker[14]/volts</property>
-				<value>12</value>
-			</greater-than>
         	<factor-prop>controls/gear/gear-down</factor-prop> 
               <greater-than>
                 <property>gear/gear/position-norm</property>
@@ -1070,10 +1059,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
     <type>material</type>
     <object-name>LuzAlrm_09</object-name>    
     <condition>
-		<greater-than>
-			<property>sim/systems/electrical/switches/breakers/breaker[14]/volts</property>
-			<value>12</value>
-		</greater-than>
         <factor-prop>controls/gear/gear-down</factor-prop>
       <greater-than>
       	<property>gear/gear/position-norm</property>
@@ -1231,15 +1216,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<type>material</type>
 	<object-name>LuzAlrm_06</object-name>    
 	<condition>
-			<greater-than>
-				<property>sim/systems/electrical/switches/breakers/breaker[13]/volts</property>
-				<value>12</value>
-			</greater-than>
-			<factor-prop>controls/engines/engine[0]/cowl-flaps-norm</factor-prop>
-			<greater-than>
-				<property>controls/engines/engine[0]/cowl-flaps-norm</property>
-				<value>0.1</value>
-			</greater-than>
+		<factor-prop>controls/engines/engine[0]/cowl-flaps-norm</factor-prop>
+		<greater-than>
+			<property>controls/engines/engine[0]/cowl-flaps-norm</property>
+			<value>0.1</value>
+		</greater-than>
 	</condition>
 	<emission>
 		<red>0.0</red>
@@ -1322,10 +1303,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<type>material</type>
 	<object-name>LuzAlrm_07</object-name>    
 	<condition>
-		<greater-than>
-			<property>sim/systems/electrical/switches/breakers/breaker[13]/volts</property>
-			<value>12</value>
-		</greater-than>
 		<factor-prop>controls/engines/engine[1]/cowl-flaps-norm</factor-prop>
 		<greater-than>
 			<property>controls/engines/engine[1]/cowl-flaps-norm</property>
@@ -1343,7 +1320,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_01</object-name>
-  <property>sim/systems/electrical/switches/voltage/battery-master</property>
+  <property>controls/engines/engine[0]/master-bat</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975185 </x1-m>
@@ -1364,7 +1341,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 	  <binding>
 			<command>property-toggle</command>  
-			<property>sim/systems/electrical/switches/voltage/battery-master</property> 
+			<property>controls/engines/engine[0]/master-bat</property> 
 		</binding>
 	</action>
 </animation>
@@ -1373,7 +1350,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_02</object-name>
-	<property>sim/systems/electrical/switches/voltage/alternator-front</property>
+	<property>controls/engines/engine[0]/master-alt</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975185 </x1-m>
@@ -1394,7 +1371,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/voltage/alternator-front</property>
+			<property>controls/engines/engine[0]/master-alt</property>
 		</binding>
 	</action>
 </animation>
@@ -1403,7 +1380,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
   <type>rotate</type>
   <object-name>Switch_03</object-name>
-  <property>sim/systems/electrical/switches/voltage/alternator-rear</property>
+  <property>controls/engines/engine[1]/master-alt</property>
   <factor>-20</factor>
 	  <axis>
         <x1-m>-0.975185 </x1-m>
@@ -1424,16 +1401,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/voltage/alternator-rear</property>
+			<property>controls/engines/engine[1]/master-alt</property>
 		</binding>
 	</action>
 </animation>
 
-<!-- Front fuel pump switches * Interruptor bomba combustible delantera * -->
+<!-- Front fuel pump switch * Interruptor bomba combustible delantera * -->
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_04</object-name>
-	<property>sim/systems/electrical/switches/engines/pump-front-hi</property>
+	<object-name>Switch_05</object-name>
+	<property>controls/engines/engine[0]/fuel-pump</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975185 </x1-m>
@@ -1448,34 +1426,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>pick</type>
 	<object-name>Switch_04</object-name>
-	<visible>true</visible>
-	<action>
-		<button>0</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/engines/pump-front-hi</property>
-		</binding>
-	</action>
-</animation>
-
-<animation>
-	<type>rotate</type>
-	<object-name>Switch_05</object-name>
-	<property>sim/systems/electrical/switches/engines/pump-front-lo</property>
-	<factor>-20</factor>
-	<axis>
-		<x1-m>-0.975185 </x1-m>
-		<y1-m>-0.528639 </y1-m>
-		<z1-m>-0.0057865</z1-m>
-		<x2-m>-0.975185 </x2-m>
-		<y2-m>-0.440608 </y2-m>
-		<z2-m>-0.0057865</z2-m>
-	</axis>
-</animation>
-
-<animation>
-	<type>pick</type>
 	<object-name>Switch_05</object-name>
 	<visible>true</visible>
 	<action>
@@ -1483,17 +1433,17 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/engines/pump-front-lo</property>
+			<property>controls/engines/engine[0]/fuel-pump</property>
 		</binding>
 	</action>
 </animation>
 
-<!-- Rear fuel pump switches * Interruptor bomba combustible trasera * -->
-
+<!-- Rear fuel pump switch * Interruptor bomba combustible trasera * -->
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_06</object-name>
-	<property>sim/systems/electrical/switches/engines/pump-rear-hi</property>
+	<object-name>Switch_07</object-name>
+	<property>controls/engines/engine[1]/fuel-pump</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975185 </x1-m>
@@ -1508,34 +1458,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>pick</type>
 	<object-name>Switch_06</object-name>
-	<visible>true</visible>
-	<action>
-		<button>0</button>
-		<repeatable>false</repeatable>
-		<binding>
-			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/engines/pump-rear-hi</property>
-		</binding>
-	</action>
-</animation>
-
-<animation>
-	<type>rotate</type>
-	<object-name>Switch_07</object-name>
-	<property>sim/systems/electrical/switches/engines/pump-rear-lo</property>
-	<factor>-20</factor>
-	<axis>
-		<x1-m>-0.975185 </x1-m>
-		<y1-m>-0.528639 </y1-m>
-		<z1-m>-0.0057865</z1-m>
-		<x2-m>-0.975185 </x2-m>
-		<y2-m>-0.440608 </y2-m>
-		<z2-m>-0.0057865</z2-m>
-	</axis>
-</animation>
-
-<animation>
-	<type>pick</type>
 	<object-name>Switch_07</object-name>
 	<visible>true</visible>
 	<action>
@@ -1543,7 +1465,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/engines/pump-rear-lo</property>
+			<property>controls/engines/engine[1]/fuel-pump</property>
 		</binding>
 	</action>
 </animation>
@@ -1557,7 +1479,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_08</object-name>
-	<property>sim/systems/electrical/switches/heat/pitot</property>
+	<property>controls/anti-ice/pitot-heat</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975253</x1-m>
@@ -1578,7 +1500,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/heat/pitot</property>
+			<property>controls/anti-ice/pitot-heat</property>
 		</binding>
 	</action>
 </animation>
@@ -1586,7 +1508,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_09</object-name>
-	<property>sim/systems/electrical/switches/heat/shield</property>
+	<property>controls/anti-ice/window-heat</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975253</x1-m>
@@ -1607,15 +1529,15 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/heat/shield</property>
+			<property>controls/anti-ice/window-heat</property>
 		</binding>
 	</action>
 </animation>
 
-<animation>
+<!-- <animation>
 	<type>rotate</type>
 	<object-name>Switch_10</object-name>
-	<property>sim/systems/electrical/switches/heat/prop-front</property>
+	<property>controls/anti-ice/engine[0]/carb-heat</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975253</x1-m>
@@ -1636,25 +1558,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/heat/prop-front</property>
+			<property>controls/anti-ice/engine[0]/carb-heat</property>
 		</binding>
-		<binding>
-			<command>property-toggle</command>
-			<property>sim/sound/switch3</property>
-		</binding>
-		<!--
 		<binding>
 			<command>property-toggle</command>
 			<property>controls/anti-ice/engine[0]/inlet-heat</property>
 		</binding>
-		-->
 	</action>
 </animation>
 
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_11</object-name>
-	<property>sim/systems/electrical/switches/heat/prop-rear</property>
+	<property>controls/anti-ice/engine[1]/carb-heat</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975253</x1-m>
@@ -1675,21 +1591,19 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/heat/prop-rear</property>
+			<property>controls/anti-ice/engine[1]/carb-heat</property>
 		</binding>
-		<!--
 		<binding>
 			<command>property-toggle</command>
 			<property>controls/anti-ice/engine[1]/inlet-heat</property>
 		</binding>
-		-->
 	</action>
 </animation>
 
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_12</object-name>
-	<property>sim/systems/electrical/switches/heat/deice-wing</property>
+	<property>controls/anti-ice/wing-heat</property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975253</x1-m>
@@ -1710,7 +1624,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/heat/deice-wing</property>
+			<property>controls/anti-ice/wing-heat</property>
 		</binding>
 	</action>
 </animation>
@@ -1718,7 +1632,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_13</object-name>
-	<property>sim/systems/electrical/switches/heat/deice-light</property>
+	<property></property>
 	<factor>-20</factor>
 	<axis>
 		<x1-m>-0.975253</x1-m>
@@ -1739,10 +1653,10 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/heat/deice-light</property>
+			<property></property>
 		</binding>
 	</action>
-</animation>
+</animation> -->
 
 <!-- Luz Alarma Stall -->
 
@@ -1750,17 +1664,13 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<type>material</type>
 	<object-name>LuzAlrm_01</object-name>
 		<condition>
-			<greater-than>
-				<property>sim/systems/electrical/switches/breakers/breaker[14]/volts</property>
-				<value>12</value>
-			</greater-than>
 			<or>
 				<and>
-				<!--	<or>
+					<or>
 						<property>controls/engines/engine/master-bat</property>
 						<property>controls/engines/engine[0]/master-alt</property>
 						<property>controls/engines/engine[1]/master-alt</property>
-					</or> -->
+					</or>
 					<less-than>
 						<property>velocities/airspeed-kt</property>
 						<value>65</value>
@@ -1817,7 +1727,6 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<object-name>LuzAlrm_01</object-name>
 		<condition>
     		<property>autopilot/locks/gs-captured</property>
-			<property>sim/systems/electrical/switches/breakers/breaker[31]/volts</property>
 		</condition>
     <emission>
        <red>0.1</red>
@@ -1831,7 +1740,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Switch_21</object-name>
-	<property>sim/systems/electrical/switches/voltage/avionics-master</property> 
+	<property>controls/switches/master-avionics</property> 
 	<interpolation>
 		<entry><ind>0</ind><dep> 0</dep></entry>
 		<entry><ind>1</ind><dep>30</dep></entry>
@@ -1855,9 +1764,9 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-toggle</command>
-			<property>sim/systems/electrical/switches/voltage/avionics-master</property>
+			<property>controls/switches/master-avionics</property>
 		</binding>
-<!--		<binding>
+		<binding>
 			<command>property-assign</command>
 			<property>systems/electrical/outputs/adf</property>
 			<value>0</value>
@@ -1906,7 +1815,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 			<command>property-assign</command>
 			<property>systems/electrical/outputs/transponder</property>
 			<value>0</value>
-		</binding> -->
+		</binding>
 	</action>
 </animation>
 
@@ -3416,12 +3325,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   <type>rotate</type> 
   <object-name>Switch_18</object-name> 	                                       
   <property>controls/lighting/landing-lights</property> 
- <!-- <condition>
+  <condition>
 	 <not>
-		 <property>sim/systems/electrical/switches/lighting/landing</property>
+		 <property>controls/lighting/taxi-light</property>
 	 </not>
  </condition>
- -->
   <factor>-20</factor>
   <axis>
       <x1-m>-0.975253</x1-m>
@@ -3443,13 +3351,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
         <binding>
           <command>property-toggle</command>
           <property>controls/lighting/landing-lights</property>
-<!--
-		  <condition>
+        <condition>
 			   <not>
 				  <property>controls/lighting/taxi-light</property>
 			   </not>
 		    </condition>
--->
         </binding> 
       </action>
 </animation>
@@ -3469,13 +3375,11 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   <type>rotate</type>  
   <object-name>Switch_17</object-name>
   <property>controls/lighting/taxi-light</property>
-<!--
   <condition>
 	 <not>
 		 <property>controls/lighting/landing-lights</property>
 	 </not>
  </condition>
--->
   <factor>-20</factor>
   <axis>
       <x1-m>-0.975253</x1-m>
@@ -3497,10 +3401,16 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
         <binding>
           <command>property-toggle</command>
           <property>controls/lighting/taxi-light</property>
+        <condition>
+	       <not>
+		      <property>controls/lighting/landing-lights</property>
+	       </not>
+        </condition>
         </binding>
       </action>
 </animation>
 
+  
   <!-- estroboscopico  *strobe* -->
  
    <model>  <!-- Strobe Izquierdo -->  

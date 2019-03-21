@@ -31,7 +31,7 @@ z -0.019
             <factor-prop>/controls/lighting/panel-norm</factor-prop>
         </emission>
     </animation>
-	
+
     <animation>
         <type>rotate</type>
         <object-name>Needle_Seconds</object-name>

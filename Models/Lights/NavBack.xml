@@ -9,8 +9,7 @@
   <type>select</type>
   <object-name>NavBack</object-name>
   <condition>
-	<property>sim/systems/electrical/switches/breakers/breaker[5]/volts</property>
-	<property>controls/lighting/nav-lights</property>
+   <property>controls/lighting/nav-lights</property>
   </condition>
  </animation>
 

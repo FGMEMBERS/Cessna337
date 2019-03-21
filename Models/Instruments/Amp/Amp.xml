@@ -19,7 +19,7 @@
 <animation> 
 	<type>rotate</type>
 	<object-name>Needle</object-name>
-	<property>sim/systems/electrical/amps</property>
+	<property>systems/electrical/amps</property>
 	<interpolation>
 		<entry><ind>17</ind><dep>-45</dep></entry>
 		<entry><ind>0</ind><dep>0</dep></entry>
