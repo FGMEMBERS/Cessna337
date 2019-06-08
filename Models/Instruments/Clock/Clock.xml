@@ -35,7 +35,7 @@ z -0.019
     <animation>
         <type>rotate</type>
         <object-name>Needle_Seconds</object-name>
-        <property>/instrumentation/clock/indicated-sec</property>
+        <property>instrumentation/clock/indicated-sec</property>
         <factor>6</factor>
         <axis>
             <x>-1.0</x>
@@ -47,7 +47,7 @@ z -0.019
     <animation>
         <type>rotate</type>
         <object-name>Needle_Minutes</object-name>
-        <property>/instrumentation/clock/indicated-sec</property>
+        <property>instrumentation/clock/indicated-sec</property>
         <factor>0.1</factor>
         <axis>
             <x>-1.0</x>
@@ -59,7 +59,7 @@ z -0.019
     <animation>
         <type>rotate</type>
         <object-name>Needle_Hours</object-name>
-        <property>/instrumentation/clock/indicated-sec</property>
+        <property>instrumentation/clock/indicated-sec</property>
         <factor>0.008333</factor>
         <axis>
             <x>-1.0</x>
@@ -107,7 +107,7 @@ z -0.019
 	<type>select</type>
 		<object-name>LabelText</object-name>
 	<condition>
-		<property>/sim/panel-hotspots</property>
+		<property>sim/panel-hotspots</property>
 	</condition>
 </animation>
 

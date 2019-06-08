@@ -41,8 +41,8 @@
 		<object-name>Digit_FLT</object-name>
 		<object-name>Digit_ET</object-name>
 		<condition>
-			<property>/instrumentation/adf[0]/serviceable</property>
-			<property>/instrumentation/adf[0]/power-btn</property>
+			<property>instrumentation/adf[0]/serviceable</property>
+			<property>instrumentation/adf[0]/power-btn</property>
 			<property>systems/electrical/outputs/adf</property>
 		</condition>
 	</animation>
@@ -99,7 +99,7 @@
 		<object-name>Digit_ANT</object-name>
 		<condition>
 			<not>
-				<property>/instrumentation/adf[0]/adf-btn</property>
+				<property>instrumentation/adf[0]/adf-btn</property>
 			</not>
 		</condition>
 	</animation>
@@ -108,7 +108,7 @@
 		<type>select</type>
 		<object-name>Digit_ADF</object-name>
 		<condition>
-			<property>/instrumentation/adf[0]/adf-btn</property>
+			<property>instrumentation/adf[0]/adf-btn</property>
 		</condition>
 	</animation>
 
@@ -116,7 +116,7 @@
 		<type>select</type>
 		<object-name>Digit_BFO</object-name>
 		<condition>
-			<property>/instrumentation/adf[0]/bfo-btn</property>
+			<property>instrumentation/adf[0]/bfo-btn</property>
 		</condition>
 	</animation>
 
@@ -125,7 +125,7 @@
 		<object-name>Digit_FRQ</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/adf[0]/display-mode</property>
+				<property>instrumentation/adf[0]/display-mode</property>
 				<value type="int">0</value>
 			</equals>
 		</condition>
@@ -136,7 +136,7 @@
 		<object-name>Digit_FLT</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/adf[0]/display-mode</property>
+				<property>instrumentation/adf[0]/display-mode</property>
 				<value type="int">1</value>
 			</equals>
 		</condition>
@@ -147,7 +147,7 @@
 		<object-name>Digit_ET</object-name>
 		<condition>
 			<equals>
-				<property>/instrumentation/adf[0]/display-mode</property>
+				<property>instrumentation/adf[0]/display-mode</property>
 				<value type="int">2</value>
 			</equals>
 		</condition>
@@ -160,7 +160,7 @@
 		<object-name>Digit_L1000</object-name>
 		<condition>
 			<greater-than-equals>
-				<property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+				<property>instrumentation/adf[0]/frequencies/selected-khz</property>
 				<value type="int">1000</value>
 			</greater-than-equals>
 		</condition>
@@ -169,7 +169,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Digit_L1000</object-name>
-		<property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+		<property>instrumentation/adf[0]/frequencies/selected-khz</property>
 		<step>1000</step>
 		<factor>0.0001</factor>
 		<axis>
@@ -182,7 +182,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Digit_L100</object-name>
-		<property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+		<property>instrumentation/adf[0]/frequencies/selected-khz</property>
 		<step>100</step>
 		<factor>0.001</factor>
 		<axis>
@@ -195,7 +195,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Digit_L10</object-name>
-		<property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+		<property>instrumentation/adf[0]/frequencies/selected-khz</property>
 		<step>10</step>
 		<factor>0.01</factor>
 		<axis>
@@ -208,7 +208,7 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>Digit_L1</object-name>
-		<property>/instrumentation/adf[0]/frequencies/selected-khz</property>
+		<property>instrumentation/adf[0]/frequencies/selected-khz</property>
 		<step>1</step>
 		<factor>0.1</factor>
 		<axis>
@@ -225,7 +225,7 @@
 		<object-name>Digit_P</object-name>
 		<condition>
 			<not-equals>
-				<property>/instrumentation/adf[0]/display-mode</property>
+				<property>instrumentation/adf[0]/display-mode</property>
 				<value type="int">0</value>
 			</not-equals>
 		</condition>
@@ -315,7 +315,7 @@
 			<button>0</button>
 			<binding>
 				<command>property-toggle</command>
-				<property>/instrumentation/adf[0]/adf-btn</property>
+				<property>instrumentation/adf[0]/adf-btn</property>
 			</binding>
 		</action>
 	</animation>
@@ -323,7 +323,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Btn_ADF</object-name>
-		<property>/instrumentation/adf[0]/adf-btn</property>
+		<property>instrumentation/adf[0]/adf-btn</property>
 		<factor>-0.0025</factor>
 		<axis>
 			<x>1</x>
@@ -340,7 +340,7 @@
 			<button>0</button>
 			<binding>
 				<command>property-toggle</command>
-				<property>/instrumentation/adf[0]/bfo-btn</property>
+				<property>instrumentation/adf[0]/bfo-btn</property>
 			</binding>
 		</action>
 	</animation>
@@ -348,7 +348,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Btn_BFO</object-name>
-		<property>/instrumentation/adf[0]/bfo-btn</property>
+		<property>instrumentation/adf[0]/bfo-btn</property>
 		<factor>-0.0025</factor>
 		<axis>
 			<x>1</x>
@@ -365,33 +365,33 @@
 			<button>0</button>
 			<binding>
 				<command>property-toggle</command>
-				<property>/instrumentation/adf[0]/bfo-frq</property>
+				<property>instrumentation/adf[0]/bfo-frq</property>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/frq-btn</property>
+				<property>instrumentation/adf[0]/frq-btn</property>
 				<value type="int">1</value>
 			</binding>
 			<binding>
 				<condition>
 					<equals>
-						<property>/instrumentation/adf[0]/display-mode</property>
+						<property>instrumentation/adf[0]/display-mode</property>
 						<value type="int">0</value>
 					</equals>
 				</condition>
 				<command>property-swap</command>
-				<property>/instrumentation/adf[0]/frequencies/selected-khz</property>
-				<property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+				<property>instrumentation/adf[0]/frequencies/selected-khz</property>
+				<property>instrumentation/adf[0]/frequencies/standby-khz</property>
 			</binding>
 			<binding>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/display-mode</property>
+				<property>instrumentation/adf[0]/display-mode</property>
 				<value type="int">0</value>
 			</binding>
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/instrumentation/adf[0]/frq-btn</property>
+					<property>instrumentation/adf[0]/frq-btn</property>
 					<value type="int">0</value>
 				</binding>
 			</mod-up>
@@ -401,7 +401,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Btn_FRQ</object-name>
-		<property>/instrumentation/adf[0]/frq-btn</property>
+		<property>instrumentation/adf[0]/frq-btn</property>
 		<factor>-0.0025</factor>
 		<axis>
 			<x>1</x>
@@ -418,12 +418,12 @@
 			<button>0</button>
 			<binding>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/flt-btn</property>
+				<property>instrumentation/adf[0]/flt-btn</property>
 				<value type="int">1</value>
 			</binding>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/display-mode</property>
+				<property>instrumentation/adf[0]/display-mode</property>
 				<step>1</step>
 				<min>1</min>
 				<max>3</max>
@@ -432,7 +432,7 @@
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/instrumentation/adf[0]/flt-btn</property>
+					<property>instrumentation/adf[0]/flt-btn</property>
 					<value type="int">0</value>
 				</binding>
 			</mod-up>
@@ -442,7 +442,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Btn_FLT</object-name>
-		<property>/instrumentation/adf[0]/flt-btn</property>
+		<property>instrumentation/adf[0]/flt-btn</property>
 		<factor>-0.0025</factor>
 		<axis>
 			<x>1</x>
@@ -459,13 +459,13 @@
 			<button>0</button>
 			<binding>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/set-btn</property>
+				<property>instrumentation/adf[0]/set-btn</property>
 				<value type="int">1</value>
 			</binding>
 			<mod-up>
 				<binding>
 					<command>property-assign</command>
-					<property>/instrumentation/adf[0]/set-btn</property>
+					<property>instrumentation/adf[0]/set-btn</property>
 					<value type="int">0</value>
 				</binding>
 			</mod-up>
@@ -475,7 +475,7 @@
 	<animation>
 		<type>translate</type>
 		<object-name>Btn_SET</object-name>
-		<property>/instrumentation/adf[0]/set-btn</property>
+		<property>instrumentation/adf[0]/set-btn</property>
 		<factor>-0.0025</factor>
 		<axis>
 			<x>1</x>
@@ -492,7 +492,7 @@
 			<button>0</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/volume-norm</property>
+				<property>instrumentation/adf[0]/volume-norm</property>
 				<step>0.1</step>
 				<min>0</min>
 				<max>1.0</max>
@@ -500,12 +500,12 @@
 			<binding>
 				<condition>
 					<greater-than>
-						<property>/instrumentation/adf[0]/volume-norm</property>
+						<property>instrumentation/adf[0]/volume-norm</property>
 						<value>0.0</value>
 					</greater-than>
 				</condition>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/power-btn</property>
+				<property>instrumentation/adf[0]/power-btn</property>
 				<value type="bool">1</value>
 			</binding>
 		</action>
@@ -513,7 +513,7 @@
 			<button>1</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/volume-norm</property>
+				<property>instrumentation/adf[0]/volume-norm</property>
 				<step>-0.1</step>
 				<min>0</min>
 				<max>1.0</max>
@@ -521,12 +521,12 @@
 			<binding>
 				<condition>
 					<less-than>
-						<property>/instrumentation/adf[0]/volume-norm</property>
+						<property>instrumentation/adf[0]/volume-norm</property>
 						<value>0.1</value>
 					</less-than>
 				</condition>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/power-btn</property>
+				<property>instrumentation/adf[0]/power-btn</property>
 				<value type="bool">0</value>
 			</binding>
 		</action>
@@ -540,7 +540,7 @@
 			<button>3</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/volume-norm</property>
+				<property>instrumentation/adf[0]/volume-norm</property>
 				<step>0.1</step>
 				<min>0</min>
 				<max>1.0</max>
@@ -548,12 +548,12 @@
 			<binding>
 				<condition>
 					<greater-than>
-						<property>/instrumentation/adf[0]/volume-norm</property>
+						<property>instrumentation/adf[0]/volume-norm</property>
 						<value>0.0</value>
 					</greater-than>
 				</condition>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/power-btn</property>
+				<property>instrumentation/adf[0]/power-btn</property>
 				<value type="bool">1</value>
 			</binding>
 		</action>
@@ -561,7 +561,7 @@
 			<button>4</button>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/volume-norm</property>
+				<property>instrumentation/adf[0]/volume-norm</property>
 				<step>-0.1</step>
 				<min>0</min>
 				<max>1.0</max>
@@ -569,12 +569,12 @@
 			<binding>
 				<condition>
 					<less-than>
-						<property>/instrumentation/adf[0]/volume-norm</property>
+						<property>instrumentation/adf[0]/volume-norm</property>
 						<value>0.1</value>
 					</less-than>
 				</condition>
 				<command>property-assign</command>
-				<property>/instrumentation/adf[0]/power-btn</property>
+				<property>instrumentation/adf[0]/power-btn</property>
 				<value type="bool">0</value>
 			</binding>
 		</action>
@@ -583,7 +583,7 @@
 	<animation>
 		<type>rotate</type>
         <object-name>Knob_Volume</object-name>
-		<property>/instrumentation/adf[0]/volume-norm</property>
+		<property>instrumentation/adf[0]/volume-norm</property>
 		<factor>-270</factor>
 		<axis>
 			<x>1</x>
@@ -607,7 +607,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+				<property>instrumentation/adf[0]/frequencies/standby-khz</property>
 				<step>1</step>
 				<min>200</min>
 				<max>1800</max>
@@ -620,7 +620,7 @@
 			<repeatable>true</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+				<property>instrumentation/adf[0]/frequencies/standby-khz</property>
 				<step>-1</step>
 				<min>200</min>
 				<max>1800</max>
@@ -633,7 +633,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+				<property>instrumentation/adf[0]/frequencies/standby-khz</property>
 				<step>100</step>
 				<min>200</min>
 				<max>1800</max>
@@ -646,7 +646,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-adjust</command>
-				<property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+				<property>instrumentation/adf[0]/frequencies/standby-khz</property>
 				<step>-100</step>
 				<min>200</min>
 				<max>1800</max>
@@ -660,7 +660,7 @@
 		<type>rotate</type>
 		<object-name>Knob_FREQ01</object-name>
 		<object-name>Knob_FREQ02</object-name>
-		<property>/instrumentation/adf[0]/frequencies/standby-khz</property>
+		<property>instrumentation/adf[0]/frequencies/standby-khz</property>
 		<factor>-270</factor>
 		<axis>
 			<x>1</x>
@@ -713,7 +713,7 @@
 	<type>select</type>
 		<object-name>LabelText</object-name>
 	<condition>
-		<property>/sim/panel-hotspots</property>
+		<property>sim/panel-hotspots</property>
 	</condition>
 </animation>
 

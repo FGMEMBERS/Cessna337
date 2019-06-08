@@ -27,7 +27,7 @@
 		<type>select</type>
 		<object-name>Strobe</object-name>
 		<condition>
-			<property>/sim/model/Cessna337/lighting/strobes/state</property>
+			<property>sim/model/Cessna337/lighting/strobes/state</property>
 		</condition>
 	</animation>
  

@@ -45,8 +45,8 @@ License: GPL
 	</emission>
 	<condition>
 		<less-than>
-			<property>/position/altitude-agl-ft</property>
-			<property>/instrumentation/radar-altimeter/decision-height</property>
+			<property>position/altitude-agl-ft</property>
+			<property>instrumentation/radar-altimeter/decision-height</property>
 		</less-than>
 	</condition>
 </animation>
@@ -54,7 +54,7 @@ License: GPL
 <animation>
 	<type>rotate</type>
 	<object-name>Needle</object-name>
-	<property>/position/altitude-agl-ft</property>
+	<property>position/altitude-agl-ft</property>
 	<interpolation>
 		<entry><ind>-9999</ind><dep>0</dep></entry>
 		<entry><ind>    0</ind><dep>   0</dep></entry>
@@ -88,7 +88,7 @@ License: GPL
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/radar-altimeter/decision-height</property>
+			<property>instrumentation/radar-altimeter/decision-height</property>
 				<step> 10</step>
 				<min>   0</min>
 				<max>2500</max>
@@ -101,7 +101,7 @@ License: GPL
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/radar-altimeter/decision-height</property>
+			<property>instrumentation/radar-altimeter/decision-height</property>
 				<step>-10</step>
 				<min>   0</min>
 				<max>2500</max>
@@ -114,7 +114,7 @@ License: GPL
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/radar-altimeter/decision-height</property>
+			<property>instrumentation/radar-altimeter/decision-height</property>
 				<step> 100</step>
 				<min>    0</min>
 				<max> 2500</max>
@@ -127,7 +127,7 @@ License: GPL
 		<repeatable>false</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/radar-altimeter/decision-height</property>
+			<property>instrumentation/radar-altimeter/decision-height</property>
 				<step>-100</step>
 				<min>    0</min>
 				<max> 2500</max>
@@ -139,7 +139,7 @@ License: GPL
 <animation>
 	<type>rotate</type>
 	<object-name>DH_Marker</object-name>
-	<property>/instrumentation/radar-altimeter/decision-height</property>
+	<property>instrumentation/radar-altimeter/decision-height</property>
 	<interpolation>
 		<entry><ind>    0</ind><dep>   0</dep></entry>
 		<entry><ind>  500</ind><dep>-160</dep></entry>
@@ -199,7 +199,7 @@ License: GPL
 	<type>select</type>
 		<object-name>LabelText</object-name>
 	<condition>
-		<property>/sim/panel-hotspots</property>
+		<property>sim/panel-hotspots</property>
 	</condition>
 </animation>
 

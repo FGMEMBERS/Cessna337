@@ -24,7 +24,7 @@ http://www.kellymfg.com/dgs.html
 <animation>
 	<type>rotate</type>
 	<object-name>Card</object-name>
-	<property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+	<property>instrumentation/heading-indicator/indicated-heading-deg</property>
 	<factor>-1</factor>
 	<axis>
 		<x>-1</x>
@@ -36,7 +36,7 @@ http://www.kellymfg.com/dgs.html
 <animation>
 	<type>rotate</type>
 	<object-name>HDGmarker</object-name>
-	<property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+	<property>instrumentation/heading-indicator/indicated-heading-deg</property>
 	<factor>-1</factor>
 	<axis>
 		<x>-1</x>
@@ -47,7 +47,7 @@ http://www.kellymfg.com/dgs.html
 <animation>
 	<type>rotate</type>
 	<object-name>HDGmarker</object-name>
-	<property>/autopilot/settings/heading-bug-deg</property>
+	<property>autopilot/settings/heading-bug-deg</property>
 	<factor>1</factor>
 	<axis>
 		<x>-1</x>
@@ -59,7 +59,7 @@ http://www.kellymfg.com/dgs.html
 <animation>
 	<type>rotate</type>
 	<object-name>Knob_01</object-name>
-	<property>/instrumentation/heading-indicator/indicated-heading-deg</property>
+	<property>instrumentation/heading-indicator/indicated-heading-deg</property>
 	<axis>
 		<x>-1</x>
 		<y>0</y>
@@ -75,7 +75,7 @@ http://www.kellymfg.com/dgs.html
 <animation>
 	<type>rotate</type>
 	<object-name>Knob_02</object-name>
-	<property>/autopilot/settings/heading-bug-deg</property>
+	<property>autopilot/settings/heading-bug-deg</property>
 	<axis>
 		<x>-1</x>
 		<y>0</y>
@@ -100,7 +100,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/heading-indicator/offset-deg</property>
+			<property>instrumentation/heading-indicator/offset-deg</property>
 				<step> 1</step>
 				<min>  0</min>
 				<max>360</max>
@@ -113,7 +113,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/heading-indicator/offset-deg</property>
+			<property>instrumentation/heading-indicator/offset-deg</property>
 				<step>-1</step>
 				<min>  0</min>
 				<max>360</max>
@@ -126,7 +126,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/heading-indicator/offset-deg</property>
+			<property>instrumentation/heading-indicator/offset-deg</property>
 				<step> 5</step>
 				<min>  0</min>
 				<max>360</max>
@@ -139,7 +139,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/instrumentation/heading-indicator/offset-deg</property>
+			<property>instrumentation/heading-indicator/offset-deg</property>
 				<step>-5</step>
 				<min>  0</min>
 				<max>360</max>
@@ -158,7 +158,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/autopilot/settings/heading-bug-deg</property>
+			<property>autopilot/settings/heading-bug-deg</property>
 				<step> 1</step>
 				<min>  0</min>
 				<max>360</max>
@@ -171,7 +171,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/autopilot/settings/heading-bug-deg</property>
+			<property>autopilot/settings/heading-bug-deg</property>
 				<step>-1</step>
 				<min>  0</min>
 				<max>360</max>
@@ -184,7 +184,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/autopilot/settings/heading-bug-deg</property>
+			<property>autopilot/settings/heading-bug-deg</property>
 				<step> 5</step>
 				<min>  0</min>
 				<max>360</max>
@@ -197,7 +197,7 @@ http://www.kellymfg.com/dgs.html
 		<repeatable>true</repeatable>
 		<binding>
 			<command>property-adjust</command>
-			<property>/autopilot/settings/heading-bug-deg</property>
+			<property>autopilot/settings/heading-bug-deg</property>
 				<step>-5</step>
 				<min>  0</min>
 				<max>360</max>
@@ -246,7 +246,7 @@ http://www.kellymfg.com/dgs.html
 	<type>select</type>
 		<object-name>LabelText</object-name>
 	<condition>
-		<property>/sim/panel-hotspots</property>
+		<property>sim/panel-hotspots</property>
 	</condition>
 </animation>
 
