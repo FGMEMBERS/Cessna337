@@ -34,14 +34,14 @@ License: GPL
 		<object-name>Flag_01</object-name>
 		<object-name>Flag_02</object-name>
 		<condition>
-			<property>/instrumentation/altimeter/servicable</property>
+			<property>instrumentation/altimeter/servicable</property>
 		</condition>
 	</animation>
 
 	<animation>
 		<type>rotate</type>
 		<object-name>Needle</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.36</factor>
 		<axis>
 			<x>-1</x>
@@ -53,7 +53,7 @@ License: GPL
 	<animation>
 		<type>rotate</type>
 		<object-name>Counter_100</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<factor>0.36</factor>
 		<axis>
 			<x>0</x>
@@ -70,7 +70,7 @@ License: GPL
 	<animation>
 		<type>rotate</type>
 		<object-name>Counter_1000</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<axis>
 			<x>0</x>
 			<y>-1</y>
@@ -162,7 +162,7 @@ License: GPL
 	<animation>
 		<type>rotate</type>
 		<object-name>Counter_10000</object-name>
-		<property>/instrumentation/altimeter/indicated-altitude-ft</property>
+		<property>instrumentation/altimeter/indicated-altitude-ft</property>
 		<axis>
 			<x>0</x>
 			<y>-1</y>
@@ -354,7 +354,7 @@ License: GPL
 	<type>select</type>
 		<object-name>LabelText</object-name>
 	<condition>
-		<property>/sim/panel-hotspots</property>
+		<property>sim/panel-hotspots</property>
 	</condition>
 </animation>
 

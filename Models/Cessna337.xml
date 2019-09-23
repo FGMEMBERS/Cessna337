@@ -302,7 +302,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Perilla_01</object-name>
-		<property>/controls/engines/engine[0]/starter</property>
+		<property>controls/engines/engine[0]/starter</property>
 	<factor>-30</factor>
 	<center>
 		<x-m>-0.963693</x-m>
@@ -393,7 +393,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>Perilla_02</object-name>
-		<property>/controls/engines/engine[1]/starter</property>
+		<property>controls/engines/engine[1]/starter</property>
 	<factor>-30</factor>
 	<center>
 		<x-m>-0.963693</x-m>
@@ -947,7 +947,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<type>rotate</type>
 		<object-name>PalancaBrakes_01</object-name>
 		<object-name>PalancaBrakes_02</object-name>
-	<property>/controls/gear/brake-parking</property>
+	<property>controls/gear/brake-parking</property>
 		 <interpolation>
    <entry>
     <ind>0.0</ind>
@@ -980,7 +980,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 		<button>0</button>
 		<binding>
 			<command>property-toggle</command>
-			<property>/controls/gear/brake-parking</property>
+			<property>controls/gear/brake-parking</property>
 		</binding>
 	</action>
  </animation>
@@ -1077,7 +1077,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
   <type>translate</type>
   <object-name>PalancaFlaps_01</object-name>
   <object-name>PalancaFlaps_02</object-name>
-  <property>/controls/flight/flaps</property>
+  <property>controls/flight/flaps</property>
   <interpolation>
       <entry>
           <ind>0.0</ind>
@@ -1708,7 +1708,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 					</or>
 					<or>
 						<less-than>
-							<property>/position/altitude-agl-ft</property>
+							<property>position/altitude-agl-ft</property>
 							<value>500</value>
 						</less-than>
 					</or>
@@ -1919,7 +1919,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>ViseraIZQ_01</object-name>
-	<property>/Cessna337/sunshade/left</property>
+	<property>Cessna337/sunshade/left</property>
 	<factor>-130</factor>
 	<axis>
 		<x1-m>-0.476395</x1-m>
@@ -1954,7 +1954,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 <animation>
 	<type>rotate</type>
 	<object-name>ViseraDER_01</object-name>
-	<property>/Cessna337/sunshade/right</property>
+	<property>Cessna337/sunshade/right</property>
 	<factor>-130</factor>
 	<axis>
 		<x1-m>-0.476395</x1-m>
@@ -1993,7 +1993,7 @@ Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301 USA.
 	<object-name>TapaPanel_01a</object-name>
 	<object-name>TapaPanel_01b</object-name>
 	<object-name>TapaPanel_02</object-name>
-	<property>/Cessna337/storage-drawer</property>
+	<property>Cessna337/storage-drawer</property>
 	<factor>-60</factor>
 	<axis>
 		<x1-m>-0.97601</x1-m>

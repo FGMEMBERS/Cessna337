@@ -24,7 +24,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>Needle</object-name>
-	<property>/instrumentation/turn-indicator/indicated-turn-rate</property>
+	<property>instrumentation/turn-indicator/indicated-turn-rate</property>
 	<factor>20</factor>
 	<min-deg>-16</min-deg>
 	<max-deg> 16</max-deg>
@@ -43,7 +43,7 @@
 <animation>
 	<type>rotate</type>
 	<object-name>Ball</object-name>
-	<property>/instrumentation/slip-skid-ball/indicated-slip-skid</property>
+	<property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
 	<factor>1</factor>
 	<min-deg>-5</min-deg>
 	<max-deg>5</max-deg>
@@ -98,7 +98,7 @@
 	<type>select</type>
 		<object-name>LabelText</object-name>
 	<condition>
-		<property>/sim/panel-hotspots</property>
+		<property>sim/panel-hotspots</property>
 	</condition>
 </animation>
 
